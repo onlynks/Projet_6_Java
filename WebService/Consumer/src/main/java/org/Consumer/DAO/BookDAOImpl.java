@@ -22,11 +22,11 @@ public class BookDAOImpl implements BookDAO{
 		int id = 0;
 		String description = null;
 		
-		while(resultSet.next()) {
-			 id = resultSet.getInt("book_id");
-			 description = resultSet.getString("book_description");				
-		}	
+		resultSet.first();		
+		id = resultSet.getInt("book_id");
+		description = resultSet.getString("book_description");	
 		Book book = new Book(id, title, description);
+		
 			
 		return book;
 	}
