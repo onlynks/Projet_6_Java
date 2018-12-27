@@ -1,14 +1,15 @@
-package org.Business;
+package org.Business.impl;
 
 import java.sql.SQLException;
 
+import org.Business.interfaces.BookManager;
 import org.Consumer.DAO.BookDAO;
 import org.Consumer.DAO.DAOFactory;
 import org.beans.Book;
 
-public class BookManager 
+public class BookManagerImpl implements BookManager
 {
-	
+	@Override
     public String getBook( String title ) throws SQLException
     {
     	DAOFactory Factory = DAOFactory.getInstance();
