@@ -7,8 +7,8 @@ import com.projet3.webservice.Business.impl.ManagerFactoryImpl;
 //import org.springframework.context.ApplicationContext;
 //import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-@WebService(name = "BookService")
-public class BookService {
+@WebService
+public class Book {
 	
 	private ManagerFactoryImpl managerFactory;	
 
