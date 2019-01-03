@@ -1,0 +1,8 @@
+com\projet3\webservice\Consumer\DAO\BookDAO.class
+org\Consumer\DAO\DAOFactory.class
+com\projet3\webservice\Consumer\DAO\DAOFactory.class
+org\Consumer\DAO\BookDAO.class
+org\Consumer\TestConnection.class
+com\projet3\webservice\Consumer\DAO\BookDAOImpl.class
+org\Consumer\App.class
+org\Consumer\DAO\BookDAOImpl.class

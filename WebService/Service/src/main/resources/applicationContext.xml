@@ -5,14 +5,14 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookManager" class="org.Business.impl.BookManagerImpl">
+    <bean id="bookManager" class="com.projet3.webservice.Business.impl.BookManagerImpl">
     </bean>
 
-    <bean id="managerFactory" class="org.Business.impl.ManagerFactoryImpl">
+    <bean id="managerFactory" class="com.projet3.webservice.Business.impl.ManagerFactoryImpl">
     	<property name="bookManager" ref="bookManager"/>
     </bean>
     
-    <bean id="bookService" class="com.projet3.webservice.BookService">
+    <bean id="bookService" class="com.projet3.webservice.Service.BookService">
     	<property name="managerFactory" ref="managerFactory"/>
     </bean>
 

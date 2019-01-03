@@ -13,7 +13,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.6</maven.compiler.source>
     <maven.compiler.target>1.6</maven.compiler.target>
-    <spring.version>4.3.11.RELEASE</spring.version>
+    <spring.version>5.1.1.RELEASE</spring.version>
   </properties>
   
   <modules>
@@ -60,5 +60,13 @@
             </dependency>
   	</dependencies>
   </dependencyManagement>
+  <dependencies>
+  <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>3.8</version>
+      	  <scope>test</scope>
+    	</dependency>
+  </dependencies>
   
 </project>
