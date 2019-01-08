@@ -12,9 +12,12 @@
     <bean id="managerFactory" class="com.projet3.webservice.Business.impl.ManagerFactoryImpl">
     	<property name="bookManager" ref="bookManager"/>
     </bean>
-    
-    <bean id="bookService" class="com.projet3.webservice.Service.Book">
-    	<property name="managerFactory" ref="managerFactory"/>
-    </bean>
-
+        
+    <bean id="bookService"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="targetClass" value="com.projet3.webservice.Service.Book" />
+		<property name="targetMethod" value="setManagerFactory" />
+		<property name="arguments" ref="managerFactory" />
+	</bean>
+	
 </beans>

@@ -11,9 +11,11 @@ public class BookManagerImpl implements BookManager
 	public String getBook( String title ) throws SQLException
     {
     	DAOFactory Factory = DAOFactory.getInstance();
+    	if(Factory == null)return"Factory";
     	BookDAO bookDAO = Factory.getBookDAO();
-    	
-    	Book book = bookDAO.getBook(title);    	
+    	if(bookDAO == null)return"bookDAO";
+    	Book book = bookDAO.getBook(title); 
+    	if(book == null)return"book";
     	String description = book.getDescription();
         
         return description;

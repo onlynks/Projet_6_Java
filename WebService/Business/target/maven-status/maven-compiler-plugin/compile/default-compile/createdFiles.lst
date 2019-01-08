@@ -1,8 +1,4 @@
 com\projet3\webservice\Business\interfaces\ManagerFactory.class
-org\Business\impl\ManagerFactoryImpl.class
-org\Business\impl\BookManagerImpl.class
-com\projet3\webservice\Business\impl\BookManagerImpl.class
 com\projet3\webservice\Business\interfaces\BookManager.class
-org\Business\interfaces\ManagerFactory.class
-org\Business\interfaces\BookManager.class
+com\projet3\webservice\Business\impl\BookManagerImpl.class
 com\projet3\webservice\Business\impl\ManagerFactoryImpl.class
