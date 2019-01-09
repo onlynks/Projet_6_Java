@@ -1,33 +1,23 @@
 package com.projet3.webservice.Consumer.DAO;
 
+import com.projet3.webservice.Consumer.RowMapper.BookRowMapper;
 import com.projet3.webservice.Model.beans.Book;
 import java.sql.*;
+import org.springframework.jdbc.core.JdbcTemplate;
 
-public class BookDAOImpl implements BookDAO{
-	
-	public DAOFactory DAOFactory;
-	
-	public BookDAOImpl(DAOFactory Factory) {
-		this.DAOFactory = Factory;
-	}
+public class BookDAOImpl extends AbstractDAO implements BookDAO{
 
+	@Override
 	public Book getBook(String title) throws SQLException {
+				
+		String sql = "SELECT * FROM book WHERE book_title = ?";
 		
-		Connection connection = DAOFactory.getConnection();
-		Statement statement = connection.createStatement();		
+		Book book = template.queryForObject(sql, new Object[] {title}, new BookRowMapper());
 		
-		ResultSet resultSet = statement.executeQuery("SELECT * FROM book WHERE book_title = '"+title+"'");
+		return book;		
 		
-		int id = 0;
-		String description = null;
-		
-		resultSet.first();		
-		id = resultSet.getInt("book_id");
-		description = resultSet.getString("book_description");	
-		Book book = new Book(id, title, description);
-		
-			
-		return book;
 	}
+	
+	
 
 }
