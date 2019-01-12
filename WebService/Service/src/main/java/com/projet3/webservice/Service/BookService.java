@@ -6,48 +6,55 @@ import javax.jws.WebService;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.projet3.webservice.Business.interfaces.BookManager;
 import com.projet3.webservice.Model.beans.Book;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @WebService
-public class BookService {
+public class BookService extends AbstractBookService {
 
-	@Autowired
-	private BookManager bookManager;
+	//@Autowired
+	//private BookManager bookManager;
 
 	
-	 public static void main(String[] args) throws SQLException {
+	 
+
+/*
+	public static void main(String[] args) throws SQLException {
 	  
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
-	  BookService bookService = (BookService) context.getBean("bookService");
-	  BookManager manager = bookService.getBookManager();
-	  Book book = manager.getBook("Tintin");
-	  String description = book.getDescription();
+	  BookService bookService = new BookService();
+	  String description = bookService.getDescription("Tintin");
 	  System.out.print(description);
 
 	  
 	 //Endpoint.publish("http://localhost:8082/service", new BookService()); }
 	 }
-
-	@WebMethod
-	public String getDescription(String title) {
-
-		return null;
-
-	}
-
+	
 	public BookManager getBookManager() {
 		return bookManager;
 	}
-	
-//	  @WebMethod(exclude = true) public static ManagerFactoryImpl
-//	  getManagerFactory() { return bookManager; }
-//	  
-//	  @WebMethod(exclude = true) public static void
-//	  setManagerFactory(ManagerFactoryImpl managerFactory) { Book.managerFactory =
-//	  managerFactory; }
-	 
+ 
+*/
+	@WebMethod
+	public String getDescription(String title) {
+
+		Book book = null;
+		try {
+			book = bookManager.getBook(title);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();		}
+		
+		String description = book.getDescription();/*
+		String description = null;
+		if(bookManager == null) {
+			description = "nul";
+		}else {
+			description = "pas nul";
+		}*/
+		return description;
+	}
+
 
 }
