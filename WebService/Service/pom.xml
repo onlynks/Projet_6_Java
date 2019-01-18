@@ -34,6 +34,6 @@
   </dependencies>
   
   <build>
-  	<finalName>BookService</finalName>
+  	<finalName>Services</finalName>
   </build>
 </project>

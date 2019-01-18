@@ -1,6 +1,7 @@
 package com.projet3.webservice.Business.impl;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import com.projet3.webservice.Business.interfaces.BookManager;
@@ -18,5 +19,12 @@ public class BookManagerImpl implements BookManager
         
         return book;
     }
+
+	@Override
+	public List<Book> getBookList() throws SQLException {
+		List<Book> bookList = bookDAO.getBookList();
+		
+		return bookList;
+	}
   
 }

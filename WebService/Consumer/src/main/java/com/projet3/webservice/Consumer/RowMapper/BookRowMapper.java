@@ -13,8 +13,8 @@ public class BookRowMapper implements RowMapper<Book>{
 		Book book = new Book();
 		
 		book.setId(rs.getInt("book_id"));
-		book.setTitle(rs.getString("book_title"));
-		book.setDescription(rs.getString("book_description"));
+		book.setTitle(rs.getString("title"));
+		book.setDescription(rs.getString("description"));
  
         return book;
 	}

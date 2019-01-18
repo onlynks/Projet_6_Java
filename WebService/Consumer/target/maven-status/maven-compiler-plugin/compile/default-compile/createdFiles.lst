@@ -1,3 +1,4 @@
 com\projet3\webservice\Consumer\DAO\BookDAO.class
+com\projet3\webservice\Consumer\RowMapper\BookRowMapper.class
+com\projet3\webservice\Consumer\DAO\AbstractDAO.class
 com\projet3\webservice\Consumer\DAO\BookDAOImpl.class
-com\projet3\webservice\Consumer\DAO\DAOFactory.class

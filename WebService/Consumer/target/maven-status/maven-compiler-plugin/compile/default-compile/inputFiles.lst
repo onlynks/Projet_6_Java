@@ -1,3 +1,4 @@
-C:\Users\Nicolas\Documents\Workspace\Projet-3\WebService\Consumer\src\main\java\com\projet3\webservice\Consumer\DAO\BookDAOImpl.java
-C:\Users\Nicolas\Documents\Workspace\Projet-3\WebService\Consumer\src\main\java\com\projet3\webservice\Consumer\DAO\BookDAO.java
-C:\Users\Nicolas\Documents\Workspace\Projet-3\WebService\Consumer\src\main\java\com\projet3\webservice\Consumer\DAO\DAOFactory.java
+C:\Users\Nicolas\Documents\Workspace\Projet_3\WebService\Consumer\src\main\java\com\projet3\webservice\Consumer\DAO\AbstractDAO.java
+C:\Users\Nicolas\Documents\Workspace\Projet_3\WebService\Consumer\src\main\java\com\projet3\webservice\Consumer\DAO\BookDAO.java
+C:\Users\Nicolas\Documents\Workspace\Projet_3\WebService\Consumer\src\main\java\com\projet3\webservice\Consumer\RowMapper\BookRowMapper.java
+C:\Users\Nicolas\Documents\Workspace\Projet_3\WebService\Consumer\src\main\java\com\projet3\webservice\Consumer\DAO\BookDAOImpl.java
