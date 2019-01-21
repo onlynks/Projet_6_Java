@@ -34,10 +34,10 @@
           </execution>
         </executions>
         <configuration>
-          <packageName>com.projet3.webapp</packageName>
+          <packageName>com.projet3.webapp.Model</packageName>
           <sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
           <wsdlUrls>
-          	<wsdlUrl>http://localhost:8080/BookService/BookServiceService?wsdl</wsdlUrl>
+          	<wsdlUrl>http://localhost:8081/Services/BookService?wsdl</wsdlUrl>
           </wsdlUrls>
         </configuration>
 	  </plugin>

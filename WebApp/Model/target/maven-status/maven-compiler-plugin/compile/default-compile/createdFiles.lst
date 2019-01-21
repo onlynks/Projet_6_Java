@@ -1,0 +1,10 @@
+com\projet3\webapp\Model\BookService_Service.class
+com\projet3\webapp\Model\Main.class
+com\projet3\webapp\Model\GetBookListResponse.class
+com\projet3\webapp\Model\BookService.class
+com\projet3\webapp\Model\Book.class
+com\projet3\webapp\Model\ObjectFactory.class
+com\projet3\webapp\Model\GetBook.class
+com\projet3\webapp\Model\GetBookList.class
+com\projet3\webapp\Model\GetBookResponse.class
+com\projet3\webapp\Model\package-info.class

@@ -11,5 +11,36 @@
   
   <artifactId>App</artifactId>  
   <packaging>war</packaging>
-
+  
+  <dependencies>
+  
+  	  <dependency>
+	      <groupId>com.projet3.webapp</groupId>
+	      <artifactId>Business</artifactId>
+      </dependency>
+      <dependency>
+	      <groupId>com.projet3.webapp</groupId>
+	      <artifactId>Model</artifactId>
+      </dependency>
+  	  <dependency>
+	      <groupId>org.springframework</groupId>
+	      <artifactId>spring-web</artifactId>
+      </dependency>
+	  <dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-webmvc</artifactId>
+	  </dependency>
+	  <dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+	  </dependency>
+	  
+	  <dependency>
+		  <groupId>javax.servlet</groupId>
+		  <artifactId>jstl</artifactId>
+		  <version>1.2</version>
+	  </dependency>
+	  
+  </dependencies>
+  
 </project>
