@@ -10,4 +10,8 @@ public interface BookManager {
 	public Book getBook(String title) throws SQLException;
 	
 	public List<Book> getBookList() throws SQLException;
+	
+	public List<Book> bookResearch(String title) throws SQLException;
+	
+	public void createBook(Book book) throws SQLException;
 }

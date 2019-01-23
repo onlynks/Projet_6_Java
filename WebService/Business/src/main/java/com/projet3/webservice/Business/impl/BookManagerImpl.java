@@ -26,5 +26,18 @@ public class BookManagerImpl implements BookManager
 		
 		return bookList;
 	}
+
+	@Override
+	public List<Book> bookResearch(String title) throws SQLException {
+		List<Book> bookFound = bookDAO.bookResearch(title);
+		
+		return bookFound;
+	}
+
+	@Override
+	public void createBook(Book book) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
   
 }

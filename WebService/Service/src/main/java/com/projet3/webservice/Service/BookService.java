@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @WebService(serviceName="BookService")
 public class BookService extends AbstractBookService {
-/*
+
 	public static void main(String[] args) throws SQLException {
 	  
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
@@ -28,7 +28,7 @@ public class BookService extends AbstractBookService {
 	public BookManager getBookManager() {
 		return bookManager;
 	}
-*/
+
 
 	@WebMethod
 	public Book getBook(String title) {
@@ -54,6 +54,25 @@ public class BookService extends AbstractBookService {
 		return bookList;
 	}
 	
-
+	public List<Book> bookResearch(String title){
+		List<Book> bookFound = null;
+		
+		try {
+			bookFound = bookManager.bookResearch(title);
+		} catch (SQLException e) {
+			e.printStackTrace();		}
+		
+		return bookFound;
+		
+	}
+	
+	public void createBook(Book book) {
+		try {
+			bookManager.createBook(book);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }
