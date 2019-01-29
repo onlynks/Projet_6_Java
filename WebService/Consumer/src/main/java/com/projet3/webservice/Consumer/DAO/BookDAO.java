@@ -13,4 +13,8 @@ public interface BookDAO {
 	public List<Book> bookResearch(String title) throws SQLException;
 	
 	public void createBook(Book book) throws SQLException;
+	
+	public void updateBook(Book book) throws SQLException;
+	
+	public void deleteBook(Book book) throws SQLException;
 }
