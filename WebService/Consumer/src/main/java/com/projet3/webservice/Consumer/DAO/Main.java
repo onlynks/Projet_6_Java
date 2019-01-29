@@ -47,7 +47,8 @@ public class Main {
 		
 		//borrowing creation
 		Borrowing borrowing = new Borrowing();
-		
+		LocalDate localDate = LocalDate.now();
+		Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 		System.out.print(LocalDate.now());
 		
 	}
