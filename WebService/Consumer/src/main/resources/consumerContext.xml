@@ -33,7 +33,11 @@
     
     <bean id="authorDAO" class="com.projet3.webservice.Consumer.DAO.AuthorDAOImpl"/>
     
+    <bean id="borrowingDAO" class="com.projet3.webservice.Consumer.DAO.BorrowingDAOImpl"/>
+    
     <bean id="publisherDAO" class="com.projet3.webservice.Consumer.DAO.PublisherDAOImpl"/>
+    
+    <bean id="userDAO" class="com.projet3.webservice.Consumer.DAO.UserDAOImpl"/>
     
     <bean id="roleDAO" class="com.projet3.webservice.Consumer.DAO.RoleDAOImpl"/>
     

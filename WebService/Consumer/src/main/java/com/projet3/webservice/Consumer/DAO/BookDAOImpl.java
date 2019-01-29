@@ -23,13 +23,23 @@ public class BookDAOImpl extends AbstractDAO implements BookDAO{
 	private PublisherDAO publisherDAO;
 	
 	@Override
-	public Book getBook(String title) throws SQLException {
+	public Book getBookByTitle(String title) throws SQLException {
 
 		String sql = "SELECT * FROM book WHERE title = :title";
 		SqlParameterSource namedParameters = new MapSqlParameterSource("title", title);
         
 		Book book = namedParameterTemplate.queryForObject(sql, namedParameters, new BookRowMapper(authorDAO, publisherDAO));		
 		return book;	
+	}
+	
+	@Override
+	public Book getBookById(int id) throws SQLException {
+		
+		String sql = "SELECT * FROM book WHERE book_id = :book_id";
+		SqlParameterSource namedParameters = new MapSqlParameterSource("book_id", id);
+        
+		Book book = namedParameterTemplate.queryForObject(sql, namedParameters, new BookRowMapper(authorDAO, publisherDAO));		
+		return book;
 	}
 
 	@Override

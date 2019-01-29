@@ -6,7 +6,9 @@ import java.util.List;
 import com.projet3.webservice.Model.beans.Book;
 
 public interface BookDAO {
-	public Book getBook(String title) throws SQLException;
+	public Book getBookByTitle(String title) throws SQLException;
+	
+	public Book getBookById(int id) throws SQLException;
 	
 	public List<Book> getBookList() throws SQLException;
 	

@@ -15,7 +15,7 @@ public class BookManagerImpl implements BookManager
 	
 	public Book getBook( String title ) throws SQLException
     {
-    	Book book = bookDAO.getBook(title);
+    	Book book = bookDAO.getBookByTitle(title);
         
         return book;
     }

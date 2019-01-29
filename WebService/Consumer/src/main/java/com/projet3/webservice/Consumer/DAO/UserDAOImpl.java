@@ -50,7 +50,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 
 	@Override
 	public void createUser(User user) throws SQLException {
-		String sql = "INSERT INTO user (first_name, last_name, adress, city, post_code, phone_number, id_role, password) VALUES (:first_name, :last_name, :adress, city, :post_code, :phone_number, :id_role, :password)";
+		String sql = "INSERT INTO user (first_name, last_name, adress, city, post_code, phone_number, id_role, password) VALUES (:first_name, :last_name, :adress, :city, :post_code, :phone_number, :id_role, :password)";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("first_name", user.getFirstName());
@@ -60,7 +60,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 		params.addValue("post_code", user.getPostCode());
 		params.addValue("phone_number", user.getPhoneNumber());
 		params.addValue("id_role", user.getRole().getId());
-		params.addValue("password", user.getId());
+		params.addValue("password", user.getPassword());
 		
 		namedParameterTemplate.update(sql, params);		
 		

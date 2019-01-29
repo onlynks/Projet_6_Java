@@ -8,7 +8,7 @@ public class User {
 	private String adress;
 	private String city;
 	private int postCode;
-	private int phoneNumber;
+	private String phoneNumber;
 	
 	public int getId() {
 		return id;
@@ -52,10 +52,10 @@ public class User {
 	public void setPostCode(int postCode) {
 		this.postCode = postCode;
 	}
-	public int getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	public Role getRole() {
