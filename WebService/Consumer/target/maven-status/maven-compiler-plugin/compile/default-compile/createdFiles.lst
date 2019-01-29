@@ -1,11 +1,17 @@
 com\projet3\webservice\Consumer\DAO\AuthorDAOImpl.class
 com\projet3\webservice\Consumer\DAO\BookDAO.class
 com\projet3\webservice\Consumer\RowMapper\PublisherRowMapper.class
+com\projet3\webservice\Consumer\RowMapper\UserRowMapper.class
+com\projet3\webservice\Consumer\RowMapper\RoleRowMapper.class
+com\projet3\webservice\Consumer\DAO\UserDAOImpl.class
 com\projet3\webservice\Consumer\DAO\AbstractDAO.class
 com\projet3\webservice\Consumer\RowMapper\AuthorRowMapper.class
 com\projet3\webservice\Consumer\DAO\AuthorDAO.class
 com\projet3\webservice\Consumer\DAO\BookDAOImpl.class
 com\projet3\webservice\Consumer\DAO\PublisherDAO.class
+com\projet3\webservice\Consumer\DAO\UserDAO.class
 com\projet3\webservice\Consumer\DAO\PublisherDAOImpl.class
 com\projet3\webservice\Consumer\RowMapper\BookRowMapper.class
 com\projet3\webservice\Consumer\DAO\Main.class
+com\projet3\webservice\Consumer\DAO\RoleDAO.class
+com\projet3\webservice\Consumer\DAO\RoleDAOImpl.class
