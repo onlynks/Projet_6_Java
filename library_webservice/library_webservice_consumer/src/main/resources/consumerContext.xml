@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
         
-    <context:component-scan base-package="com.projet3.webservice.Consumer.DAO"/>        
+    <context:component-scan base-package="com.projet3.library_webservice.library_webservice_consumer.DAO"/>        
 
     <bean id="dataSourceConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="location" value="classpath:/db-Projet_3.properties"/>
@@ -29,17 +29,17 @@
     	<constructor-arg ref="dataSource"/>
     </bean>
     
-    <bean id="bookDAO" class="com.projet3.webservice.Consumer.DAO.BookDAOImpl"/>
+    <bean id="bookDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.BookDAOImpl"/>
     
-    <bean id="authorDAO" class="com.projet3.webservice.Consumer.DAO.AuthorDAOImpl"/>
+    <bean id="authorDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.AuthorDAOImpl"/>
     
-    <bean id="borrowingDAO" class="com.projet3.webservice.Consumer.DAO.BorrowingDAOImpl"/>
+    <bean id="borrowingDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.BorrowingDAOImpl"/>
     
-    <bean id="publisherDAO" class="com.projet3.webservice.Consumer.DAO.PublisherDAOImpl"/>
+    <bean id="publisherDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.PublisherDAOImpl"/>
     
-    <bean id="userDAO" class="com.projet3.webservice.Consumer.DAO.UserDAOImpl"/>
+    <bean id="userDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.UserDAOImpl"/>
     
-    <bean id="roleDAO" class="com.projet3.webservice.Consumer.DAO.RoleDAOImpl"/>
+    <bean id="roleDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.RoleDAOImpl"/>
     
 
     

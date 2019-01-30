@@ -9,8 +9,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   
-  <groupId>com.project3.library_webservice</groupId>
-  <artifactId>library_webservice_Model</artifactId>
+  <artifactId>library_webservice_model</artifactId>
   
   <name>Model</name>
   
