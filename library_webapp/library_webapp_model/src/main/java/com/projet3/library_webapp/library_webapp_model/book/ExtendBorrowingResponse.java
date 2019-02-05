@@ -1,5 +1,5 @@
 
-package com.projet3.library_webapp.library_webapp_model;
+package com.projet3.library_webapp.library_webapp_model.book;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -7,12 +7,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour getBookList complex type.
+ * <p>Classe Java pour extendBorrowingResponse complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="getBookList">
+ * &lt;complexType name="extendBorrowingResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -25,8 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getBookList")
-public class GetBookList {
+@XmlType(name = "extendBorrowingResponse")
+public class ExtendBorrowingResponse {
 
 
 }

@@ -12,7 +12,7 @@ public interface BorrowingDAO {
 	
 	public Borrowing getBorrowingByBook(Book book) throws SQLException;
 	
-	public List<Borrowing> getBorrowingByUser(User user) throws SQLException;
+	public List<Integer> getBorrowingByUser(User user) throws SQLException;
 	
 	public void createBorrowing(Borrowing borrowing) throws SQLException;
 	

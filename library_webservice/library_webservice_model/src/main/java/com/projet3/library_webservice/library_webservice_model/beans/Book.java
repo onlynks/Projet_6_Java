@@ -5,8 +5,7 @@ public class Book {
 	private int id;
 	private String title;
 	private String description;
-	private int quantity;
-	private int maxQuantity;
+	private Boolean available;
 	private Author author;
 	private Publisher publisher;
 	
@@ -28,17 +27,11 @@ public class Book {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getQuantity() {
-		return quantity;
+	public Boolean getAvailable() {
+		return available;
 	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-	public int getMaxQuantity() {
-		return maxQuantity;
-	}
-	public void setMaxQuantity(int maxQuantity) {
-		this.maxQuantity = maxQuantity;
+	public void setAvailable(Boolean available) {
+		this.available = available;
 	}
 	public Author getAuthor() {
 		return author;

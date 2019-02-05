@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.projet3.library_webapp.library_webapp_business.interfaces.BookManager;
 import com.projet3.library_webapp.library_webapp_consumer.DAO.BookDAO;
-import com.projet3.library_webapp.library_webapp_model.Book;
+import com.projet3.library_webapp.library_webapp_model.book.Book;
 
 public class BookManagerImpl implements BookManager
 {

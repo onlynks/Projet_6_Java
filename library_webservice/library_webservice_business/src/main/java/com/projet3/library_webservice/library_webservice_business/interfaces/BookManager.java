@@ -14,4 +14,10 @@ public interface BookManager {
 	public List<Book> bookResearch(String title) throws SQLException;
 	
 	public void createBook(Book book) throws SQLException;
+	
+	public List<Book> getBorrowedBook(int  userId) throws SQLException;
+	
+	public void extendBorrowing(int bookId) throws SQLException;
+	
+	public void deleteBorrowing (int bookId) throws SQLException;
 }

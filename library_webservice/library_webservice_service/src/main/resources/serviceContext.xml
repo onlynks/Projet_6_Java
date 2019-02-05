@@ -10,8 +10,6 @@
     
     <bean name="bookManager" class="com.projet3.library_webservice.library_webservice_business.impl.BookManagerImpl"></bean>
     
-    <!-- <bean name="bookService" class="com.projet3.webservice.Service.BookService"></bean> -->
-    
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="com.projet3.library_webservice.library_webservice_service.AbstractBookService"/>
         <property name="targetMethod" value="setBookManager"/>

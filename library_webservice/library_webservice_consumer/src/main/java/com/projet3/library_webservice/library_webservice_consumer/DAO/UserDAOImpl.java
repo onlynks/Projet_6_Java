@@ -25,12 +25,13 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 	}
 
 	@Override
-	public User getUserByName(String firstName, String lastName) throws SQLException {
-		String sql = "SELECT * FROM user WHERE first_name = :first_name AND last_name = :last_name";
+	public User logIn(String firstName, String lastName, String password) throws SQLException {
+		String sql = "SELECT * FROM user WHERE first_name = :first_name AND last_name = :last_name AND password = :password";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("first_name", firstName);
 		params.addValue("last_name", lastName);
+		params.addValue("password", password);
         
 		User user = namedParameterTemplate.queryForObject(sql, params, new UserRowMapper(roleDAO));		
 		return user;

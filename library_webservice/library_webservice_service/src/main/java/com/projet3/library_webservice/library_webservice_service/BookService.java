@@ -5,30 +5,22 @@ import java.util.List;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.projet3.library_webservice.library_webservice_business.interfaces.BookManager;
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
 
 @WebService(serviceName="BookService")
 public class BookService extends AbstractBookService {
-
+/*
 	public static void main(String[] args) throws SQLException {
 	  
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
 	  BookService bookService = new BookService();
-	  List<Book> bookList = bookService.getBookList();
-	  //String description = book.getDescription();
-	  System.out.print(bookList);
 	  
-	 }
-	
-	public BookManager getBookManager() {
-		return bookManager;
-	}
-
+	  System.out.print(bookService.getUserBorrowing(2));
+	  
+	 }	
+*/
 
 	@WebMethod
 	public Book getBook(String title) {
@@ -49,11 +41,27 @@ public class BookService extends AbstractBookService {
 		try {
 			bookList = bookManager.getBookList();
 		} catch (SQLException e) {
-			e.printStackTrace();		}
-		
-		return bookList;
+			e.printStackTrace();
+		}
+			
+			return bookList;		
 	}
 	
+	@WebMethod
+	public List<Book> getUserBorrowing(int userId){
+		List<Book> bookList = null;
+		
+		try {
+			bookList = bookManager.getBorrowedBook(userId);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return bookList;
+		
+	}
+	
+	@WebMethod
 	public List<Book> bookResearch(String title){
 		List<Book> bookFound = null;
 		
@@ -66,6 +74,27 @@ public class BookService extends AbstractBookService {
 		
 	}
 	
+	@WebMethod
+	public void extendBorrowing(int bookId) {
+		try {
+			bookManager.extendBorrowing(bookId);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@WebMethod
+	public void deleteBorrowing(int bookId) {
+		
+		try {
+			bookManager.deleteBorrowing(bookId);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+		
 	public void createBook(Book book) {
 		try {
 			bookManager.createBook(book);

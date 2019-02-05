@@ -1,5 +1,5 @@
 
-package com.projet3.library_webapp.library_webapp_model;
+package com.projet3.library_webapp.library_webapp_model.book;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,14 +17,14 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "BookService", targetNamespace = "http://Service.webservice.projet3.com/", wsdlLocation = "http://localhost:8081/Services/BookService?wsdl")
+@WebServiceClient(name = "BookService", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", wsdlLocation = "http://localhost:8081/Services/BookService?wsdl")
 public class BookService_Service
     extends Service
 {
 
     private final static URL BOOKSERVICE_WSDL_LOCATION;
     private final static WebServiceException BOOKSERVICE_EXCEPTION;
-    private final static QName BOOKSERVICE_QNAME = new QName("http://Service.webservice.projet3.com/", "BookService");
+    private final static QName BOOKSERVICE_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "BookService");
 
     static {
         URL url = null;
@@ -69,7 +69,7 @@ public class BookService_Service
      */
     @WebEndpoint(name = "BookServicePort")
     public BookService getBookServicePort() {
-        return super.getPort(new QName("http://Service.webservice.projet3.com/", "BookServicePort"), BookService.class);
+        return super.getPort(new QName("http://library_webservice_service.library_webservice.projet3.com/", "BookServicePort"), BookService.class);
     }
 
     /**
@@ -81,7 +81,7 @@ public class BookService_Service
      */
     @WebEndpoint(name = "BookServicePort")
     public BookService getBookServicePort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://Service.webservice.projet3.com/", "BookServicePort"), BookService.class, features);
+        return super.getPort(new QName("http://library_webservice_service.library_webservice.projet3.com/", "BookServicePort"), BookService.class, features);
     }
 
     private static URL __getWsdlLocation() {

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 
+import com.projet3.library_webservice.library_webservice_consumer.RowMapper.BookRowMapper;
 import com.projet3.library_webservice.library_webservice_consumer.RowMapper.BorrowingRowMapper;
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
 import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
@@ -31,17 +32,19 @@ public class BorrowingDAOImpl extends AbstractDAO implements BorrowingDAO {
 	}
 
 	@Override
-	public List<Borrowing> getBorrowingByUser(User user) throws SQLException {
-		String sql = "SELECT * FROM user WHERE id_user = :id_user";
-		List<Borrowing> borrowingList = new ArrayList<Borrowing>();
+	public List<Integer> getBorrowingByUser(User user) throws SQLException {
+		String sql = "SELECT book_id FROM borrowing WHERE id_user = :id_user";
+		SqlParameterSource namedParameters = new MapSqlParameterSource("id_user", user.getId());
 		
-		borrowingList = template.query(sql, new BorrowingRowMapper(userDAO, bookDAO));
+		List<Integer> borrowingList = new ArrayList<Integer>();
+		
+		borrowingList = namedParameterTemplate.queryForList(sql, namedParameters, Integer.class);
 		return borrowingList;
 	}
 
 	@Override
 	public void createBorrowing(Borrowing borrowing) throws SQLException {
-		String sql = "INSERT INTO borrowing (beginning_date, ending_date, book_id, id_user) VALUES (:beginning_date, :ending_date, :book_id, :id_user)";
+		String sql = "INSERT INTO borrowing (ending_date, book_id, id_user) VALUES (:beginning_date, :ending_date, :book_id, :id_user)";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("beginning_date", borrowing.getBeginningDate());
@@ -54,14 +57,11 @@ public class BorrowingDAOImpl extends AbstractDAO implements BorrowingDAO {
 
 	@Override
 	public void updateBorrowing(Borrowing borrowing) throws SQLException {
-		String sql = "UPDATE borrowing SET beginning_date = :beginning_date, ending_date = :ending_date, book_id = :book_id, id_user = :id_user WHERE borrowing_id = :borrowing_id";
+		String sql = "UPDATE borrowing SET ending_date = :ending_date WHERE borrowing_id = :borrowing_id";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("borrowing_id", borrowing.getId());
-		params.addValue("beginning_date", borrowing.getBeginningDate());
 		params.addValue("ending_date", borrowing.getEndingDate());
-		params.addValue("book_id", borrowing.getBook().getId());
-		params.addValue("id_user", borrowing.getUser().getId());
 		
 		namedParameterTemplate.update(sql, params);		
 	}

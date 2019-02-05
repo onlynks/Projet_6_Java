@@ -63,13 +63,12 @@ public class BookDAOImpl extends AbstractDAO implements BookDAO{
 
 	@Override
 	public void createBook(Book book) {
-		String sql = "INSERT INTO book (title, description, quantity, max_quantity, author_id, publisher_id) VALUES (:title, :description, :quantity, :max_quantity, :author_id, :publisher_id)";
+		String sql = "INSERT INTO book (title, description, available, author_id, publisher_id) VALUES (:title, :description, :available, :author_id, :publisher_id)";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("title", book.getTitle());
 		params.addValue("description", book.getDescription());
-		params.addValue("quantity", book.getQuantity());
-		params.addValue("max_quantity", book.getMaxQuantity());
+		params.addValue("available", book.getAvailable());
 		params.addValue("author_id", book.getAuthor().getId());
 		params.addValue("publisher_id", book.getPublisher().getId());
 		
@@ -78,14 +77,13 @@ public class BookDAOImpl extends AbstractDAO implements BookDAO{
 
 	@Override
 	public void updateBook(Book book) throws SQLException {
-		String sql = "UPDATE book SET title = :title, description = :description, quantity = :quantity, max_quantity = :max_quantity, author_id = :author_id, publisher_id = :publisher_id WHERE book_id = :book_id";
+		String sql = "UPDATE book SET title = :title, description = :description, available = :available, author_id = :author_id, publisher_id = :publisher_id WHERE book_id = :book_id";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("book_id", book.getId());
 		params.addValue("title", book.getTitle());
 		params.addValue("description", book.getDescription());
-		params.addValue("quantity", book.getQuantity());
-		params.addValue("max_quantity", book.getMaxQuantity());
+		params.addValue("available", book.getAvailable());
 		params.addValue("author_id", book.getAuthor().getId());
 		params.addValue("publisher_id", book.getPublisher().getId());
 		

@@ -1,5 +1,5 @@
 
-package com.projet3.library_webapp.library_webapp_model;
+package com.projet3.library_webapp.library_webapp_model.book;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour getBookListResponse complex type.
+ * <p>Classe Java pour getUserBorrowingResponse complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="getBookListResponse">
+ * &lt;complexType name="getUserBorrowingResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://Service.webservice.projet3.com/}book" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://library_webservice_service.library_webservice.projet3.com/}book" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,10 +29,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getBookListResponse", propOrder = {
+@XmlType(name = "getUserBorrowingResponse", propOrder = {
     "_return"
 })
-public class GetBookListResponse {
+public class GetUserBorrowingResponse {
 
     @XmlElement(name = "return")
     protected List<Book> _return;

@@ -7,8 +7,8 @@ import com.projet3.library_webservice.library_webservice_model.beans.User;
 
 public interface UserDAO {
 	public User getUserById(int id) throws SQLException;
-	
-	public User getUserByName(String firstName, String lastName) throws SQLException;
+		
+	public User logIn(String firstName, String lastName, String password) throws SQLException;
 	
 	public List<User> getUserList() throws SQLException;
 	

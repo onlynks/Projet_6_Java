@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.projet3.library_webapp.library_webapp_model.Book;
+import com.projet3.library_webapp.library_webapp_model.book.Book;
 
 
 @Controller

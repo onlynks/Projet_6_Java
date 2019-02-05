@@ -28,18 +28,34 @@
         <version>2.5</version>
         <executions>
           <execution>
+          	<id>bookService</id>
             <goals>
               <goal>wsimport</goal>
             </goals>
+            <configuration>
+	          	<packageName>com.projet3.library_webapp.library_webapp_model.book</packageName>
+	          	<sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
+	          	<wsdlUrls>
+	          		<wsdlUrl>http://localhost:8081/Services/BookService?wsdl</wsdlUrl>
+	          	</wsdlUrls>
+        	</configuration>
           </execution>
+
+          <execution>
+          	<id>userService</id>
+            <goals>
+              <goal>wsimport</goal>
+            </goals>
+            <configuration>
+	          	<packageName>com.projet3.library_webapp.library_webapp_model.user</packageName>
+	          	<sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
+	          	<wsdlUrls>
+	          		<wsdlUrl>http://localhost:8081/Services/UserService?wsdl</wsdlUrl>
+	          	</wsdlUrls>
+        	</configuration>
+          </execution>          
         </executions>
-        <configuration>
-          <packageName>com.projet3.library_webapp.library_webapp_model</packageName>
-          <sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
-          <wsdlUrls>
-          	<wsdlUrl>http://localhost:8081/Services/BookService?wsdl</wsdlUrl>
-          </wsdlUrls>
-        </configuration>
+        
 	  </plugin>
 	</plugins>
   </build>	  

@@ -8,7 +8,7 @@ public abstract class AbstractBookService {
 
 	public static void setBookManager(BookManager bookManager) {
 		AbstractBookService.bookManager = bookManager;
-	}	
+	}
 	
 
 }

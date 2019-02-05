@@ -28,8 +28,7 @@ public class BookRowMapper implements RowMapper<Book>{
 		book.setId(rs.getInt("book_id"));
 		book.setTitle(rs.getString("title"));
 		book.setDescription(rs.getString("description"));
-		book.setQuantity(rs.getInt("quantity"));
-		book.setMaxQuantity(rs.getInt("max_quantity"));
+		book.setAvailable(rs.getBoolean("available"));
 		
 		if(rs.getInt("author_id") != 0) {
 			book.setAuthor(authorDAO.getAuthorByID(rs.getInt("author_id")));
