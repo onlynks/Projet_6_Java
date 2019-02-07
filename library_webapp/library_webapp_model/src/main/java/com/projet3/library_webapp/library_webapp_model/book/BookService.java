@@ -45,61 +45,10 @@ public interface BookService {
      * @param arg0
      */
     @WebMethod
-    @RequestWrapper(localName = "createBook", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.CreateBook")
-    @ResponseWrapper(localName = "createBookResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.CreateBookResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/createBookRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/createBookResponse")
-    public void createBook(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Book arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<com.projet3.library_webapp.library_webapp_model.book.Book>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getBookList", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBookList")
-    @ResponseWrapper(localName = "getBookListResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBookListResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookListRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookListResponse")
-    public List<Book> getBookList();
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns com.projet3.library_webapp.library_webapp_model.book.Book
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getBook", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBook")
-    @ResponseWrapper(localName = "getBookResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBookResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookResponse")
-    public Book getBook(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
     @RequestWrapper(localName = "extendBorrowing", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.ExtendBorrowing")
     @ResponseWrapper(localName = "extendBorrowingResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.ExtendBorrowingResponse")
     @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/extendBorrowingRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/extendBorrowingResponse")
     public void extendBorrowing(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "deleteBorrowing", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.DeleteBorrowing")
-    @ResponseWrapper(localName = "deleteBorrowingResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.DeleteBorrowingResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/deleteBorrowingRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/deleteBorrowingResponse")
-    public void deleteBorrowing(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
 
@@ -117,5 +66,56 @@ public interface BookService {
     public List<Book> getUserBorrowing(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "createBook", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.CreateBook")
+    @ResponseWrapper(localName = "createBookResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.CreateBookResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/createBookRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/createBookResponse")
+    public void createBook(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Book arg0);
+
+    /**
+     * 
+     * @return
+     *     returns com.projet3.library_webapp.library_webapp_model.book.MapWrapper
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getBookList", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBookList")
+    @ResponseWrapper(localName = "getBookListResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBookListResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookListRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookListResponse")
+    public MapWrapper getBookList();
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "deleteBorrowing", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.DeleteBorrowing")
+    @ResponseWrapper(localName = "deleteBorrowingResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.DeleteBorrowingResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/deleteBorrowingRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/deleteBorrowingResponse")
+    public void deleteBorrowing(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns com.projet3.library_webapp.library_webapp_model.book.Book
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getBook", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBook")
+    @ResponseWrapper(localName = "getBookResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBookResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookResponse")
+    public Book getBook(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
 
 }

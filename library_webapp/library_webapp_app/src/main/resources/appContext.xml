@@ -16,6 +16,14 @@
         <property name="targetClass" value="com.projet3.library_webapp.library_webapp_app.AbstractBookController"/>
         <property name="targetMethod" value="setBookManager"/>
         <property name="arguments" ref="bookManager"/>
+    </bean>
+    
+    <bean name="userManager" class="com.projet3.library_webapp.library_webapp_business.impl.UserManagerImpl"></bean>
+        
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="com.projet3.library_webapp.library_webapp_app.AbstractUserController"/>
+        <property name="targetMethod" value="setUserManager"/>
+        <property name="arguments" ref="userManager"/>
     </bean> 
 
 

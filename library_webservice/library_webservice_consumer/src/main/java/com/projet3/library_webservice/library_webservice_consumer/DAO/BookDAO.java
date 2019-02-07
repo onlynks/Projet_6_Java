@@ -20,4 +20,6 @@ public interface BookDAO {
 	public void updateBook(Book book) throws SQLException;
 	
 	public void deleteBook(Book book) throws SQLException;
+	
+	public int countBook(String title) throws SQLException;
 }

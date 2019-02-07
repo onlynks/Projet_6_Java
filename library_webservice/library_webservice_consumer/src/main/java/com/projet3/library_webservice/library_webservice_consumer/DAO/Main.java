@@ -11,6 +11,7 @@ import java.util.List;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.projet3.library_webservice.library_webservice_model.beans.Book;
 import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
 import com.projet3.library_webservice.library_webservice_model.beans.Role;
 import com.projet3.library_webservice.library_webservice_model.beans.User;
@@ -27,6 +28,16 @@ public class Main {
 		UserDAO userDAO = (UserDAO) context.getBean("userDAO");
 		BorrowingDAO borrowingDAO = (BorrowingDAO) context.getBean("borrowingDAO");
 		RoleDAO roleDAO = (RoleDAO) context.getBean("roleDAO");
+		
+		//book creation
+		Book book = new Book();
+		book.setTitle("Harry Potter et le Prisonnier d'Azkaban");
+		book.setDescription("Harry Potter et le Prisonnier d'Azkaban est le troisième roman de la série littéraire centrée sur le personnage de Harry Potter créé par J. K. Rowling. Il a été publié le 19 octobre 1999 en France.");
+		book.setAuthor(authorDAO.getAuthorByID(1));
+		book.setPublisher(publisherDAO.getPublisherByID(4));
+		book.setAvailable(true);
+		
+		//bookDAO.createBook(book);
 		
 		//role creation
 		Role role = new Role();
@@ -57,7 +68,7 @@ public class Main {
 		borrowing.setBeginningDate(dateBeginnng);
 		borrowing.setEndingDate(dateEnding);
 		borrowing.setBook(bookDAO.getBookById(26));
-		borrowing.setUser(userDAO.logIn("Nicolas", "Garnier", "passwordTest"));
+		//borrowing.setUser(userDAO.logIn("Nicolas", "Garnier", "passwordTest"));
 		//borrowingDAO.createBorrowing(borrowing);
 		
 		//borrowing update
@@ -72,8 +83,7 @@ public class Main {
 		
 		borrowingToUpdate.setEndingDate(updatedDate);
 		//borrowingDAO.updateBorrowing(borrowingToUpdate);
-		System.out.println(userDAO.logIn("Nicolas", "Garnier", "passwordTest").getAdress());
-		
+		System.out.println(bookDAO.countBook("Harry Potter et le Prisonnier d'Azkaban"));
 	}
 
 }

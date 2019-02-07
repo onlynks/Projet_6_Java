@@ -4,15 +4,10 @@ import com.projet3.library_webapp.library_webapp_model.book.BookService;
 
 public abstract class AbstractBookDAO {
 	
-	protected static BookService serviceConnection;
+	protected static BookService bookServiceConnection;
 
-	public static void setServiceConnection(BookService serviceConnection) {
-		AbstractBookDAO.serviceConnection = serviceConnection;
-	}
-	
-
-
-	
-	
+	public static void setBookServiceConnection(BookService serviceConnection) {
+		AbstractBookDAO.bookServiceConnection = serviceConnection;
+	}	
 
 }

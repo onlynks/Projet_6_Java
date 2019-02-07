@@ -10,17 +10,30 @@
         
     <context:component-scan base-package="com.projet3.library_webapp.library_webapp_consumer"/>
     
-    <bean id="serviceCall" class="com.projet3.library_webapp.library_webapp_model.book.BookService_Service"/>
+    <bean id="bookServiceCall" class="com.projet3.library_webapp.library_webapp_model.book.BookService_Service"/>
     
-    <bean id="serviceConnection"
+    <bean id="bookServiceConnection"
 	  class="com.projet3.library_webapp.library_webapp_model.book.BookService_Service"
-	  factory-method="getBookServicePort" factory-bean="serviceCall">
+	  factory-method="getBookServicePort" factory-bean="bookServiceCall">
 	</bean>
 	
 	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="com.projet3.library_webapp.library_webapp_consumer.DAO.AbstractBookDAO"/>
-        <property name="targetMethod" value="setServiceConnection"/>
-        <property name="arguments" ref="serviceConnection"/>
+        <property name="targetMethod" value="setBookServiceConnection"/>
+        <property name="arguments" ref="bookServiceConnection"/>
+    </bean>
+    
+    <bean id="userServiceCall" class="com.projet3.library_webapp.library_webapp_model.user.UserService_Service"/>
+    
+    <bean id="userServiceConnection"
+	  class="com.projet3.library_webapp.library_webapp_model.user.UserService_Service"
+	  factory-method="getUserServicePort" factory-bean="userServiceCall">
+	</bean>
+    
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="com.projet3.library_webapp.library_webapp_consumer.DAO.AbstractUserDAO"/>
+        <property name="targetMethod" value="setUserServiceConnection"/>
+        <property name="arguments" ref="userServiceConnection"/>
     </bean>
 
 

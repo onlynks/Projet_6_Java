@@ -4,7 +4,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -34,10 +36,23 @@ public class BookManagerImpl implements BookManager
     }
 
 	@Override
-	public List<Book> getBookList() throws SQLException {
+	public Map<Book, Integer> getBookList() throws SQLException {
 		List<Book> bookList = bookDAO.getBookList();
 		
-		return bookList;
+		List<String>bookTitles = new ArrayList<String>();
+		Map<Book,Integer> bookWithQuantity = new HashMap<Book,Integer>();
+		
+		
+		for(int i=0; i<bookList.size(); i++)  {
+			if(bookTitles.contains(bookList.get(i).getTitle())) {
+				bookList.remove(bookList.get(i));
+				i--;
+			}
+			bookTitles.add(bookList.get(i).getTitle());
+			bookWithQuantity.put(bookList.get(i), bookDAO.countBook(bookList.get(i).getTitle()));
+		}
+		
+		return bookWithQuantity;
 	}
 
 	@Override

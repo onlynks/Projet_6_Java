@@ -100,6 +100,16 @@ public class BookDAOImpl extends AbstractDAO implements BookDAO{
 		namedParameterTemplate.update(sql, params);
 		
 	}
+
+	@Override
+	public int countBook(String title) throws SQLException {
+		String sql = "SELECT COUNT(*) FROM book WHERE title = :title AND available = 1";
+		
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("title", title);
+		
+		return namedParameterTemplate.queryForObject(sql, params, Integer.class);
+	}
 	
 	
 

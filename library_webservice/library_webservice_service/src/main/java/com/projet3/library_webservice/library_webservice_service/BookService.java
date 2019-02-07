@@ -1,26 +1,36 @@
 package com.projet3.library_webservice.library_webservice_service;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
 
 @WebService(serviceName="BookService")
 public class BookService extends AbstractBookService {
-/*
+	
 	public static void main(String[] args) throws SQLException {
-	  
+	  /*
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
 	  BookService bookService = new BookService();
 	  
-	  System.out.print(bookService.getUserBorrowing(2));
+	  Map<Book,Integer>bookList = bookService.getBookList();
 	  
+	  for (Map.Entry<Book, Integer> entry : bookList.entrySet())
+	  {
+	      System.out.println(entry.getKey().getTitle() + "/" + entry.getValue() + entry.getKey().getAvailable());
+	  }
+	  */
 	 }	
-*/
+
 
 	@WebMethod
 	public Book getBook(String title) {
@@ -35,16 +45,18 @@ public class BookService extends AbstractBookService {
 	}
 	
 	@WebMethod
-	public List<Book> getBookList(){
-		List<Book> bookList = null;
+	public MapWrapper getBookList(){
+		
+		MapWrapper mapWrapper = null;
 		
 		try {
-			bookList = bookManager.getBookList();
+			mapWrapper = new MapWrapper();
+			mapWrapper.setBookMap(bookManager.getBookList());
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 			
-			return bookList;		
+		return mapWrapper;		
 	}
 	
 	@WebMethod
