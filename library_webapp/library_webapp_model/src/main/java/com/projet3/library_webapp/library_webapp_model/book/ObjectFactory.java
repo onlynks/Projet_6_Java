@@ -47,22 +47,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link MapWrapper }
-     * 
-     */
-    public MapWrapper createMapWrapper() {
-        return new MapWrapper();
-    }
-
-    /**
-     * Create an instance of {@link MapWrapper.BookMap }
-     * 
-     */
-    public MapWrapper.BookMap createMapWrapperBookMap() {
-        return new MapWrapper.BookMap();
-    }
-
-    /**
      * Create an instance of {@link DeleteBorrowingResponse }
      * 
      */
@@ -175,6 +159,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Role }
+     * 
+     */
+    public Role createRole() {
+        return new Role();
+    }
+
+    /**
      * Create an instance of {@link Author }
      * 
      */
@@ -199,11 +191,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link MapWrapper.BookMap.Entry }
+     * Create an instance of {@link Borrowing }
      * 
      */
-    public MapWrapper.BookMap.Entry createMapWrapperBookMapEntry() {
-        return new MapWrapper.BookMap.Entry();
+    public Borrowing createBorrowing() {
+        return new Borrowing();
+    }
+
+    /**
+     * Create an instance of {@link User }
+     * 
+     */
+    public User createUser() {
+        return new User();
     }
 
     /**

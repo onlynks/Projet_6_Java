@@ -2,7 +2,9 @@ package com.projet3.library_webservice.library_webservice_consumer.DAO;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
@@ -32,13 +34,13 @@ public class BorrowingDAOImpl extends AbstractDAO implements BorrowingDAO {
 	}
 
 	@Override
-	public List<Integer> getBorrowingByUser(User user) throws SQLException {
-		String sql = "SELECT book_id FROM borrowing WHERE id_user = :id_user";
+	public List<Borrowing> getBorrowingByUser(User user) throws SQLException {
+		String sql = "SELECT * FROM borrowing WHERE id_user = :id_user";
 		SqlParameterSource namedParameters = new MapSqlParameterSource("id_user", user.getId());
 		
-		List<Integer> borrowingList = new ArrayList<Integer>();
+		List<Borrowing> borrowingList = new ArrayList<Borrowing>();
 		
-		borrowingList = namedParameterTemplate.queryForList(sql, namedParameters, Integer.class);
+		borrowingList = namedParameterTemplate.query(sql, namedParameters, new BorrowingRowMapper(userDAO, bookDAO));
 		return borrowingList;
 	}
 
@@ -57,7 +59,7 @@ public class BorrowingDAOImpl extends AbstractDAO implements BorrowingDAO {
 
 	@Override
 	public void updateBorrowing(Borrowing borrowing) throws SQLException {
-		String sql = "UPDATE borrowing SET ending_date = :ending_date WHERE borrowing_id = :borrowing_id";
+		String sql = "UPDATE borrowing SET ending_date = :ending_date, extended = 1 WHERE borrowing_id = :borrowing_id";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("borrowing_id", borrowing.getId());
@@ -76,6 +78,5 @@ public class BorrowingDAOImpl extends AbstractDAO implements BorrowingDAO {
 		namedParameterTemplate.update(sql, params);
 		
 	}
-
 
 }

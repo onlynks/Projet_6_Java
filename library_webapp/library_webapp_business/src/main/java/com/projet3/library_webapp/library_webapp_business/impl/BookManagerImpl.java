@@ -1,30 +1,40 @@
 package com.projet3.library_webapp.library_webapp_business.impl;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.projet3.library_webapp.library_webapp_business.interfaces.BookManager;
+import com.projet3.library_webapp.library_webapp_business.interfaces.UserManager;
 import com.projet3.library_webapp.library_webapp_consumer.DAO.BookDAO;
+import com.projet3.library_webapp.library_webapp_consumer.DAO.UserDAO;
 import com.projet3.library_webapp.library_webapp_model.book.Book;
+import com.projet3.library_webapp.library_webapp_model.book.Borrowing;
+import com.projet3.library_webapp.library_webapp_model.user.User;
 
 public class BookManagerImpl implements BookManager
 {
 	@Autowired
 	private BookDAO bookDAO;
 	
-	public Book getBook( String title ) {
-    	Book book = bookDAO.getBook(title);
+	public Book getBook( int id ) {
+    	Book book = bookDAO.getBook(id);
         
         return book;
     }
 	
 	public Map<Book,Integer> getBookList() {
 	
-		return bookDAO.getBookList();
+		Map<Book,Integer> booksAndQuantities = this.getListQuantity(bookDAO.getBookList());
+		return booksAndQuantities;
 	}
 
 	public Map<Book,Integer> bookResearch(String title) {
@@ -32,6 +42,32 @@ public class BookManagerImpl implements BookManager
 		Map<Book,Integer> bookFoundQuantity = this.getListQuantity(bookFound);
 		
 		return bookFoundQuantity;
+	}
+	
+	public Map<Borrowing,Map<String,String>> getUserBorrowing(User user) {
+		List<Borrowing> borrowedBooks = bookDAO.getUserBorrowing(user.getId());
+		Map<Borrowing,Map<String,String>> userBorrrowingswithDates = new HashMap<Borrowing,Map<String,String>>();
+		DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		
+		for(int i=0;i<borrowedBooks.size();i++) {
+;
+			Map<String,String> borrowingDates = new HashMap<String,String>();
+			
+			String beginningDate = formatter.format(borrowedBooks.get(i).getBeginningDate().toGregorianCalendar().getTime());
+			String endingDate = formatter.format(borrowedBooks.get(i).getEndingDate().toGregorianCalendar().getTime());			
+			
+			borrowingDates.put("Beginning", beginningDate);
+			borrowingDates.put("Ending", endingDate);
+			
+			userBorrrowingswithDates.put(borrowedBooks.get(i), borrowingDates);			
+		}
+		
+		return userBorrrowingswithDates;
+	}
+	
+	public void extendBorrowing(int borrowingId) {
+		bookDAO.extendBorrowing(borrowingId);
+		
 	}
 
 	private Map<Book,Integer> getListQuantity(List<Book> bookList) {
@@ -63,5 +99,7 @@ public class BookManagerImpl implements BookManager
 		return booksAndQuantities;
 		
 	}
+
+		
   
 }

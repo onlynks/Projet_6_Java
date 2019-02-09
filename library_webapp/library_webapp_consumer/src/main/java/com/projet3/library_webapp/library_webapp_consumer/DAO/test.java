@@ -13,13 +13,7 @@ public class test {
 
 		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/consumerContext.xml");
 		
-		BookDAO bookDAO = new BookDAOImpl();
-		
-		Map<Book, Integer> test = bookDAO.getBookList();
-		
-		for (Map.Entry<Book, Integer> entry : test.entrySet()) {
-	        System.out.println(entry.getKey() + ":" + entry.getValue());
-	    }
+	    
 
 	}
 

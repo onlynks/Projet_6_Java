@@ -27,9 +27,12 @@
       <li class="nav-item">
         <a class="nav-link" href="bookList">Livres</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Auteurs</a>
-      </li>
+      <c:if test = "${!empty sessionScope.user}">
+	      <li class="nav-item">
+	      	<a class="nav-link" href="userBorrowing">Mes emprunts</a>
+	      </li>
+      </c:if>
+      
     </ul>
     
     <form method="post" action="bookResearch" class="form-inline">

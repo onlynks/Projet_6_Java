@@ -32,7 +32,8 @@ public class BorrowingRowMapper implements RowMapper<Borrowing>{
 		}
 		if(rs.getInt("id_user") != 0) {
 			borrowing.setUser(userDAO.getUserById(rs.getInt("id_user")));
-		}		
+		}
+		borrowing.setExtended(rs.getBoolean("extended"));
  
         return borrowing;
 	}

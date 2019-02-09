@@ -28,31 +28,18 @@ public class BookManagerImpl implements BookManager
 	@Autowired
 	private UserDAO userDAO;
 	
-	public Book getBook( String title ) throws SQLException
+	public Book getBook( int id ) throws SQLException
     {
-    	Book book = bookDAO.getBookByTitle(title);
+    	Book book = bookDAO.getBookById(id);
         
         return book;
     }
 
 	@Override
-	public Map<Book, Integer> getBookList() throws SQLException {
+	public List<Book> getBookList() throws SQLException {
 		List<Book> bookList = bookDAO.getBookList();
 		
-		List<String>bookTitles = new ArrayList<String>();
-		Map<Book,Integer> bookWithQuantity = new HashMap<Book,Integer>();
-		
-		
-		for(int i=0; i<bookList.size(); i++)  {
-			if(bookTitles.contains(bookList.get(i).getTitle())) {
-				bookList.remove(bookList.get(i));
-				i--;
-			}
-			bookTitles.add(bookList.get(i).getTitle());
-			bookWithQuantity.put(bookList.get(i), bookDAO.countBook(bookList.get(i).getTitle()));
-		}
-		
-		return bookWithQuantity;
+		return bookList;
 	}
 
 	@Override
@@ -69,24 +56,11 @@ public class BookManagerImpl implements BookManager
 	}
 	
 	@Override
-	public List<Book> getBorrowedBook(int userId) throws SQLException {
+	public List<Borrowing> getBorrowings(int userId) throws SQLException {
 		
-		List<Integer> borrowedBook = borrowingDAO.getBorrowingByUser(userDAO.getUserById(userId));
-		List<Book> bookList = new ArrayList<Book>();
+		List<Borrowing> borrowingList = borrowingDAO.getBorrowingByUser(userDAO.getUserById(userId));
 		
-		for (int i = 0; i < borrowedBook.size(); i++) {
-			bookList.add(bookDAO.getBookById(borrowedBook.get(i)));
-		}
-		/*
-		borrowedBook.forEach((bookId) -> {
-			try {
-				bookList.add(bookDAO.getBookById(bookId));
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		});
-		*/
-		return bookList;		
+		return borrowingList;		
 	}
 
 	@Override

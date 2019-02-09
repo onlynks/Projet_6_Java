@@ -1,30 +1,21 @@
 package com.projet3.library_webapp.library_webapp_consumer.DAO;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.projet3.library_webapp.library_webapp_model.book.Book;
-import com.projet3.library_webapp.library_webapp_model.book.MapWrapper;
-import com.projet3.library_webapp.library_webapp_model.book.MapWrapper.BookMap.Entry;
+import com.projet3.library_webapp.library_webapp_model.book.Borrowing;
 
 public class BookDAOImpl extends AbstractBookDAO implements BookDAO {
 
-	public Book getBook(String title) {
-		Book book = bookServiceConnection.getBook(title);
+	public Book getBook(int id) {
+		Book book = bookServiceConnection.getBook(id);
 		
 		return book;
 	}
 
-	public Map<Book, Integer> getBookList() {
-		Map<Book, Integer> bookList = new HashMap<Book, Integer>();		
-		MapWrapper mapWrapper = bookServiceConnection.getBookList();
+	public List<Book> getBookList() {
 		
-		List<Entry> entries = mapWrapper.getBookMap().getEntry();
-		
-		for(int i = 0; i<entries.size();i++) {
-			bookList.put(entries.get(i).getKey(), entries.get(i).getValue());
-		}
+		List<Book> bookList =  bookServiceConnection.getBookList();
 		
 		return bookList;
 	}
@@ -33,6 +24,15 @@ public class BookDAOImpl extends AbstractBookDAO implements BookDAO {
 		
 		List<Book> bookFound = bookServiceConnection.bookResearch(title);
 		return bookFound;
+	}
+
+	public List<Borrowing> getUserBorrowing(int userId) {
+		List<Borrowing> bookFound = bookServiceConnection.getUserBorrowing(userId);
+		return bookFound;
+	}
+
+	public void extendBorrowing(int borrowingId) {
+		bookServiceConnection.extendBorrowing(borrowingId);		
 	}
 
 }

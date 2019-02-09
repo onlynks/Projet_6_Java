@@ -8,6 +8,7 @@ public class Borrowing {
 	private Date endingDate;
 	private Book book;
 	private User user;
+	private boolean extended;
 	
 	public int getId() {
 		return id;
@@ -38,6 +39,12 @@ public class Borrowing {
 	}
 	public void setUser(User user) {
 		this.user = user;
+	}
+	public Boolean getExtended() {
+		return extended;
+	}
+	public void setExtended(Boolean extended) {
+		this.extended = extended;
 	}
 	
 

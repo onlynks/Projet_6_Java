@@ -12,6 +12,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
+import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
 
 @WebService(serviceName="BookService")
 public class BookService extends AbstractBookService {
@@ -33,11 +34,11 @@ public class BookService extends AbstractBookService {
 
 
 	@WebMethod
-	public Book getBook(String title) {
+	public Book getBook(int id) {
 
 		Book book = null;
 		try {
-			book = bookManager.getBook(title);
+			book = bookManager.getBook(id);
 		} catch (SQLException e) {
 			e.printStackTrace();		}
 		
@@ -45,26 +46,25 @@ public class BookService extends AbstractBookService {
 	}
 	
 	@WebMethod
-	public MapWrapper getBookList(){
+	public List<Book> getBookList(){
 		
-		MapWrapper mapWrapper = null;
+		List<Book> bookList = null;
 		
 		try {
-			mapWrapper = new MapWrapper();
-			mapWrapper.setBookMap(bookManager.getBookList());
+			bookList = bookManager.getBookList();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 			
-		return mapWrapper;		
+		return bookList;		
 	}
 	
 	@WebMethod
-	public List<Book> getUserBorrowing(int userId){
-		List<Book> bookList = null;
+	public List<Borrowing> getUserBorrowing(int userId){
+		List<Borrowing> bookList = null;
 		
 		try {
-			bookList = bookManager.getBorrowedBook(userId);
+			bookList = bookManager.getBorrowings(userId);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

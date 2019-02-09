@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://library_webservice_service.library_webservice.projet3.com/}book" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://library_webservice_service.library_webservice.projet3.com/}borrowing" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
 public class GetUserBorrowingResponse {
 
     @XmlElement(name = "return")
-    protected List<Book> _return;
+    protected List<Borrowing> _return;
 
     /**
      * Gets the value of the return property.
@@ -55,13 +55,13 @@ public class GetUserBorrowingResponse {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Book }
+     * {@link Borrowing }
      * 
      * 
      */
-    public List<Book> getReturn() {
+    public List<Borrowing> getReturn() {
         if (_return == null) {
-            _return = new ArrayList<Book>();
+            _return = new ArrayList<Borrowing>();
         }
         return this._return;
     }
