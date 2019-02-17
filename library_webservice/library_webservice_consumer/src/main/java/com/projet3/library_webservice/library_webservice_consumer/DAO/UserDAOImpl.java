@@ -7,6 +7,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import com.projet3.library_webservice.library_webservice_consumer.RowMapper.UserRowMapper;
 import com.projet3.library_webservice.library_webservice_model.beans.User;
 
@@ -14,6 +17,9 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 	
 	@Autowired
 	private RoleDAO roleDAO;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 
 	@Override
 	public User getUserById(int id) throws SQLException {
@@ -26,15 +32,19 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 
 	@Override
 	public User logIn(String firstName, String lastName, String password) throws SQLException {
-		String sql = "SELECT * FROM user WHERE first_name = :first_name AND last_name = :last_name AND password = :password";
+		String sql = "SELECT * FROM user WHERE first_name = :first_name AND last_name = :last_name";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("first_name", firstName);
 		params.addValue("last_name", lastName);
-		params.addValue("password", password);
-        
-		User user = namedParameterTemplate.queryForObject(sql, params, new UserRowMapper(roleDAO));		
-		return user;
+        		
+		User user = namedParameterTemplate.queryForObject(sql, params, new UserRowMapper(roleDAO));
+		
+		if(passwordEncoder.matches(password, user.getPassword())) {			
+			return user;
+		}else {
+			return null;
+		}
 	}
 
 	@Override
@@ -58,7 +68,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 		params.addValue("post_code", user.getPostCode());
 		params.addValue("phone_number", user.getPhoneNumber());
 		params.addValue("id_role", user.getRole().getId());
-		params.addValue("password", user.getPassword());
+		params.addValue("password", passwordEncoder.encode(user.getPassword()));
 		
 		namedParameterTemplate.update(sql, params);		
 		
@@ -77,7 +87,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 		params.addValue("post_code", user.getPostCode());
 		params.addValue("phone_number", user.getPhoneNumber());
 		params.addValue("id_role", user.getRole().getId());
-		params.addValue("password", user.getId());
+		params.addValue("password", passwordEncoder.encode(user.getPassword()));
 		
 		namedParameterTemplate.update(sql, params);	
 		

@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -16,14 +17,21 @@ public class UserController extends AbstractUserController{
 	public String logIn(@RequestParam("firstName") String firstName,
 						@RequestParam("lastName") String lastName,
 						@RequestParam("password") String password,
-						HttpServletRequest request) {
+						HttpServletRequest request,
+						Model model) {
 		
-		User user = userManager.logIn(firstName, lastName, password);
 		
 		HttpSession session = request.getSession();
-        session.setAttribute("user", user);
-		
-		return "index";		
+		try {	
+			User user = userManager.logIn(firstName, lastName, password);
+	        session.setAttribute("user", user);	
+			return "index";
+			
+		} catch(Exception e) {
+			model.addAttribute("error", "Erreur lors de l'authentification");
+			return "index";
+		}
+				
 	}
 	
 	@RequestMapping("/logOut")

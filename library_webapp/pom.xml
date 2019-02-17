@@ -37,6 +37,11 @@
 	  		<version>0.0.1-SNAPSHOT</version>
   		</dependency>
   		<dependency>
+	  		<groupId>com.projet3.library_webapp</groupId>
+	  		<artifactId>library_webapp_batch</artifactId>
+	  		<version>0.0.1-SNAPSHOT</version>
+  		</dependency>
+  		<dependency>
 	        <groupId>org.springframework</groupId>
 	        <artifactId>spring-framework-bom</artifactId>
 	        <version>${spring.version}</version>
@@ -52,6 +57,7 @@
     <module>library_webapp_business</module>
     <module>library_webapp_consumer</module>
     <module>library_webapp_model</module>
+    <module>library_webapp_batch</module>
   </modules>
   
 </project>

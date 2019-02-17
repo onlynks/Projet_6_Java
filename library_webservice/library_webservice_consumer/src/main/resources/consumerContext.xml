@@ -29,6 +29,8 @@
     	<constructor-arg ref="dataSource"/>
     </bean>
     
+    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+    
     <bean id="bookDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.BookDAOImpl"/>
     
     <bean id="authorDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.AuthorDAOImpl"/>

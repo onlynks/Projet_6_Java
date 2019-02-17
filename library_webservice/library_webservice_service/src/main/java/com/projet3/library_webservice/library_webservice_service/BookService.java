@@ -16,9 +16,9 @@ import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
 
 @WebService(serviceName="BookService")
 public class BookService extends AbstractBookService {
-	
+	/*
 	public static void main(String[] args) throws SQLException {
-	  /*
+	  
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
 	  BookService bookService = new BookService();
@@ -29,9 +29,9 @@ public class BookService extends AbstractBookService {
 	  {
 	      System.out.println(entry.getKey().getTitle() + "/" + entry.getValue() + entry.getKey().getAvailable());
 	  }
-	  */
+	  
 	 }	
-
+*/
 
 	@WebMethod
 	public Book getBook(int id) {

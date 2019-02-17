@@ -17,6 +17,7 @@ import com.projet3.library_webservice.library_webservice_model.beans.Role;
 import com.projet3.library_webservice.library_webservice_model.beans.User;
 
 
+
 public class Main {
 
 	public static void main(String[] args) throws SQLException {
@@ -53,7 +54,7 @@ public class Main {
 		user.setPostCode(91510);
 		user.setPhoneNumber("0637517428");
 		user.setRole(roleDAO.getRole("admin"));
-		user.setPassword("passwordTest");		
+		user.setPassword("test");		
 		//userDAO.createUser(user);
 		
 		
@@ -83,7 +84,11 @@ public class Main {
 		
 		borrowingToUpdate.setEndingDate(updatedDate);
 		//borrowingDAO.updateBorrowing(borrowingToUpdate);
-		System.out.println(bookDAO.countBook("Harry Potter et le Prisonnier d'Azkaban"));
+		
+		User user2 = userDAO.getUserById(2);
+		user2.setPassword("test");
+		//userDAO.updateUser(user2);
+	
 	}
 
 }

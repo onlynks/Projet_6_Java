@@ -12,7 +12,7 @@ import com.projet3.library_webservice.library_webservice_model.beans.User;
 
 @WebService(serviceName="UserService")
 public class UserService extends AbstractUserService{
-	
+	/*
 	public static void main(String[] args) throws SQLException {
 		  
 		  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
@@ -22,7 +22,7 @@ public class UserService extends AbstractUserService{
 		  System.out.print(userService.logIn("Nicolas", "Garnier", "passwordTest").getFirstName());
 		  
 	}
-	
+	*/
 	@WebMethod
 	public User logIn(String firstName, String lastName, String password) {		
 		User user = null;	

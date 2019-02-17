@@ -1,8 +1,10 @@
 package com.projet3.library_webapp.library_webapp_app;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -29,17 +31,8 @@ public class BookController extends AbstractBookController {
 		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 		Role role = new Role();
 		
-		User user = new User();
-		user.setId(2);
-		user.setFirstName("Nicolas");
-		user.setLastName("Garnier");
-		user.setAdress("3 allée Miss Rodgers");
-		user.setCity("Lardy");
-		user.setPostCode(91510);
-		user.setPhoneNumber("067517428");
-		user.setRole(role);
-		user.setPassword("test");
-		System.out.println(bookManager.getUserBorrowing(user));		
+		
+				
 	}
 	
 	

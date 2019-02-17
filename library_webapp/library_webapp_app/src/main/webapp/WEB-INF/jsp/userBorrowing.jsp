@@ -24,8 +24,7 @@
 		    	</blockquote>
 		    	<footer class="blockquote-footer"><cite title="Source Title">${entry.key.book.author.firstName} ${entry.key.book.author.lastName}</cite></footer>
 	  		</div>
-		</div>
-		  	 
+		</div> 
 	</c:forEach>
 
 <%@ include file="footer.jsp" %>
