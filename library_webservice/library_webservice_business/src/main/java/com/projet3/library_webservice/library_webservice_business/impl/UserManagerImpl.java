@@ -1,6 +1,7 @@
 package com.projet3.library_webservice.library_webservice_business.impl;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,6 +18,12 @@ public class UserManagerImpl implements UserManager{
 	public User logIn(String firstName, String lastName, String password) throws SQLException {
 		
 		return userDAO.logIn(firstName, lastName, password);
+	}
+
+	@Override
+	public List<User> getUserList() throws SQLException {
+		
+		return userDAO.getUserList();
 	}
 
 }

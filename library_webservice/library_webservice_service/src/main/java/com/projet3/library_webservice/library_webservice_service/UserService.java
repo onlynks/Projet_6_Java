@@ -1,6 +1,7 @@
 package com.projet3.library_webservice.library_webservice_service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -34,6 +35,19 @@ public class UserService extends AbstractUserService{
 			e.printStackTrace();
 		}
 		return user;
+	}
+	
+	@WebMethod
+	public List<User> getUserList(){
+		List<User> userList = null;
+		
+		try {
+			userList = userManager.getUserList();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return userList;
 	}
 
 }

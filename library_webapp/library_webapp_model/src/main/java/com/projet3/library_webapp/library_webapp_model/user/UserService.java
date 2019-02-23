@@ -1,6 +1,7 @@
 
 package com.projet3.library_webapp.library_webapp_model.user;
 
+import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebResult;
@@ -44,5 +45,17 @@ public interface UserService {
         String arg1,
         @WebParam(name = "arg2", targetNamespace = "")
         String arg2);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.projet3.library_webapp.library_webapp_model.user.User>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUserList", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.GetUserList")
+    @ResponseWrapper(localName = "getUserListResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.GetUserListResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/UserService/getUserListRequest", output = "http://library_webservice_service.library_webservice.projet3.com/UserService/getUserListResponse")
+    public List<User> getUserList();
 
 }

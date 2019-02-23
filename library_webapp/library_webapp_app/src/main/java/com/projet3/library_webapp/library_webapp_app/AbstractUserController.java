@@ -8,6 +8,6 @@ public class AbstractUserController {
 	
 	public static void setUserManager(UserManager userManager) {
 		AbstractUserController.userManager = userManager;
-	}	
+	}
 
 }

@@ -25,6 +25,8 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _LogIn_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "logIn");
+    private final static QName _GetUserList_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserList");
+    private final static QName _GetUserListResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserListResponse");
     private final static QName _LogInResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "logInResponse");
 
     /**
@@ -40,6 +42,22 @@ public class ObjectFactory {
      */
     public LogInResponse createLogInResponse() {
         return new LogInResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetUserListResponse }
+     * 
+     */
+    public GetUserListResponse createGetUserListResponse() {
+        return new GetUserListResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetUserList }
+     * 
+     */
+    public GetUserList createGetUserList() {
+        return new GetUserList();
     }
 
     /**
@@ -73,6 +91,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "logIn")
     public JAXBElement<LogIn> createLogIn(LogIn value) {
         return new JAXBElement<LogIn>(_LogIn_QNAME, LogIn.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUserList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getUserList")
+    public JAXBElement<GetUserList> createGetUserList(GetUserList value) {
+        return new JAXBElement<GetUserList>(_GetUserList_QNAME, GetUserList.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUserListResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getUserListResponse")
+    public JAXBElement<GetUserListResponse> createGetUserListResponse(GetUserListResponse value) {
+        return new JAXBElement<GetUserListResponse>(_GetUserListResponse_QNAME, GetUserListResponse.class, null, value);
     }
 
     /**
