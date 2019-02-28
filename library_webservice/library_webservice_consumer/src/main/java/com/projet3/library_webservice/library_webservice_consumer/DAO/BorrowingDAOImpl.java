@@ -46,7 +46,7 @@ public class BorrowingDAOImpl extends AbstractDAO implements BorrowingDAO {
 
 	@Override
 	public void createBorrowing(Borrowing borrowing) throws SQLException {
-		String sql = "INSERT INTO borrowing (ending_date, book_id, id_user) VALUES (:beginning_date, :ending_date, :book_id, :id_user)";
+		String sql = "INSERT INTO borrowing (beginning_date, ending_date, book_id, id_user) VALUES (:beginning_date, :ending_date, :book_id, :id_user)";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("beginning_date", borrowing.getBeginningDate());

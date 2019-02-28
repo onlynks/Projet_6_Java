@@ -10,6 +10,8 @@
  http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
  
   <context:component-scan base-package="com.projet3.library_webapp.library_webapp_batch" />
+  
+  <bean name="bookManager" class="com.projet3.library_webapp.library_webapp_business.impl.BookManagerImpl"></bean>
  
   <batch:job id="scheduledJob">
     <batch:step id="jobStep">
@@ -18,7 +20,9 @@
   </batch:job>
   
   <task:scheduled-tasks>
-        <task:scheduled ref="batchLauncher" method="run" cron="*/5 * * * * *"/>
-    </task:scheduled-tasks>
+     <task:scheduled ref="batchLauncher" method="run" cron="*/5 * * * * *"/>
+  </task:scheduled-tasks>
+    
+  
  
 </beans>

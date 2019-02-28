@@ -2,11 +2,14 @@ package com.projet3.library_webapp.library_webapp_business.impl;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+
+import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -24,6 +27,9 @@ public class BookManagerImpl implements BookManager
 {
 	@Autowired
 	private BookDAO bookDAO;
+	
+	@Autowired
+	private UserDAO userDAO;
 	
 	public Book getBook( int id ) {
     	Book book = bookDAO.getBook(id);
@@ -98,6 +104,31 @@ public class BookManagerImpl implements BookManager
 	    }
 		return booksAndQuantities;
 		
+	}
+
+	public Map<User, List<Borrowing>> getLateBorrowing() {
+		List<User> userList = userDAO.getUserList();
+		
+		Map<User, List<Borrowing>> userWithLateBorrowing = new HashMap<User, List<Borrowing>>();
+		
+		for(User user : userList){
+			List<Borrowing> borrowingList = bookDAO.getUserBorrowing(user.getId());
+			List<Borrowing> lateBorrowingList = new ArrayList<Borrowing>();
+			
+			for(Borrowing borrowing : borrowingList) {				
+				
+				XMLGregorianCalendar  gcDate = borrowing.getEndingDate();
+				Date date = gcDate.toGregorianCalendar().getTime();
+				
+				if(date.before(new Date())) {
+					lateBorrowingList.add(borrowing);					
+				}
+			}
+			if(!lateBorrowingList.isEmpty()) {
+				userWithLateBorrowing.put(user, lateBorrowingList);
+			}			
+		}	
+		return userWithLateBorrowing;
 	}
 
 		

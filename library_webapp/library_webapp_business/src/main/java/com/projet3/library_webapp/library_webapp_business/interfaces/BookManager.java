@@ -19,6 +19,8 @@ public interface BookManager {
 	public Map<Borrowing,Map<String,String>> getUserBorrowing(User user);
 	
 	public void extendBorrowing(int borrowingId);
+	
+	public Map<User,List<Borrowing>> getLateBorrowing();
 }
 
 

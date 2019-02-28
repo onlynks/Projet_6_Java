@@ -2,10 +2,13 @@ package com.projet3.library_webservice.library_webservice_consumer.DAO;
 
 import java.sql.SQLException;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
@@ -57,20 +60,26 @@ public class Main {
 		user.setPassword("test");		
 		//userDAO.createUser(user);
 		
-		
+		//Set Date
+		/* 
 		LocalDate beginning = LocalDate.now();
 		LocalDate ending = beginning.plusMonths(1);
 		
 		Date dateBeginnng = java.sql.Date.valueOf(beginning);
 		Date dateEnding = java.sql.Date.valueOf(ending);
+		*/
+		
+			
+		Date dateBeginnng = new GregorianCalendar(2019, 0, 11).getTime();
+		Date dateEnding = new GregorianCalendar(2019, 1, 11).getTime();
 		
 		//borrowing creation
 		Borrowing borrowing = new Borrowing();
 		borrowing.setBeginningDate(dateBeginnng);
 		borrowing.setEndingDate(dateEnding);
-		borrowing.setBook(bookDAO.getBookById(26));
-		//borrowing.setUser(userDAO.logIn("Nicolas", "Garnier", "passwordTest"));
-		//borrowingDAO.createBorrowing(borrowing);
+		borrowing.setBook(bookDAO.getBookById(21));
+		borrowing.setUser(userDAO.logIn("Nicolas", "Garnier", "test"));
+		borrowingDAO.createBorrowing(borrowing);
 		
 		//borrowing update
 		Borrowing borrowingToUpdate = borrowingDAO.getBorrowingByBook(bookDAO.getBookById(2));
