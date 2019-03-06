@@ -10,8 +10,8 @@
         
     <context:component-scan base-package="com.projet3.library_webapp.library_webapp_business"/>
     
-    <bean id="bookDAO" class="com.projet3.library_webapp.library_webapp_consumer.DAO.BookDAOImpl"/>
+    <bean name="bookManager" class="com.projet3.library_webapp.library_webapp_business.impl.BookManagerImpl"></bean>
     
-    <bean id="userDAO" class="com.projet3.library_webapp.library_webapp_consumer.DAO.UserDAOImpl"/>
+    <bean name="userManager" class="com.projet3.library_webapp.library_webapp_business.impl.UserManagerImpl"></bean>
         
 </beans>

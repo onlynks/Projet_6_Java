@@ -23,12 +23,7 @@ public class BookService extends AbstractBookService {
 	  
 	  BookService bookService = new BookService();
 	  
-	  Map<Book,Integer>bookList = bookService.getBookList();
-	  
-	  for (Map.Entry<Book, Integer> entry : bookList.entrySet())
-	  {
-	      System.out.println(entry.getKey().getTitle() + "/" + entry.getValue() + entry.getKey().getAvailable());
-	  }
+	  Book book = bookManager.getBook(1);
 	  
 	 }	
 */

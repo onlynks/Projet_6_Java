@@ -18,23 +18,17 @@ public class MailToSend {
  
 		String subject = "Biboliothèque de Paris: emprunts en retard";
 
-		String bookRows = null;
+		String bookRows = "";
 		
 		for(Map.Entry<String,String>entry : lateBook.entrySet()) {
-			 bookRows += "<tr>"
-					+ "<td>" + entry.getKey()
-					+ "<td>" + entry.getValue()
-					+ "</tr>";
+			 bookRows += entry.getKey() 
+					+ " -> " + entry.getValue()
+					+ "\n";
 		}
 				
-		String body = "Bonjour" + firstName + " " + lastName + "\n" 
+		String body = "Bonjour " + firstName + " " + lastName + "\n \n" 
 				+ "Voici la liste de vos emprunts en retard:"
-				+ "<table>"
-				+ "<tr>"
-				+ "<td>&nbsp;</td>"
-				+ "<td>Titre</td>"
-				+ "<td>Date de retour</td>"
-				+ "</tr>"
+				+ "\n"
 				+ bookRows;	
 				
 				

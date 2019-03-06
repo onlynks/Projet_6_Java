@@ -36,6 +36,7 @@ public class BatchTasklet implements Tasklet{
 		
 		for(Entry<User, List<Borrowing>> e : userWithLateBorrowing.entrySet()) {
 			
+			String email = e.getKey().getEmail();
 			String firstName = e.getKey().getFirstName();
 			String lastName = e.getKey().getLastName();
 			Map<String,String> lateBook = new HashMap<String,String>();
@@ -50,7 +51,7 @@ public class BatchTasklet implements Tasklet{
 				lateBook.put(title, date);
 			}
 					
-			mailToSend.sendMail("dev.adress.12@gmail.com", firstName, lastName, lateBook);			
+			mailToSend.sendMail(email, firstName, lastName, lateBook);			
 	             
 	    }
 		return RepeatStatus.FINISHED;

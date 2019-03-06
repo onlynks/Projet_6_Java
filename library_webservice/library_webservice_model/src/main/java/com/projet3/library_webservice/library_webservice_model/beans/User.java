@@ -9,6 +9,9 @@ public class User {
 	private String city;
 	private int postCode;
 	private String phoneNumber;
+	private String email;
+	private Role role;
+	
 	
 	public int getId() {
 		return id;
@@ -63,7 +66,13 @@ public class User {
 	}
 	public void setRole(Role role) {
 		this.role = role;
+	}	
+	
+	public String getEmail() {
+		return email;
 	}
-	private Role role; 
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 }

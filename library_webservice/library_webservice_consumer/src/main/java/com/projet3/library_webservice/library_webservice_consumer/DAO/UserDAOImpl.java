@@ -58,7 +58,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 
 	@Override
 	public void createUser(User user) throws SQLException {
-		String sql = "INSERT INTO user (first_name, last_name, adress, city, post_code, phone_number, id_role, password) VALUES (:first_name, :last_name, :adress, :city, :post_code, :phone_number, :id_role, :password)";
+		String sql = "INSERT INTO user (first_name, last_name, adress, city, post_code, phone_number, id_role, password, email) VALUES (:first_name, :last_name, :adress, :city, :post_code, :phone_number, :id_role, :password, :email)";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("first_name", user.getFirstName());
@@ -69,6 +69,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 		params.addValue("phone_number", user.getPhoneNumber());
 		params.addValue("id_role", user.getRole().getId());
 		params.addValue("password", passwordEncoder.encode(user.getPassword()));
+		params.addValue("email", user.getEmail());
 		
 		namedParameterTemplate.update(sql, params);		
 		
@@ -76,7 +77,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 
 	@Override
 	public void updateUser(User user) throws SQLException {
-		String sql = "UPDATE user SET first_name = :first_name, last_name = :last_name, adress = :adress, city = :city, post_code = :post_code, phone_number = :phone_number, id_role = :id_role, password = :password WHERE id_user = :id_user";
+		String sql = "UPDATE user SET first_name = :first_name, last_name = :last_name, adress = :adress, city = :city, post_code = :post_code, phone_number = :phone_number, id_role = :id_role, password = :password, email = :email WHERE id_user = :id_user";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("id_user", user.getId());
@@ -88,6 +89,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 		params.addValue("phone_number", user.getPhoneNumber());
 		params.addValue("id_role", user.getRole().getId());
 		params.addValue("password", passwordEncoder.encode(user.getPassword()));
+		params.addValue("email", user.getEmail());
 		
 		namedParameterTemplate.update(sql, params);	
 		

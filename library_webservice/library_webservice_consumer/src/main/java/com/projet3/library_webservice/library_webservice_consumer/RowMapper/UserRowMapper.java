@@ -29,6 +29,7 @@ public class UserRowMapper implements RowMapper<User> {
 		user.setPhoneNumber(rs.getString("phone_number"));
 		user.setRole(roleDAO.getRoleById(rs.getInt("id_role")));
 		user.setPassword(rs.getString("password"));	
+		user.setEmail(rs.getString("email"));	
  
         return user;
 	}

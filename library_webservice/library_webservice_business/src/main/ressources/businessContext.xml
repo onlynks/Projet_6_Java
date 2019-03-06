@@ -8,13 +8,11 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
         
-    <context:component-scan base-package="com.projet3.library_webservice.library_webservice_business"/>        
+    <context:component-scan base-package="com.projet3.library_webservice.library_webservice_business"/>
 	
-	<bean id="bookDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.BookDAOImpl"/>
+	<bean name="bookManager" class="com.projet3.library_webservice.library_webservice_business.impl.BookManagerImpl"></bean>
 	
-	<bean id="borrowingDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.BorrowingDAOImpl"/>
-	
-	<bean id="userDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.UserDAOImpl"/>
+	<bean name="userManager" class="com.projet3.library_webservice.library_webservice_business.impl.UserManagerImpl"></bean>
 
     
 </beans>

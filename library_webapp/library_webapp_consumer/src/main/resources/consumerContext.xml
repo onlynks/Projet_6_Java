@@ -35,7 +35,9 @@
         <property name="targetMethod" value="setUserServiceConnection"/>
         <property name="arguments" ref="userServiceConnection"/>
     </bean>
-
-
+    
+    <bean id="bookDAO" class="com.projet3.library_webapp.library_webapp_consumer.DAO.BookDAOImpl"/>
+    
+    <bean id="userDAO" class="com.projet3.library_webapp.library_webapp_consumer.DAO.UserDAOImpl"/>
     
 </beans>

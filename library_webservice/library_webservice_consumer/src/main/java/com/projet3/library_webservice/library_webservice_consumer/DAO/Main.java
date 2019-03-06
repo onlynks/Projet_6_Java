@@ -50,14 +50,15 @@ public class Main {
 		
 		//user creation
 		User user = new User();
-		user.setFirstName("Nicolas");
-		user.setLastName("Garnier");
-		user.setAdress("3 allée Miss Rodgers");
-		user.setCity("Lardy");
-		user.setPostCode(91510);
-		user.setPhoneNumber("0637517428");
+		user.setFirstName("Rose");
+		user.setLastName("Gentille");
+		user.setAdress("8 rue des coquet");
+		user.setCity("Pitiviers");
+		user.setPostCode(91450);
+		user.setPhoneNumber("0685784258");
 		user.setRole(roleDAO.getRole("admin"));
-		user.setPassword("test");		
+		user.setPassword("pop");		
+		user.setEmail("dev.adress.12@gmail.com");		
 		//userDAO.createUser(user);
 		
 		//Set Date
@@ -77,12 +78,14 @@ public class Main {
 		Borrowing borrowing = new Borrowing();
 		borrowing.setBeginningDate(dateBeginnng);
 		borrowing.setEndingDate(dateEnding);
-		borrowing.setBook(bookDAO.getBookById(21));
+		borrowing.setBook(bookDAO.getBookById(26));
 		borrowing.setUser(userDAO.logIn("Nicolas", "Garnier", "test"));
 		borrowingDAO.createBorrowing(borrowing);
 		
 		//borrowing update
-		Borrowing borrowingToUpdate = borrowingDAO.getBorrowingByBook(bookDAO.getBookById(2));
+		
+		/*
+		Borrowing borrowingToUpdate = borrowingDAO.getBorrowingByBook(bookDAO.getBookById(26));
 		
 		Date dateToUpdate = borrowingToUpdate.getEndingDate();
 		
@@ -91,7 +94,7 @@ public class Main {
 		myCal.add(Calendar.MONTH, +1);    
 		Date updatedDate = myCal.getTime();
 		
-		borrowingToUpdate.setEndingDate(updatedDate);
+		borrowingToUpdate.setEndingDate(updatedDate); */
 		//borrowingDAO.updateBorrowing(borrowingToUpdate);
 		
 		User user2 = userDAO.getUserById(2);
