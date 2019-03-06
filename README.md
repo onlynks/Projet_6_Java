@@ -23,7 +23,7 @@ c) Get GlassFish (preferably version 5)
 https://javaee.github.io/glassfish/download
 
 * Configure tomcat on your eclipse:
-- windows->Preference->Server->Runtime Environments->Add
+windows->Preference->Server->Runtime Environments->Add
 
 * Launch your GlassFish server:
 Go to your GlassFish repository->bin->Open your command line tool->copy the root->enter: start-domain domain1->Go to http://localhost:4848/ 
