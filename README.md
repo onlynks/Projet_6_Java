@@ -28,6 +28,10 @@ windows->Preference->Server->Runtime Environments->Add
 * Launch your GlassFish server:
 Go to your GlassFish repository->bin->Open your command line tool->copy the root->enter: start-domain domain1->Go to http://localhost:4848/ 
 
+d) Create database schema from the provided mysql file
+
+Two file are provided: one containing the schema only and an other one with fake datas.
+
 ### 2- Installation
 
 Positionnate in the folder of your choice by command line
@@ -72,6 +76,20 @@ Ensure that the wsdl URL is pointing to your web service running server (most pr
 	  </wsdlUrls>
   </configuration>
 ```
+Build the project with Maven
 
+### 6- Batch configuration
 
+Go to library_webapp\library_webapp_batch\src\main\resources\mailConfig.xml
 
+Put your gmail username and password
+
+```
+	<property name="username" value="dev.adress.12@gmail.com" />
+	<property name="password" value="Mrsmaima12G" />
+```
+Go to library_webapp_batch\src\main\java\com\projet3\library_webapp\library_webapp_batch\email\mailToSend.java
+
+Enter your mail adress line 17.
+
+Build the module
