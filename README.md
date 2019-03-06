@@ -15,9 +15,11 @@
 
 a) Get Eclipse installed
 https://www.eclipse.org/downloads/packages/release/kepler/r/eclipse-ide-java-ee-developers
+
 b) Get Tomcat (preferably version 7)
 https://tomcat.apache.org/download-70.cgi
-c) Get GlassFish
+
+c) Get GlassFish (preferably version 5)
 https://javaee.github.io/glassfish/download
 
 * Configure tomcat on your eclipse:
