@@ -63,7 +63,7 @@ Once you has your Glassfish server running, go to http://localhost:4848/
 Open the model folder's POM.xml (library_webapp\library_webapp_model\pom.xml)
 
 Ensure that the wsdl URL is pointing to your web service running server (most probably Glassfish).
-
+```
   <configuration>
 	  <packageName>com.projet3.library_webapp.library_webapp_model.book</packageName>
 	  <sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
@@ -71,7 +71,7 @@ Ensure that the wsdl URL is pointing to your web service running server (most pr
 	     <wsdlUrl>http://localhost:8081/Services/BookService?wsdl</wsdlUrl>
 	  </wsdlUrls>
   </configuration>
-
+```
 
 
 
