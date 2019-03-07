@@ -1,0 +1,1986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>MPD</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="projet_3" />
+   <property key="Connection Type" value="MySQL" />
+   <property key="JDBC URL" value="jdbc:mysql://localhost:3306/Projet_3?characterEncoding=latin1" />
+   <property key="UID" value="root" />
+   <property key="PWD" value="root" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+  <data-source id="DS0">
+   <property key="Connection Type" value="MySQL" />
+   <property key="Logical" value="projet_3" />
+   <property key="JDBC URL" value="jdbc:mysql://localhost:3306/Projet_3?characterEncoding=latin1" />
+   <property key="UID" value="root" />
+   <property key="PWD" value="root" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="2ed14af0-f382-489e-b2b2-6854e7599fae" dbcs-ref="DS0" name="projet_3" physicalName="projet_3" >
+   <catalog id="CAT1" populated="false" UUID="c8f7252d-9477-4adb-a578-d01555d6794b" name="information_schema" nativeTerm="database" physicalName="information_schema" >
+   </catalog>
+   <catalog id="CAT2" populated="true" UUID="463616ac-68a7-4727-b77a-cf176a38bfb7" name="mysql" nativeTerm="database" physicalName="mysql" >
+    <table id="TAB3" populated="false" UUID="d549d951-0aec-4483-9103-ec3a32ef4986" name="columns_priv" objectType="TABLE" physicalName="columns_priv" >
+     <remarks></remarks>
+     <folder id="FOLTAB31" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX4" populated="true" UUID="3a0c8b04-2fdb-4ae9-9c87-dc8aa0cc7775" clustered="false" name="columns_priv_pk" physicalName="columns_priv_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB5" populated="false" UUID="148777ba-85f4-41fa-ab07-fa51021ae102" name="component" objectType="TABLE" physicalName="component" >
+     <remarks></remarks>
+     <folder id="FOLTAB51" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX6" populated="true" UUID="0a5f174f-4dda-4d30-bf62-19d8f6986635" clustered="false" name="component_pk" physicalName="component_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB7" populated="false" UUID="ff21ef17-acb9-4734-aa3e-5e546644890d" name="db" objectType="TABLE" physicalName="db" >
+     <remarks></remarks>
+     <folder id="FOLTAB71" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX8" populated="true" UUID="90b9f7d0-09d1-44fc-9c7c-e183c124b071" clustered="false" name="db_pk" physicalName="db_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB9" populated="false" UUID="a6b9af9c-fe5a-4edc-96ca-82200ca1ccaa" name="default_roles" objectType="TABLE" physicalName="default_roles" >
+     <remarks></remarks>
+     <folder id="FOLTAB91" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX10" populated="true" UUID="541d0b43-ee06-4fd6-8eb2-ac025ced2720" clustered="false" name="default_roles_pk" physicalName="default_roles_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB11" populated="false" UUID="ce2342a9-aa4a-4aa2-90ab-470599566b3b" name="engine_cost" objectType="TABLE" physicalName="engine_cost" >
+     <remarks></remarks>
+     <folder id="FOLTAB111" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX12" populated="true" UUID="b9fffda4-d68a-4590-8a1e-5f6792352025" clustered="false" name="engine_cost_pk" physicalName="engine_cost_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB13" populated="false" UUID="93d26b54-4433-4467-bc8c-653721bee831" name="func" objectType="TABLE" physicalName="func" >
+     <remarks></remarks>
+     <folder id="FOLTAB131" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX14" populated="true" UUID="39c4db7a-79c7-4a2a-8a3b-87314c6b97eb" clustered="false" name="func_pk" physicalName="func_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB15" populated="false" UUID="ad94fc8a-a9b4-40b9-9226-c91a4b4b9ab0" name="general_log" objectType="TABLE" physicalName="general_log" >
+     <remarks></remarks>
+     <folder id="FOLTAB151" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX16" populated="true" UUID="09aa85a9-c3bc-49ce-8a03-eb56e4e51706" clustered="false" name="general_log_pk" physicalName="general_log_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB17" populated="false" UUID="12f19828-bf3a-45be-89ee-57d84392665b" name="global_grants" objectType="TABLE" physicalName="global_grants" >
+     <remarks></remarks>
+     <folder id="FOLTAB171" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX18" populated="true" UUID="90cb372a-27c7-4bbe-b986-c592b39a3ef4" clustered="false" name="global_grants_pk" physicalName="global_grants_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB19" populated="false" UUID="df3e969d-2375-4d36-8764-9122b1bea097" name="gtid_executed" objectType="TABLE" physicalName="gtid_executed" >
+     <remarks></remarks>
+     <folder id="FOLTAB191" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX20" populated="true" UUID="5b0157df-ca0f-48ac-9101-609811676fd0" clustered="false" name="gtid_executed_pk" physicalName="gtid_executed_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB21" populated="false" UUID="388b068d-cd43-47ff-a84d-ceb54c459743" name="help_category" objectType="TABLE" physicalName="help_category" >
+     <remarks></remarks>
+     <folder id="FOLTAB211" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX22" populated="true" UUID="dd86656f-205c-4aec-a587-5ec2381e153f" clustered="false" name="help_category_pk" physicalName="help_category_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB23" populated="false" UUID="cb8c614f-53c2-4b44-8d13-c8ae3cceea01" name="help_keyword" objectType="TABLE" physicalName="help_keyword" >
+     <remarks></remarks>
+     <folder id="FOLTAB231" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX24" populated="true" UUID="d43a4b82-0a49-4ffb-adde-4e91630441a4" clustered="false" name="help_keyword_pk" physicalName="help_keyword_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB25" populated="false" UUID="b6a2a2da-9279-4323-9e06-9d0c66817529" name="help_relation" objectType="TABLE" physicalName="help_relation" >
+     <remarks></remarks>
+     <folder id="FOLTAB251" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX26" populated="true" UUID="7e924d7e-7758-4e0a-a2e7-bf74bde4c922" clustered="false" name="help_relation_pk" physicalName="help_relation_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB27" populated="false" UUID="ee26bd14-64b4-4dc7-af02-ccd433ef5525" name="help_topic" objectType="TABLE" physicalName="help_topic" >
+     <remarks></remarks>
+     <folder id="FOLTAB271" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX28" populated="true" UUID="510c72df-b633-491b-a2d5-ade0f1eef88b" clustered="false" name="help_topic_pk" physicalName="help_topic_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB29" populated="false" UUID="76a3c834-8137-4548-bd8a-78a389b7a41c" name="innodb_index_stats" objectType="TABLE" physicalName="innodb_index_stats" >
+     <remarks></remarks>
+     <folder id="FOLTAB291" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX30" populated="true" UUID="4e022533-43b3-46f2-9a11-508d2956d952" clustered="false" name="innodb_index_stats_pk" physicalName="innodb_index_stats_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB31" populated="false" UUID="7768191f-2199-47ea-ab15-37663e091a26" name="innodb_table_stats" objectType="TABLE" physicalName="innodb_table_stats" >
+     <remarks></remarks>
+     <folder id="FOLTAB311" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX32" populated="true" UUID="d03b6c61-281a-4c96-8da0-53beafcb423e" clustered="false" name="innodb_table_stats_pk" physicalName="innodb_table_stats_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB33" populated="false" UUID="a5467681-04cf-4ff9-b021-3726d69d030e" name="password_history" objectType="TABLE" physicalName="password_history" >
+     <remarks></remarks>
+     <folder id="FOLTAB331" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX34" populated="true" UUID="2e83ac63-2d89-48b2-817a-c08abb399320" clustered="false" name="password_history_pk" physicalName="password_history_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB35" populated="false" UUID="1d6b07de-95a6-4496-a20c-a2ac576348d1" name="plugin" objectType="TABLE" physicalName="plugin" >
+     <remarks></remarks>
+     <folder id="FOLTAB351" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX36" populated="true" UUID="f2ea3ed3-dca4-4e43-ad06-37d3d7812bda" clustered="false" name="plugin_pk" physicalName="plugin_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB37" populated="false" UUID="ae2e10d9-09ae-4e61-828e-0de112a3e15e" name="procs_priv" objectType="TABLE" physicalName="procs_priv" >
+     <remarks></remarks>
+     <folder id="FOLTAB371" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX38" populated="true" UUID="497cc7fb-2409-4a1e-a01d-07b937a01007" clustered="false" name="procs_priv_pk" physicalName="procs_priv_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB39" populated="false" UUID="3333e9c7-bee8-46cc-adc5-3180734520d8" name="proxies_priv" objectType="TABLE" physicalName="proxies_priv" >
+     <remarks></remarks>
+     <folder id="FOLTAB391" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX40" populated="true" UUID="f74f5d45-e019-466f-b1be-a0ea2bc47ac6" clustered="false" name="proxies_priv_pk" physicalName="proxies_priv_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB41" populated="false" UUID="a36d3c8d-bc57-4f57-8c59-67215615411a" name="role_edges" objectType="TABLE" physicalName="role_edges" >
+     <remarks></remarks>
+     <folder id="FOLTAB411" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX42" populated="true" UUID="7e16bb2d-e46a-4dff-bb03-9ac2f897d565" clustered="false" name="role_edges_pk" physicalName="role_edges_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB43" populated="false" UUID="3a049dd7-aa97-40ad-b2b4-b51a382f2bac" name="server_cost" objectType="TABLE" physicalName="server_cost" >
+     <remarks></remarks>
+     <folder id="FOLTAB431" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX44" populated="true" UUID="746deac4-9714-4d0e-9695-e640d147e874" clustered="false" name="server_cost_pk" physicalName="server_cost_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB45" populated="false" UUID="fa76062b-240c-4df5-abbc-5d4d14d587cf" name="servers" objectType="TABLE" physicalName="servers" >
+     <remarks></remarks>
+     <folder id="FOLTAB451" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX46" populated="true" UUID="6f25314c-6142-42a9-9d2b-35d895b81cb2" clustered="false" name="servers_pk" physicalName="servers_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB47" populated="false" UUID="c4a14cc1-aeb4-433a-8907-c9a6c6c69048" name="slave_master_info" objectType="TABLE" physicalName="slave_master_info" >
+     <remarks></remarks>
+     <folder id="FOLTAB471" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX48" populated="true" UUID="88eb417d-f780-44aa-9084-6ddfd4ffaa54" clustered="false" name="slave_master_info_pk" physicalName="slave_master_info_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB49" populated="false" UUID="57f76470-8416-46ae-ba6d-ee58b8b2bd01" name="slave_relay_log_info" objectType="TABLE" physicalName="slave_relay_log_info" >
+     <remarks></remarks>
+     <folder id="FOLTAB491" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX50" populated="true" UUID="098a3fba-4aca-41d5-9d5a-6928adaa6e6b" clustered="false" name="slave_relay_log_info_pk" physicalName="slave_relay_log_info_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB51" populated="false" UUID="3229c9f8-de5a-4df1-a07a-d8aef72ff69e" name="slave_worker_info" objectType="TABLE" physicalName="slave_worker_info" >
+     <remarks></remarks>
+     <folder id="FOLTAB511" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX52" populated="true" UUID="1336468b-a3ae-4f5c-933f-0e87dc0632ab" clustered="false" name="slave_worker_info_pk" physicalName="slave_worker_info_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB53" populated="false" UUID="43508fed-d6c9-4ae4-a8a2-b82f4886dc60" name="slow_log" objectType="TABLE" physicalName="slow_log" >
+     <remarks></remarks>
+     <folder id="FOLTAB531" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX54" populated="true" UUID="398f52cd-9aea-4944-8b29-43928af0bfbd" clustered="false" name="slow_log_pk" physicalName="slow_log_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB55" populated="false" UUID="26ddf03a-814f-41ec-806e-d9ec6db6a9cb" name="tables_priv" objectType="TABLE" physicalName="tables_priv" >
+     <remarks></remarks>
+     <folder id="FOLTAB551" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX56" populated="true" UUID="7db96295-c6bb-45df-a8a4-1e636d0e8d45" clustered="false" name="tables_priv_pk" physicalName="tables_priv_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB57" populated="false" UUID="fe15e216-f0ea-4bc3-bd8e-8928d54bde81" name="time_zone" objectType="TABLE" physicalName="time_zone" >
+     <remarks></remarks>
+     <folder id="FOLTAB571" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX58" populated="true" UUID="5d6f42bb-b806-4a1c-8fa7-ceabca9db5ce" clustered="false" name="time_zone_pk" physicalName="time_zone_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB59" populated="false" UUID="c88bd8ab-2cb9-4052-a945-56ad745a0603" name="time_zone_leap_second" objectType="TABLE" physicalName="time_zone_leap_second" >
+     <remarks></remarks>
+     <folder id="FOLTAB591" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX60" populated="true" UUID="471d095f-11de-4f28-a38c-80e8cf1488fa" clustered="false" name="time_zone_leap_second_pk" physicalName="time_zone_leap_second_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB61" populated="false" UUID="4fbd31e5-0587-4554-b7cb-e4894ed62786" name="time_zone_name" objectType="TABLE" physicalName="time_zone_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB611" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX62" populated="true" UUID="952d8ad1-2aea-4dd3-b341-e522dc19d01d" clustered="false" name="time_zone_name_pk" physicalName="time_zone_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB63" populated="false" UUID="1add9acc-3cab-480e-93ce-046239ee94e6" name="time_zone_transition" objectType="TABLE" physicalName="time_zone_transition" >
+     <remarks></remarks>
+     <folder id="FOLTAB631" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX64" populated="true" UUID="a2cad80a-9ea6-4f94-88ea-99732fd4e6d2" clustered="false" name="time_zone_transition_pk" physicalName="time_zone_transition_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB65" populated="false" UUID="f69555e6-b8bd-41b6-a7a4-f3a167bfac86" name="time_zone_transition_type" objectType="TABLE" physicalName="time_zone_transition_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB651" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX66" populated="true" UUID="90446795-d3c0-400d-bc10-db106a137aac" clustered="false" name="time_zone_transition_type_pk" physicalName="time_zone_transition_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB67" populated="false" UUID="0d92c5f6-1f14-4872-ac90-55e78588c1be" name="user" objectType="TABLE" physicalName="user" >
+     <remarks></remarks>
+     <folder id="FOLTAB671" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX68" populated="true" UUID="14f59e4e-2345-41f0-ab14-1fdb45d28fe3" clustered="false" name="user_pk" physicalName="user_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+   </catalog>
+   <catalog id="CAT69" populated="true" UUID="7541ec8c-c189-491e-98ae-9e85a78751d1" name="performance_schema" nativeTerm="database" physicalName="performance_schema" >
+    <table id="TAB70" populated="false" UUID="5fd90e99-0ef3-4cd4-b532-dfb7e89f5a56" name="accounts" objectType="TABLE" physicalName="accounts" >
+     <remarks></remarks>
+     <folder id="FOLTAB701" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX71" populated="true" UUID="c16c0325-0355-4a92-9c18-6183824bddd0" clustered="false" name="accounts_pk" physicalName="accounts_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB72" populated="false" UUID="208533b8-128c-47aa-9a37-7a9f47c4cdf2" name="cond_instances" objectType="TABLE" physicalName="cond_instances" >
+     <remarks></remarks>
+     <folder id="FOLTAB721" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX73" populated="true" UUID="118d98bd-b8c0-4699-8668-4044ed963ab8" clustered="false" name="cond_instances_pk" physicalName="cond_instances_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB74" populated="false" UUID="c99436d9-a1f9-4c2b-be74-381dda85d01b" name="data_lock_waits" objectType="TABLE" physicalName="data_lock_waits" >
+     <remarks></remarks>
+     <folder id="FOLTAB741" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX75" populated="true" UUID="ea03a477-18ba-47c7-bed0-5b63ce40f10d" clustered="false" name="data_lock_waits_pk" physicalName="data_lock_waits_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB76" populated="false" UUID="8401f762-b6d0-43e0-b660-72cc279a1f1f" name="data_locks" objectType="TABLE" physicalName="data_locks" >
+     <remarks></remarks>
+     <folder id="FOLTAB761" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX77" populated="true" UUID="bab98083-a735-4ad1-abc0-732fcd29e243" clustered="false" name="data_locks_pk" physicalName="data_locks_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB78" populated="false" UUID="1212f536-3373-46d6-af04-b17c7871e7ce" name="events_errors_summary_by_account_by_error" objectType="TABLE" physicalName="events_errors_summary_by_account_by_error" >
+     <remarks></remarks>
+     <folder id="FOLTAB781" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX79" populated="true" UUID="73e939f3-dc16-4869-95de-3137001e33cb" clustered="false" name="events_errors_summary_by_account_by_error_pk" physicalName="events_errors_summary_by_account_by_error_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB80" populated="false" UUID="d8b07d9a-7bf7-41b9-aa0c-f536a7fbe104" name="events_errors_summary_by_host_by_error" objectType="TABLE" physicalName="events_errors_summary_by_host_by_error" >
+     <remarks></remarks>
+     <folder id="FOLTAB801" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX81" populated="true" UUID="bba074da-f6f8-4106-96f8-d84c00e6df9b" clustered="false" name="events_errors_summary_by_host_by_error_pk" physicalName="events_errors_summary_by_host_by_error_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB82" populated="false" UUID="bc631fad-150c-48e7-86e8-3ce42aabf536" name="events_errors_summary_by_thread_by_error" objectType="TABLE" physicalName="events_errors_summary_by_thread_by_error" >
+     <remarks></remarks>
+     <folder id="FOLTAB821" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX83" populated="true" UUID="bd707db6-e2ff-42a1-948b-0f8d06397015" clustered="false" name="events_errors_summary_by_thread_by_error_pk" physicalName="events_errors_summary_by_thread_by_error_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB84" populated="false" UUID="9c7e0b28-22dc-41d2-84d2-f4b11b97fbae" name="events_errors_summary_by_user_by_error" objectType="TABLE" physicalName="events_errors_summary_by_user_by_error" >
+     <remarks></remarks>
+     <folder id="FOLTAB841" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX85" populated="true" UUID="082cf917-3028-4295-b79c-81a8b9638944" clustered="false" name="events_errors_summary_by_user_by_error_pk" physicalName="events_errors_summary_by_user_by_error_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB86" populated="false" UUID="ac4f187d-a30b-463f-bd13-f4e085fa2337" name="events_errors_summary_global_by_error" objectType="TABLE" physicalName="events_errors_summary_global_by_error" >
+     <remarks></remarks>
+     <folder id="FOLTAB861" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX87" populated="true" UUID="5725f869-a645-4276-a14d-c7b2276e46ba" clustered="false" name="events_errors_summary_global_by_error_pk" physicalName="events_errors_summary_global_by_error_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB88" populated="false" UUID="d50fd084-b444-4245-b8fe-e22bd0a18a90" name="events_stages_current" objectType="TABLE" physicalName="events_stages_current" >
+     <remarks></remarks>
+     <folder id="FOLTAB881" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX89" populated="true" UUID="d93c9008-b951-4f68-abf6-d63ad131fc77" clustered="false" name="events_stages_current_pk" physicalName="events_stages_current_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB90" populated="false" UUID="ba5909e5-b57d-4e13-97c3-180f7a41ff30" name="events_stages_history" objectType="TABLE" physicalName="events_stages_history" >
+     <remarks></remarks>
+     <folder id="FOLTAB901" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX91" populated="true" UUID="8f80a215-c626-4aaa-95e3-ecb202addf46" clustered="false" name="events_stages_history_pk" physicalName="events_stages_history_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB92" populated="false" UUID="b1d19941-e1f9-4e03-a71f-a69c78b46434" name="events_stages_history_long" objectType="TABLE" physicalName="events_stages_history_long" >
+     <remarks></remarks>
+     <folder id="FOLTAB921" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX93" populated="true" UUID="aa7e7910-87a2-47f9-b308-47597c0170e5" clustered="false" name="events_stages_history_long_pk" physicalName="events_stages_history_long_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB94" populated="false" UUID="df5028e6-701e-43cf-9b2a-e8b278932838" name="events_stages_summary_by_account_by_event_name" objectType="TABLE" physicalName="events_stages_summary_by_account_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB941" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX95" populated="true" UUID="b1642094-2fea-41ac-acb8-92b246bc5e1e" clustered="false" name="events_stages_summary_by_account_by_event_name_pk" physicalName="events_stages_summary_by_account_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB96" populated="false" UUID="d7fd7bb3-7f99-4809-9a5b-1c151f700170" name="events_stages_summary_by_host_by_event_name" objectType="TABLE" physicalName="events_stages_summary_by_host_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB961" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX97" populated="true" UUID="8038ef40-71aa-4b33-ba32-d9190976909f" clustered="false" name="events_stages_summary_by_host_by_event_name_pk" physicalName="events_stages_summary_by_host_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB98" populated="false" UUID="1eaab737-c9b8-4494-8f3c-6e53db6885b1" name="events_stages_summary_by_thread_by_event_name" objectType="TABLE" physicalName="events_stages_summary_by_thread_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB981" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX99" populated="true" UUID="1d29052d-c739-435a-b1a5-6593233ab875" clustered="false" name="events_stages_summary_by_thread_by_event_name_pk" physicalName="events_stages_summary_by_thread_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB100" populated="false" UUID="abbfd9d7-6264-4da7-96cd-5d4b9bada376" name="events_stages_summary_by_user_by_event_name" objectType="TABLE" physicalName="events_stages_summary_by_user_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1001" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX101" populated="true" UUID="883b4aa3-e75a-426f-a86b-98ffc0676cbd" clustered="false" name="events_stages_summary_by_user_by_event_name_pk" physicalName="events_stages_summary_by_user_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB102" populated="false" UUID="d6b219ec-3f12-4883-b89f-f49ba72c6bfe" name="events_stages_summary_global_by_event_name" objectType="TABLE" physicalName="events_stages_summary_global_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1021" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX103" populated="true" UUID="617daa95-e88e-47ee-9ddf-2b00cadd4713" clustered="false" name="events_stages_summary_global_by_event_name_pk" physicalName="events_stages_summary_global_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB104" populated="false" UUID="5a663ca4-74c9-4e03-8171-95b15ea7ff39" name="events_statements_current" objectType="TABLE" physicalName="events_statements_current" >
+     <remarks></remarks>
+     <folder id="FOLTAB1041" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX105" populated="true" UUID="e9dbb11b-1338-4779-a192-d63c036c01d8" clustered="false" name="events_statements_current_pk" physicalName="events_statements_current_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB106" populated="false" UUID="7263601d-4045-4f0c-87e5-5c49953fbbd0" name="events_statements_histogram_by_digest" objectType="TABLE" physicalName="events_statements_histogram_by_digest" >
+     <remarks></remarks>
+     <folder id="FOLTAB1061" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX107" populated="true" UUID="b5643be0-619b-40cc-b39b-614e1393e338" clustered="false" name="events_statements_histogram_by_digest_pk" physicalName="events_statements_histogram_by_digest_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB108" populated="false" UUID="40792511-e057-4b9c-a162-70d64a4e2586" name="events_statements_histogram_global" objectType="TABLE" physicalName="events_statements_histogram_global" >
+     <remarks></remarks>
+     <folder id="FOLTAB1081" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX109" populated="true" UUID="751b9333-e922-4132-9ba9-57fef2962f51" clustered="false" name="events_statements_histogram_global_pk" physicalName="events_statements_histogram_global_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB110" populated="false" UUID="73bdcad6-3dbd-4341-8a49-5e576592c1ae" name="events_statements_history" objectType="TABLE" physicalName="events_statements_history" >
+     <remarks></remarks>
+     <folder id="FOLTAB1101" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX111" populated="true" UUID="484d6ed8-6382-43e3-91a8-c80090f93066" clustered="false" name="events_statements_history_pk" physicalName="events_statements_history_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB112" populated="false" UUID="a09d5c3f-142d-49e6-b4e5-7b3c24a4815f" name="events_statements_history_long" objectType="TABLE" physicalName="events_statements_history_long" >
+     <remarks></remarks>
+     <folder id="FOLTAB1121" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX113" populated="true" UUID="689bc707-b41b-402d-a32b-02017fad0463" clustered="false" name="events_statements_history_long_pk" physicalName="events_statements_history_long_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB114" populated="false" UUID="b0cb70cc-e8d6-4656-acc7-13ebf4c89d4b" name="events_statements_summary_by_account_by_event_name" objectType="TABLE" physicalName="events_statements_summary_by_account_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1141" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX115" populated="true" UUID="daa083b2-cce6-4c58-94fe-a21396f0b6c9" clustered="false" name="events_statements_summary_by_account_by_event_name_pk" physicalName="events_statements_summary_by_account_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB116" populated="false" UUID="6dd47135-cd89-4128-ace7-9196000c0c8b" name="events_statements_summary_by_digest" objectType="TABLE" physicalName="events_statements_summary_by_digest" >
+     <remarks></remarks>
+     <folder id="FOLTAB1161" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX117" populated="true" UUID="a9a75bcc-814d-4122-a5f8-990bbc2f6da1" clustered="false" name="events_statements_summary_by_digest_pk" physicalName="events_statements_summary_by_digest_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB118" populated="false" UUID="68fbdca8-df27-4739-a632-8330011c9dfc" name="events_statements_summary_by_host_by_event_name" objectType="TABLE" physicalName="events_statements_summary_by_host_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1181" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX119" populated="true" UUID="e4b81d46-7640-484a-8639-adfcee42eeaf" clustered="false" name="events_statements_summary_by_host_by_event_name_pk" physicalName="events_statements_summary_by_host_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB120" populated="false" UUID="a9889ff8-4a41-4e67-8553-bec3383acc4f" name="events_statements_summary_by_program" objectType="TABLE" physicalName="events_statements_summary_by_program" >
+     <remarks></remarks>
+     <folder id="FOLTAB1201" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX121" populated="true" UUID="c2e5f30d-9f13-4ceb-84b7-af2350a52ccb" clustered="false" name="events_statements_summary_by_program_pk" physicalName="events_statements_summary_by_program_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB122" populated="false" UUID="65cf6f22-e75b-4617-80ae-8ca614481047" name="events_statements_summary_by_thread_by_event_name" objectType="TABLE" physicalName="events_statements_summary_by_thread_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1221" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX123" populated="true" UUID="0492f664-e9b8-4b40-94f1-7856a59d5ef1" clustered="false" name="events_statements_summary_by_thread_by_event_name_pk" physicalName="events_statements_summary_by_thread_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB124" populated="false" UUID="ee45401e-207e-4b7e-a247-3f5072ef21d3" name="events_statements_summary_by_user_by_event_name" objectType="TABLE" physicalName="events_statements_summary_by_user_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1241" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX125" populated="true" UUID="ddf90633-d84f-43b1-9dff-a9dad9a125f4" clustered="false" name="events_statements_summary_by_user_by_event_name_pk" physicalName="events_statements_summary_by_user_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB126" populated="false" UUID="4488b27d-2d6b-4b16-af74-20b25855c2b1" name="events_statements_summary_global_by_event_name" objectType="TABLE" physicalName="events_statements_summary_global_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1261" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX127" populated="true" UUID="fe1efb87-713d-457a-a3fd-970e8f774fe6" clustered="false" name="events_statements_summary_global_by_event_name_pk" physicalName="events_statements_summary_global_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB128" populated="false" UUID="043b630d-77a2-4784-b827-2a75c5c111ab" name="events_transactions_current" objectType="TABLE" physicalName="events_transactions_current" >
+     <remarks></remarks>
+     <folder id="FOLTAB1281" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX129" populated="true" UUID="74b68b46-1f1e-4558-a075-d6fba17b45df" clustered="false" name="events_transactions_current_pk" physicalName="events_transactions_current_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB130" populated="false" UUID="0066883a-7862-4b6c-a787-55a715541641" name="events_transactions_history" objectType="TABLE" physicalName="events_transactions_history" >
+     <remarks></remarks>
+     <folder id="FOLTAB1301" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX131" populated="true" UUID="4c054be9-c692-4af1-827e-50a535428e28" clustered="false" name="events_transactions_history_pk" physicalName="events_transactions_history_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB132" populated="false" UUID="46f1d5a3-8199-49f8-a51a-cb314055fd02" name="events_transactions_history_long" objectType="TABLE" physicalName="events_transactions_history_long" >
+     <remarks></remarks>
+     <folder id="FOLTAB1321" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX133" populated="true" UUID="98751b1f-4d5b-4d96-ae33-bd49935f833e" clustered="false" name="events_transactions_history_long_pk" physicalName="events_transactions_history_long_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB134" populated="false" UUID="361322bb-77a7-4710-ada2-85e0a7422e18" name="events_transactions_summary_by_account_by_event_name" objectType="TABLE" physicalName="events_transactions_summary_by_account_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1341" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX135" populated="true" UUID="1f9d3b54-46f4-4bc6-a0cc-f7edb1a94b1f" clustered="false" name="events_transactions_summary_by_account_by_event_name_pk" physicalName="events_transactions_summary_by_account_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB136" populated="false" UUID="7c43a0f9-edc2-41fc-a43c-6822b3171bb1" name="events_transactions_summary_by_host_by_event_name" objectType="TABLE" physicalName="events_transactions_summary_by_host_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1361" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX137" populated="true" UUID="02d2a367-f499-4bdf-9115-5c679c6eea8e" clustered="false" name="events_transactions_summary_by_host_by_event_name_pk" physicalName="events_transactions_summary_by_host_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB138" populated="false" UUID="5f350a41-4845-4c44-9469-828edff1273f" name="events_transactions_summary_by_thread_by_event_name" objectType="TABLE" physicalName="events_transactions_summary_by_thread_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1381" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX139" populated="true" UUID="09381250-6d03-4b55-93f4-6a35a683fcab" clustered="false" name="events_transactions_summary_by_thread_by_event_name_pk" physicalName="events_transactions_summary_by_thread_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB140" populated="false" UUID="825d63f2-12be-41a0-a5aa-878b30c847aa" name="events_transactions_summary_by_user_by_event_name" objectType="TABLE" physicalName="events_transactions_summary_by_user_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1401" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX141" populated="true" UUID="3e5fed8f-61e1-470a-9bc0-938e018f6b76" clustered="false" name="events_transactions_summary_by_user_by_event_name_pk" physicalName="events_transactions_summary_by_user_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB142" populated="false" UUID="58f1e694-1c48-4938-9fb5-f904710494bd" name="events_transactions_summary_global_by_event_name" objectType="TABLE" physicalName="events_transactions_summary_global_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1421" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX143" populated="true" UUID="ee750746-0d54-4634-bc54-8c4898ff89bd" clustered="false" name="events_transactions_summary_global_by_event_name_pk" physicalName="events_transactions_summary_global_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB144" populated="false" UUID="d323a03d-339c-4827-b1e8-d240ddc850fc" name="events_waits_current" objectType="TABLE" physicalName="events_waits_current" >
+     <remarks></remarks>
+     <folder id="FOLTAB1441" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX145" populated="true" UUID="e5354bbb-4d82-46aa-b44b-8de192b289e5" clustered="false" name="events_waits_current_pk" physicalName="events_waits_current_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB146" populated="false" UUID="bec99691-7b3d-4a96-ac78-c50d0a6502ac" name="events_waits_history" objectType="TABLE" physicalName="events_waits_history" >
+     <remarks></remarks>
+     <folder id="FOLTAB1461" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX147" populated="true" UUID="d107daff-5499-4c4c-9ad3-5af5d3aa91d2" clustered="false" name="events_waits_history_pk" physicalName="events_waits_history_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB148" populated="false" UUID="923dc788-de4a-4d42-8ff7-4310c70d4232" name="events_waits_history_long" objectType="TABLE" physicalName="events_waits_history_long" >
+     <remarks></remarks>
+     <folder id="FOLTAB1481" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX149" populated="true" UUID="d87d906f-0656-424d-a3bc-167ac0b00c58" clustered="false" name="events_waits_history_long_pk" physicalName="events_waits_history_long_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB150" populated="false" UUID="280f6060-e5d1-40f7-845e-2248b05b4d59" name="events_waits_summary_by_account_by_event_name" objectType="TABLE" physicalName="events_waits_summary_by_account_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1501" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX151" populated="true" UUID="44b96ae7-3c62-4597-8656-39602b0fc730" clustered="false" name="events_waits_summary_by_account_by_event_name_pk" physicalName="events_waits_summary_by_account_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB152" populated="false" UUID="5ac6b612-f33f-4078-8a74-e998c90ddd85" name="events_waits_summary_by_host_by_event_name" objectType="TABLE" physicalName="events_waits_summary_by_host_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1521" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX153" populated="true" UUID="68f9c2c7-dc04-4f3a-a5fa-c2ba8108b63b" clustered="false" name="events_waits_summary_by_host_by_event_name_pk" physicalName="events_waits_summary_by_host_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB154" populated="false" UUID="a98c5905-426f-4679-85e7-f2838685a7b4" name="events_waits_summary_by_instance" objectType="TABLE" physicalName="events_waits_summary_by_instance" >
+     <remarks></remarks>
+     <folder id="FOLTAB1541" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX155" populated="true" UUID="1a8ac66c-81a1-49bf-9f69-60cf635f8cac" clustered="false" name="events_waits_summary_by_instance_pk" physicalName="events_waits_summary_by_instance_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB156" populated="false" UUID="ec0e153e-8ea2-4cbb-bbde-fdf174a6de93" name="events_waits_summary_by_thread_by_event_name" objectType="TABLE" physicalName="events_waits_summary_by_thread_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1561" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX157" populated="true" UUID="ecd7592a-6961-493d-a396-65c592b3659c" clustered="false" name="events_waits_summary_by_thread_by_event_name_pk" physicalName="events_waits_summary_by_thread_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB158" populated="false" UUID="04f016a8-8bf6-4eb6-9895-0708300d1eb1" name="events_waits_summary_by_user_by_event_name" objectType="TABLE" physicalName="events_waits_summary_by_user_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1581" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX159" populated="true" UUID="b388ebcd-4b9f-44f1-bd2d-e20e75b5b27e" clustered="false" name="events_waits_summary_by_user_by_event_name_pk" physicalName="events_waits_summary_by_user_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB160" populated="false" UUID="f8d4e4fc-7ff4-4459-9896-58de10cd867e" name="events_waits_summary_global_by_event_name" objectType="TABLE" physicalName="events_waits_summary_global_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1601" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX161" populated="true" UUID="0fe32d51-005d-492a-ad54-5c127d10cc33" clustered="false" name="events_waits_summary_global_by_event_name_pk" physicalName="events_waits_summary_global_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB162" populated="false" UUID="ae5b930a-1625-49f2-a8a1-cc6b3408be16" name="file_instances" objectType="TABLE" physicalName="file_instances" >
+     <remarks></remarks>
+     <folder id="FOLTAB1621" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX163" populated="true" UUID="208ca301-ca39-4b89-86bc-09c61f177e01" clustered="false" name="file_instances_pk" physicalName="file_instances_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB164" populated="false" UUID="33d22002-4585-4b93-b569-0c67be16b005" name="file_summary_by_event_name" objectType="TABLE" physicalName="file_summary_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1641" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX165" populated="true" UUID="bc7ebfea-35d2-460d-b608-6bc0a607e42e" clustered="false" name="file_summary_by_event_name_pk" physicalName="file_summary_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB166" populated="false" UUID="adc51340-3faf-4bff-9ee5-477288b49b8e" name="file_summary_by_instance" objectType="TABLE" physicalName="file_summary_by_instance" >
+     <remarks></remarks>
+     <folder id="FOLTAB1661" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX167" populated="true" UUID="f6f84c51-d209-4729-821e-21c2b4fc4803" clustered="false" name="file_summary_by_instance_pk" physicalName="file_summary_by_instance_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB168" populated="false" UUID="989f1c01-3caf-41fc-87f3-97d5fa61f242" name="global_status" objectType="TABLE" physicalName="global_status" >
+     <remarks></remarks>
+     <folder id="FOLTAB1681" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX169" populated="true" UUID="46a3e150-3bec-489a-9c05-ec36a9ed4a29" clustered="false" name="global_status_pk" physicalName="global_status_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB170" populated="false" UUID="b50d8e56-30eb-4ff8-a266-09c09e4de0cc" name="global_variables" objectType="TABLE" physicalName="global_variables" >
+     <remarks></remarks>
+     <folder id="FOLTAB1701" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX171" populated="true" UUID="e8928bdc-af53-49a9-904a-934a4d6b8d4c" clustered="false" name="global_variables_pk" physicalName="global_variables_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB172" populated="false" UUID="1d299b06-83bc-4d4b-9627-0aa455280193" name="host_cache" objectType="TABLE" physicalName="host_cache" >
+     <remarks></remarks>
+     <folder id="FOLTAB1721" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX173" populated="true" UUID="dd3b415c-9121-4cba-a299-8b8ded37847c" clustered="false" name="host_cache_pk" physicalName="host_cache_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB174" populated="false" UUID="c2f0f6e3-69de-4fb3-a351-e9d360880ea8" name="hosts" objectType="TABLE" physicalName="hosts" >
+     <remarks></remarks>
+     <folder id="FOLTAB1741" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX175" populated="true" UUID="cdd03e77-4ecd-487c-86e0-9a273fa73853" clustered="false" name="hosts_pk" physicalName="hosts_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB176" populated="false" UUID="6d948617-0fb8-4760-b88c-06e6cd3a0035" name="log_status" objectType="TABLE" physicalName="log_status" >
+     <remarks></remarks>
+     <folder id="FOLTAB1761" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX177" populated="true" UUID="5881f3b9-441c-4d35-b2ab-4f4c252aa967" clustered="false" name="log_status_pk" physicalName="log_status_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB178" populated="false" UUID="0f5ddebd-3e6b-482e-8517-6230608d94a7" name="memory_summary_by_account_by_event_name" objectType="TABLE" physicalName="memory_summary_by_account_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1781" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX179" populated="true" UUID="7caba76a-68e9-423a-b699-956a2aef3daa" clustered="false" name="memory_summary_by_account_by_event_name_pk" physicalName="memory_summary_by_account_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB180" populated="false" UUID="baab3e49-8366-41dc-8481-843f9741806d" name="memory_summary_by_host_by_event_name" objectType="TABLE" physicalName="memory_summary_by_host_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1801" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX181" populated="true" UUID="62f662b3-e11f-469a-a723-a2275dc015ae" clustered="false" name="memory_summary_by_host_by_event_name_pk" physicalName="memory_summary_by_host_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB182" populated="false" UUID="6206ee5b-f6d8-4612-85aa-55c0c50a25e7" name="memory_summary_by_thread_by_event_name" objectType="TABLE" physicalName="memory_summary_by_thread_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1821" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX183" populated="true" UUID="f2f4968b-ac81-457d-b6de-ea676174d785" clustered="false" name="memory_summary_by_thread_by_event_name_pk" physicalName="memory_summary_by_thread_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB184" populated="false" UUID="d6d2e5d3-29d3-459d-9482-446858f072de" name="memory_summary_by_user_by_event_name" objectType="TABLE" physicalName="memory_summary_by_user_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1841" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX185" populated="true" UUID="ea9bbad3-3ef4-4a8f-ae34-4d7a031c01bd" clustered="false" name="memory_summary_by_user_by_event_name_pk" physicalName="memory_summary_by_user_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB186" populated="false" UUID="1a1936e2-cb7c-4609-b506-2fab1b5a53d8" name="memory_summary_global_by_event_name" objectType="TABLE" physicalName="memory_summary_global_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB1861" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX187" populated="true" UUID="eab7fc84-36c7-4ae8-bda6-4391d94fe0d1" clustered="false" name="memory_summary_global_by_event_name_pk" physicalName="memory_summary_global_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB188" populated="false" UUID="2dd951f1-1206-4c39-aae5-9cd8ec7b91b8" name="metadata_locks" objectType="TABLE" physicalName="metadata_locks" >
+     <remarks></remarks>
+     <folder id="FOLTAB1881" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX189" populated="true" UUID="a2f678df-a5e5-478e-8e6a-921b998f939b" clustered="false" name="metadata_locks_pk" physicalName="metadata_locks_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB190" populated="false" UUID="19a8a2e8-768b-4ccd-9185-3678236779fe" name="mutex_instances" objectType="TABLE" physicalName="mutex_instances" >
+     <remarks></remarks>
+     <folder id="FOLTAB1901" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX191" populated="true" UUID="95be5e35-1628-49cd-8180-0fff28e8f376" clustered="false" name="mutex_instances_pk" physicalName="mutex_instances_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB192" populated="false" UUID="b3da4607-5409-4beb-9415-9a63bd79d075" name="objects_summary_global_by_type" objectType="TABLE" physicalName="objects_summary_global_by_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB1921" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX193" populated="true" UUID="ad6bcfbc-f93a-40b9-918c-c77aca6b93fa" clustered="false" name="objects_summary_global_by_type_pk" physicalName="objects_summary_global_by_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB194" populated="false" UUID="43338668-1923-46a6-a132-8a68df6d559d" name="performance_timers" objectType="TABLE" physicalName="performance_timers" >
+     <remarks></remarks>
+     <folder id="FOLTAB1941" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX195" populated="true" UUID="6d0618d0-401a-49c6-b035-afc1748d17f8" clustered="false" name="performance_timers_pk" physicalName="performance_timers_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB196" populated="false" UUID="2e4cd24b-d33b-4dc2-a6f7-62e518e8ebab" name="persisted_variables" objectType="TABLE" physicalName="persisted_variables" >
+     <remarks></remarks>
+     <folder id="FOLTAB1961" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX197" populated="true" UUID="80fa62d1-5450-4084-ba6e-e512b4c912b2" clustered="false" name="persisted_variables_pk" physicalName="persisted_variables_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB198" populated="false" UUID="dfc0074e-aad1-4dc3-abc6-5981b102b9b1" name="prepared_statements_instances" objectType="TABLE" physicalName="prepared_statements_instances" >
+     <remarks></remarks>
+     <folder id="FOLTAB1981" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX199" populated="true" UUID="2da5755c-9029-44ab-94ae-d314b8143cc3" clustered="false" name="prepared_statements_instances_pk" physicalName="prepared_statements_instances_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB200" populated="false" UUID="8c651ab1-1ff1-4233-89d8-6a60a8979f51" name="replication_applier_configuration" objectType="TABLE" physicalName="replication_applier_configuration" >
+     <remarks></remarks>
+     <folder id="FOLTAB2001" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX201" populated="true" UUID="a4e7475a-2be0-464c-baca-e91a5399fb64" clustered="false" name="replication_applier_configuration_pk" physicalName="replication_applier_configuration_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB202" populated="false" UUID="ccadfd1b-e397-44cd-823d-b4e119f2e323" name="replication_applier_filters" objectType="TABLE" physicalName="replication_applier_filters" >
+     <remarks></remarks>
+     <folder id="FOLTAB2021" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX203" populated="true" UUID="5f1f6ac4-0ec2-4e99-a3dd-081404d2ab6e" clustered="false" name="replication_applier_filters_pk" physicalName="replication_applier_filters_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB204" populated="false" UUID="c1d36801-b09d-429e-bda4-4568832bb5fa" name="replication_applier_global_filters" objectType="TABLE" physicalName="replication_applier_global_filters" >
+     <remarks></remarks>
+     <folder id="FOLTAB2041" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX205" populated="true" UUID="006992a8-69f4-4cf3-9272-71213ada2818" clustered="false" name="replication_applier_global_filters_pk" physicalName="replication_applier_global_filters_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB206" populated="false" UUID="09df52d9-a880-4577-a1ee-78bf66d6edc4" name="replication_applier_status" objectType="TABLE" physicalName="replication_applier_status" >
+     <remarks></remarks>
+     <folder id="FOLTAB2061" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX207" populated="true" UUID="bd026c8b-4254-4dc6-8287-7e885587f3ad" clustered="false" name="replication_applier_status_pk" physicalName="replication_applier_status_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB208" populated="false" UUID="310739b0-8fac-46a6-a9d8-922f64cd2c26" name="replication_applier_status_by_coordinator" objectType="TABLE" physicalName="replication_applier_status_by_coordinator" >
+     <remarks></remarks>
+     <folder id="FOLTAB2081" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX209" populated="true" UUID="12680678-5d15-4aad-a451-3c2c17311d4b" clustered="false" name="replication_applier_status_by_coordinator_pk" physicalName="replication_applier_status_by_coordinator_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB210" populated="false" UUID="1dd5a4b6-34a5-4717-9222-cab4fc0b0efb" name="replication_applier_status_by_worker" objectType="TABLE" physicalName="replication_applier_status_by_worker" >
+     <remarks></remarks>
+     <folder id="FOLTAB2101" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX211" populated="true" UUID="1b2d2fc3-b3de-4cdd-adc0-f00e5680dc6d" clustered="false" name="replication_applier_status_by_worker_pk" physicalName="replication_applier_status_by_worker_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB212" populated="false" UUID="72e8135f-e95c-460f-8d39-7d5abb458722" name="replication_connection_configuration" objectType="TABLE" physicalName="replication_connection_configuration" >
+     <remarks></remarks>
+     <folder id="FOLTAB2121" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX213" populated="true" UUID="9820a146-d7e2-4ea0-ade4-dd7766644657" clustered="false" name="replication_connection_configuration_pk" physicalName="replication_connection_configuration_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB214" populated="false" UUID="e1898576-73ef-4f23-b8c4-bfc9f1e39591" name="replication_connection_status" objectType="TABLE" physicalName="replication_connection_status" >
+     <remarks></remarks>
+     <folder id="FOLTAB2141" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX215" populated="true" UUID="bacaabb3-1064-424b-ad08-31341ae5be8a" clustered="false" name="replication_connection_status_pk" physicalName="replication_connection_status_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB216" populated="false" UUID="69012bde-da61-4b6a-93a6-23abe290c3d0" name="replication_group_member_stats" objectType="TABLE" physicalName="replication_group_member_stats" >
+     <remarks></remarks>
+     <folder id="FOLTAB2161" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX217" populated="true" UUID="96f998cf-f0af-4e1d-8754-bf127359b3de" clustered="false" name="replication_group_member_stats_pk" physicalName="replication_group_member_stats_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB218" populated="false" UUID="ae2f1b91-ffea-43ca-bc17-2cbcfaf405e6" name="replication_group_members" objectType="TABLE" physicalName="replication_group_members" >
+     <remarks></remarks>
+     <folder id="FOLTAB2181" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX219" populated="true" UUID="dc1fb837-aa1f-4db2-a838-96785ea2b5d8" clustered="false" name="replication_group_members_pk" physicalName="replication_group_members_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB220" populated="false" UUID="12fc7af7-cb06-42ec-9557-6633eb43fb5a" name="rwlock_instances" objectType="TABLE" physicalName="rwlock_instances" >
+     <remarks></remarks>
+     <folder id="FOLTAB2201" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX221" populated="true" UUID="e1252c0a-8c75-447c-a58c-881549237dc4" clustered="false" name="rwlock_instances_pk" physicalName="rwlock_instances_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB222" populated="false" UUID="d3685345-c056-4839-973e-5efdd035b780" name="session_account_connect_attrs" objectType="TABLE" physicalName="session_account_connect_attrs" >
+     <remarks></remarks>
+     <folder id="FOLTAB2221" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX223" populated="true" UUID="ee1ea9e3-e8d9-4b5b-b574-456b0f2ee2fc" clustered="false" name="session_account_connect_attrs_pk" physicalName="session_account_connect_attrs_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB224" populated="false" UUID="5fcdc14d-f86d-486a-be0c-e9d3155171cd" name="session_connect_attrs" objectType="TABLE" physicalName="session_connect_attrs" >
+     <remarks></remarks>
+     <folder id="FOLTAB2241" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX225" populated="true" UUID="4cfc5678-1cad-4083-a388-88d1245acbb6" clustered="false" name="session_connect_attrs_pk" physicalName="session_connect_attrs_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB226" populated="false" UUID="99ca8c53-6344-4cb7-ad5d-c906210ee74b" name="session_status" objectType="TABLE" physicalName="session_status" >
+     <remarks></remarks>
+     <folder id="FOLTAB2261" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX227" populated="true" UUID="890d09ac-c3f1-40d8-bed1-33637b4355b8" clustered="false" name="session_status_pk" physicalName="session_status_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB228" populated="false" UUID="05ac2115-aabe-4b58-a1cc-99a785024c61" name="session_variables" objectType="TABLE" physicalName="session_variables" >
+     <remarks></remarks>
+     <folder id="FOLTAB2281" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX229" populated="true" UUID="a9208441-4202-4eec-9a47-5bbe96aa91c1" clustered="false" name="session_variables_pk" physicalName="session_variables_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB230" populated="false" UUID="4bfaeacb-0b4c-44dc-b2a1-4de5feeed9a5" name="setup_actors" objectType="TABLE" physicalName="setup_actors" >
+     <remarks></remarks>
+     <folder id="FOLTAB2301" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX231" populated="true" UUID="718a8f21-4efd-4bb7-ad3c-bc32045224d9" clustered="false" name="setup_actors_pk" physicalName="setup_actors_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB232" populated="false" UUID="14057064-6975-49cd-b664-3fdcea8c7786" name="setup_consumers" objectType="TABLE" physicalName="setup_consumers" >
+     <remarks></remarks>
+     <folder id="FOLTAB2321" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX233" populated="true" UUID="af6861c4-0df7-4dd6-90d3-bdcab199a4ae" clustered="false" name="setup_consumers_pk" physicalName="setup_consumers_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB234" populated="false" UUID="0944e516-e2ec-4dd0-b6ac-15cb4dbc55e5" name="setup_instruments" objectType="TABLE" physicalName="setup_instruments" >
+     <remarks></remarks>
+     <folder id="FOLTAB2341" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX235" populated="true" UUID="99a5d396-e311-4c45-87c3-eca89ac3980f" clustered="false" name="setup_instruments_pk" physicalName="setup_instruments_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB236" populated="false" UUID="168e9b88-cee3-4a60-a669-bda3c268acca" name="setup_objects" objectType="TABLE" physicalName="setup_objects" >
+     <remarks></remarks>
+     <folder id="FOLTAB2361" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX237" populated="true" UUID="d206f0ad-6542-403a-b3a9-fc9ccae8fb76" clustered="false" name="setup_objects_pk" physicalName="setup_objects_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB238" populated="false" UUID="0855bd04-0f0f-4d60-8f6d-c68c4b1a8fac" name="setup_threads" objectType="TABLE" physicalName="setup_threads" >
+     <remarks></remarks>
+     <folder id="FOLTAB2381" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX239" populated="true" UUID="afd70717-16f0-4329-9f15-6906aad65e40" clustered="false" name="setup_threads_pk" physicalName="setup_threads_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB240" populated="false" UUID="8587702d-e64c-47f0-ba14-44f6bfdcc14e" name="socket_instances" objectType="TABLE" physicalName="socket_instances" >
+     <remarks></remarks>
+     <folder id="FOLTAB2401" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX241" populated="true" UUID="d0e66cd0-1404-4107-b9df-dfbefe9fa3bf" clustered="false" name="socket_instances_pk" physicalName="socket_instances_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB242" populated="false" UUID="70ef3764-3b7c-424a-ba0b-e2d905e84954" name="socket_summary_by_event_name" objectType="TABLE" physicalName="socket_summary_by_event_name" >
+     <remarks></remarks>
+     <folder id="FOLTAB2421" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX243" populated="true" UUID="8d00c350-9065-49a6-9574-55a0c938fe16" clustered="false" name="socket_summary_by_event_name_pk" physicalName="socket_summary_by_event_name_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB244" populated="false" UUID="0c73a7f3-6285-49b3-8a64-401e8c8d8673" name="socket_summary_by_instance" objectType="TABLE" physicalName="socket_summary_by_instance" >
+     <remarks></remarks>
+     <folder id="FOLTAB2441" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX245" populated="true" UUID="dbc84d30-642c-40b1-aaec-a3d19e3b0fd8" clustered="false" name="socket_summary_by_instance_pk" physicalName="socket_summary_by_instance_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB246" populated="false" UUID="7341d72f-4ff8-4de0-a15e-1caba9ac71f4" name="status_by_account" objectType="TABLE" physicalName="status_by_account" >
+     <remarks></remarks>
+     <folder id="FOLTAB2461" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX247" populated="true" UUID="7f2f20b7-4cc6-4001-a145-34931ecb9abb" clustered="false" name="status_by_account_pk" physicalName="status_by_account_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB248" populated="false" UUID="8671f4a7-e8b1-40f0-82df-0bc4682ff7f3" name="status_by_host" objectType="TABLE" physicalName="status_by_host" >
+     <remarks></remarks>
+     <folder id="FOLTAB2481" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX249" populated="true" UUID="48f23dc7-9459-428c-ae0a-5c8fb795b381" clustered="false" name="status_by_host_pk" physicalName="status_by_host_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB250" populated="false" UUID="253ff091-8798-4300-a51a-dd8ba33acc0f" name="status_by_thread" objectType="TABLE" physicalName="status_by_thread" >
+     <remarks></remarks>
+     <folder id="FOLTAB2501" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX251" populated="true" UUID="9417d02e-9436-4684-93ff-72e75968456c" clustered="false" name="status_by_thread_pk" physicalName="status_by_thread_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB252" populated="false" UUID="9c436fa4-7813-43da-ac8e-e430d00e1dd1" name="status_by_user" objectType="TABLE" physicalName="status_by_user" >
+     <remarks></remarks>
+     <folder id="FOLTAB2521" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX253" populated="true" UUID="cb0e97db-817f-44b7-9bfc-e802589d8413" clustered="false" name="status_by_user_pk" physicalName="status_by_user_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB254" populated="false" UUID="cf0615f6-31c7-4190-a429-c949343c64e3" name="table_handles" objectType="TABLE" physicalName="table_handles" >
+     <remarks></remarks>
+     <folder id="FOLTAB2541" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX255" populated="true" UUID="c3ae8eba-8487-4f98-8374-80d6b960dfee" clustered="false" name="table_handles_pk" physicalName="table_handles_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB256" populated="false" UUID="fc13fed2-e6bc-4c07-8c01-75581c1ec788" name="table_io_waits_summary_by_index_usage" objectType="TABLE" physicalName="table_io_waits_summary_by_index_usage" >
+     <remarks></remarks>
+     <folder id="FOLTAB2561" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX257" populated="true" UUID="e1aa9af3-5eaa-4f15-bf59-56336255e30f" clustered="false" name="table_io_waits_summary_by_index_usage_pk" physicalName="table_io_waits_summary_by_index_usage_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB258" populated="false" UUID="643ac28e-2278-4e51-87ef-1d35571fa64e" name="table_io_waits_summary_by_table" objectType="TABLE" physicalName="table_io_waits_summary_by_table" >
+     <remarks></remarks>
+     <folder id="FOLTAB2581" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX259" populated="true" UUID="8fb9cde2-e843-4d96-a938-ee816bcf984a" clustered="false" name="table_io_waits_summary_by_table_pk" physicalName="table_io_waits_summary_by_table_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB260" populated="false" UUID="e97a54fa-51f5-4d62-9b01-2138f5128031" name="table_lock_waits_summary_by_table" objectType="TABLE" physicalName="table_lock_waits_summary_by_table" >
+     <remarks></remarks>
+     <folder id="FOLTAB2601" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX261" populated="true" UUID="5b3a4f12-d155-4d74-8e20-37b895693517" clustered="false" name="table_lock_waits_summary_by_table_pk" physicalName="table_lock_waits_summary_by_table_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB262" populated="false" UUID="be26e963-24f0-4384-89ef-bc04f43f4fd3" name="threads" objectType="TABLE" physicalName="threads" >
+     <remarks></remarks>
+     <folder id="FOLTAB2621" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX263" populated="true" UUID="abd9a039-c6f1-4fd9-8e6f-3e434c2b06ae" clustered="false" name="threads_pk" physicalName="threads_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB264" populated="false" UUID="367b5ce8-f11f-4564-a4ff-e779b3a5bc88" name="user_defined_functions" objectType="TABLE" physicalName="user_defined_functions" >
+     <remarks></remarks>
+     <folder id="FOLTAB2641" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX265" populated="true" UUID="f2211b10-d388-415d-a04c-ab51a4fd2cff" clustered="false" name="user_defined_functions_pk" physicalName="user_defined_functions_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB266" populated="false" UUID="8ba19c6c-93f7-4c8f-8737-ea74f2900dd6" name="user_variables_by_thread" objectType="TABLE" physicalName="user_variables_by_thread" >
+     <remarks></remarks>
+     <folder id="FOLTAB2661" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX267" populated="true" UUID="16018e9b-172d-44a7-828f-c55db9bbb594" clustered="false" name="user_variables_by_thread_pk" physicalName="user_variables_by_thread_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB268" populated="false" UUID="aeb1e39e-3f8b-4b57-b8ee-329ff811f74c" name="users" objectType="TABLE" physicalName="users" >
+     <remarks></remarks>
+     <folder id="FOLTAB2681" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX269" populated="true" UUID="565a1a5e-97a5-460b-a093-a77e00ef1cb8" clustered="false" name="users_pk" physicalName="users_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB270" populated="false" UUID="04952b82-32dd-4968-8b0c-40b360e65470" name="variables_by_thread" objectType="TABLE" physicalName="variables_by_thread" >
+     <remarks></remarks>
+     <folder id="FOLTAB2701" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX271" populated="true" UUID="87f50a87-d0f8-4038-908d-db80c7ea2ba2" clustered="false" name="variables_by_thread_pk" physicalName="variables_by_thread_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB272" populated="false" UUID="01a9aa81-4284-4512-a256-e816495c9574" name="variables_info" objectType="TABLE" physicalName="variables_info" >
+     <remarks></remarks>
+     <folder id="FOLTAB2721" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX273" populated="true" UUID="2e725c98-3086-4775-b96d-bef24dca5847" clustered="false" name="variables_info_pk" physicalName="variables_info_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+   </catalog>
+   <catalog id="CAT274" populated="true" UUID="219cda52-23c2-49fd-aa2f-a8d915aa9d78" name="projet_3" nativeTerm="database" physicalName="projet_3" >
+    <table id="TAB275" populated="false" UUID="47818595-4efd-452d-a204-9acc2a22e15b" name="borrowing" objectType="TABLE" physicalName="borrowing" >
+     <remarks></remarks>
+     <folder id="FOLTAB2751" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX276" populated="true" UUID="e94d0a51-20d7-4296-a09e-df0ec8d6e8e2" clustered="false" name="borrowing_pk" physicalName="borrowing_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB277" populated="false" UUID="f3194598-f1dd-404d-98ed-391fed64b29f" name="publisher" objectType="TABLE" physicalName="publisher" >
+     <remarks></remarks>
+     <folder id="FOLTAB2771" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX278" populated="true" UUID="cec098bf-f3b2-4693-b269-544dced7996a" clustered="false" name="publisher_pk" physicalName="publisher_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB279" populated="false" UUID="08881d66-9af8-4ffc-99c3-0ff2b1dcd49a" name="role" objectType="TABLE" physicalName="role" >
+     <remarks></remarks>
+     <folder id="FOLTAB2791" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX280" populated="true" UUID="d642dbba-73fb-4d0a-a2ce-4360f8d6650d" clustered="false" name="role_pk" physicalName="role_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB281" populated="false" UUID="97991735-1631-47ca-9ce4-2a2fb7ca4da6" name="user" objectType="TABLE" physicalName="user" >
+     <remarks></remarks>
+     <folder id="FOLTAB2811" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX282" populated="true" UUID="fa8b647c-e818-4da0-bc78-b3f4aea23f33" clustered="false" name="user_pk" physicalName="user_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+   </catalog>
+   <catalog id="CAT283" populated="true" UUID="71909714-f00b-4374-bcfb-235e4bfcb1f4" name="sys" nativeTerm="database" physicalName="sys" >
+    <table id="TAB284" populated="false" UUID="c9939771-4ccf-415a-861b-de87fcb27788" name="sys_config" objectType="TABLE" physicalName="sys_config" >
+     <remarks></remarks>
+     <folder id="FOLTAB2841" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX285" populated="true" UUID="d4775e82-62df-49e4-b692-17645cc657fd" clustered="false" name="sys_config_pk" physicalName="sys_config_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB286" populated="false" UUID="6606814e-e14b-4f9c-8a0f-ecd773e5f43b" name="host_summary" objectType="VIEW" physicalName="host_summary" >
+     <remarks></remarks>
+     <folder id="FOLTAB2861" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX287" populated="true" UUID="2876e001-4310-4743-9c5a-0b61ce86d7ba" clustered="false" name="host_summary_pk" physicalName="host_summary_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB288" populated="false" UUID="ba8d8882-e58f-423d-9775-b5a4343d6908" name="host_summary_by_file_io" objectType="VIEW" physicalName="host_summary_by_file_io" >
+     <remarks></remarks>
+     <folder id="FOLTAB2881" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX289" populated="true" UUID="0a0bf408-5403-4dee-8e52-0846da31a7ec" clustered="false" name="host_summary_by_file_io_pk" physicalName="host_summary_by_file_io_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB290" populated="false" UUID="326e93ef-7751-42c6-85b9-a37e2c413c79" name="host_summary_by_file_io_type" objectType="VIEW" physicalName="host_summary_by_file_io_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB2901" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX291" populated="true" UUID="d78c6669-1b93-4280-b2b5-19da8d675729" clustered="false" name="host_summary_by_file_io_type_pk" physicalName="host_summary_by_file_io_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB292" populated="false" UUID="15e438a5-d5e2-467c-b719-9fdb3d60f5f5" name="host_summary_by_stages" objectType="VIEW" physicalName="host_summary_by_stages" >
+     <remarks></remarks>
+     <folder id="FOLTAB2921" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX293" populated="true" UUID="d4a46bfd-1fee-4ec3-a88b-e607c3aeea50" clustered="false" name="host_summary_by_stages_pk" physicalName="host_summary_by_stages_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB294" populated="false" UUID="c7789668-fcc4-43c8-86ca-36a57770700f" name="host_summary_by_statement_latency" objectType="VIEW" physicalName="host_summary_by_statement_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB2941" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX295" populated="true" UUID="0cde10ea-55ef-4991-bd77-9baf2e090ca6" clustered="false" name="host_summary_by_statement_latency_pk" physicalName="host_summary_by_statement_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB296" populated="false" UUID="bed73912-b562-4779-af55-8ca91351773e" name="host_summary_by_statement_type" objectType="VIEW" physicalName="host_summary_by_statement_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB2961" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX297" populated="true" UUID="49c3324e-786e-493d-b822-9bb68f273d2e" clustered="false" name="host_summary_by_statement_type_pk" physicalName="host_summary_by_statement_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB298" populated="false" UUID="864c8fb8-ad05-49b2-b9d3-eb1e278e2869" name="innodb_buffer_stats_by_schema" objectType="VIEW" physicalName="innodb_buffer_stats_by_schema" >
+     <remarks></remarks>
+     <folder id="FOLTAB2981" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX299" populated="true" UUID="9de76833-7976-4ddf-a39c-c1c756ef20aa" clustered="false" name="innodb_buffer_stats_by_schema_pk" physicalName="innodb_buffer_stats_by_schema_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB300" populated="false" UUID="62586c9a-6dd5-4c7a-a25e-7d59b016ad76" name="innodb_buffer_stats_by_table" objectType="VIEW" physicalName="innodb_buffer_stats_by_table" >
+     <remarks></remarks>
+     <folder id="FOLTAB3001" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX301" populated="true" UUID="6ba32d7c-4c31-41f5-ae0a-b54e7804d3fe" clustered="false" name="innodb_buffer_stats_by_table_pk" physicalName="innodb_buffer_stats_by_table_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB302" populated="false" UUID="9a3a575f-51de-40be-8580-4b76029477f2" name="innodb_lock_waits" objectType="VIEW" physicalName="innodb_lock_waits" >
+     <remarks></remarks>
+     <folder id="FOLTAB3021" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX303" populated="true" UUID="90284bd1-f729-4b77-99b1-2e893cbfe652" clustered="false" name="innodb_lock_waits_pk" physicalName="innodb_lock_waits_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB304" populated="false" UUID="e22761ef-0f49-46d9-b241-00680d21b523" name="io_by_thread_by_latency" objectType="VIEW" physicalName="io_by_thread_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3041" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX305" populated="true" UUID="432c0b32-d6dc-4660-b5c5-0041fc663be0" clustered="false" name="io_by_thread_by_latency_pk" physicalName="io_by_thread_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB306" populated="false" UUID="8ca808e4-d912-48aa-9a2d-9ec43003aceb" name="io_global_by_file_by_bytes" objectType="VIEW" physicalName="io_global_by_file_by_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB3061" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX307" populated="true" UUID="a38cc1ce-e37d-4170-9379-2f1a91cd5328" clustered="false" name="io_global_by_file_by_bytes_pk" physicalName="io_global_by_file_by_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB308" populated="false" UUID="50fe9c8c-7b2d-4286-9061-be088566aa68" name="io_global_by_file_by_latency" objectType="VIEW" physicalName="io_global_by_file_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3081" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX309" populated="true" UUID="db86fe14-b9c7-494b-a77b-eb0eeb044be7" clustered="false" name="io_global_by_file_by_latency_pk" physicalName="io_global_by_file_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB310" populated="false" UUID="ddc2aa22-8f8b-480b-92c6-fdb9f8d7a511" name="io_global_by_wait_by_bytes" objectType="VIEW" physicalName="io_global_by_wait_by_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB3101" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX311" populated="true" UUID="15f705c2-6718-4f20-85c2-857ca13704bc" clustered="false" name="io_global_by_wait_by_bytes_pk" physicalName="io_global_by_wait_by_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB312" populated="false" UUID="c6e88ccc-de30-4511-90d7-61ebcc542492" name="io_global_by_wait_by_latency" objectType="VIEW" physicalName="io_global_by_wait_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3121" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX313" populated="true" UUID="bd6b8041-a927-46c4-b850-8e91502936b3" clustered="false" name="io_global_by_wait_by_latency_pk" physicalName="io_global_by_wait_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB314" populated="false" UUID="a4433b38-8d9e-438c-b8e8-aa9707b9dae0" name="latest_file_io" objectType="VIEW" physicalName="latest_file_io" >
+     <remarks></remarks>
+     <folder id="FOLTAB3141" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX315" populated="true" UUID="89d5f889-7d04-463f-8d8e-bd391c216ab3" clustered="false" name="latest_file_io_pk" physicalName="latest_file_io_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB316" populated="false" UUID="c53ed383-689d-4f43-9e84-9b9a537d627c" name="memory_by_host_by_current_bytes" objectType="VIEW" physicalName="memory_by_host_by_current_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB3161" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX317" populated="true" UUID="87893bdb-7417-494a-94b7-2fc8d8cc8b67" clustered="false" name="memory_by_host_by_current_bytes_pk" physicalName="memory_by_host_by_current_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB318" populated="false" UUID="ad2d41c8-db7f-4718-9917-0b71c88ad8eb" name="memory_by_thread_by_current_bytes" objectType="VIEW" physicalName="memory_by_thread_by_current_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB3181" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX319" populated="true" UUID="9e9df857-d236-4aad-bcef-459ffcc4e8c3" clustered="false" name="memory_by_thread_by_current_bytes_pk" physicalName="memory_by_thread_by_current_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB320" populated="false" UUID="9791ce4b-b86f-4060-8068-11d8d8ed2431" name="memory_by_user_by_current_bytes" objectType="VIEW" physicalName="memory_by_user_by_current_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB3201" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX321" populated="true" UUID="daa03f78-34c1-46d3-a4b6-6a1c80d662d0" clustered="false" name="memory_by_user_by_current_bytes_pk" physicalName="memory_by_user_by_current_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB322" populated="false" UUID="1a5b47dc-b499-47d5-b84c-1979f10037b0" name="memory_global_by_current_bytes" objectType="VIEW" physicalName="memory_global_by_current_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB3221" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX323" populated="true" UUID="97deab6f-ad3d-426d-bd2e-723fe34e4b88" clustered="false" name="memory_global_by_current_bytes_pk" physicalName="memory_global_by_current_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB324" populated="false" UUID="e6859bde-f3dd-4568-86a2-beb92c8d726d" name="memory_global_total" objectType="VIEW" physicalName="memory_global_total" >
+     <remarks></remarks>
+     <folder id="FOLTAB3241" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX325" populated="true" UUID="567dbfc3-423e-457a-8fba-f6647121dbad" clustered="false" name="memory_global_total_pk" physicalName="memory_global_total_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB326" populated="false" UUID="76600dae-dda6-4d37-ba5e-1c3c645c0341" name="metrics" objectType="VIEW" physicalName="metrics" >
+     <remarks></remarks>
+     <folder id="FOLTAB3261" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX327" populated="true" UUID="9896df3d-6579-44e7-82f1-d1126351f883" clustered="false" name="metrics_pk" physicalName="metrics_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB328" populated="false" UUID="687e0f76-5ee4-4e3f-a55b-577240721058" name="processlist" objectType="VIEW" physicalName="processlist" >
+     <remarks></remarks>
+     <folder id="FOLTAB3281" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX329" populated="true" UUID="2be7b366-2b54-4e87-aec1-493c142ea855" clustered="false" name="processlist_pk" physicalName="processlist_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB330" populated="false" UUID="e1f865dd-4f4a-4ae7-a398-bbd9f27405fe" name="ps_check_lost_instrumentation" objectType="VIEW" physicalName="ps_check_lost_instrumentation" >
+     <remarks></remarks>
+     <folder id="FOLTAB3301" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX331" populated="true" UUID="a39aac51-b972-4a3c-bdf6-2e2df28785e8" clustered="false" name="ps_check_lost_instrumentation_pk" physicalName="ps_check_lost_instrumentation_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB332" populated="false" UUID="5996d01a-5ac4-4c85-8d5c-f7acd4f0d6b7" name="schema_auto_increment_columns" objectType="VIEW" physicalName="schema_auto_increment_columns" >
+     <remarks></remarks>
+     <folder id="FOLTAB3321" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX333" populated="true" UUID="e602f55c-d3ec-4b96-853a-4020d3dd745d" clustered="false" name="schema_auto_increment_columns_pk" physicalName="schema_auto_increment_columns_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB334" populated="false" UUID="5f568993-4685-4d9b-ade2-81d6e62aa042" name="schema_index_statistics" objectType="VIEW" physicalName="schema_index_statistics" >
+     <remarks></remarks>
+     <folder id="FOLTAB3341" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX335" populated="true" UUID="521b29fa-3cce-42a4-bc48-439fc2e4a3e3" clustered="false" name="schema_index_statistics_pk" physicalName="schema_index_statistics_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB336" populated="false" UUID="826e3f2f-19f2-4e2f-9f65-4e9e5a436a22" name="schema_object_overview" objectType="VIEW" physicalName="schema_object_overview" >
+     <remarks></remarks>
+     <folder id="FOLTAB3361" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX337" populated="true" UUID="2a7f3f45-f651-4c0a-b7ef-1130937dc1ce" clustered="false" name="schema_object_overview_pk" physicalName="schema_object_overview_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB338" populated="false" UUID="421d731b-d986-421f-b028-e081ab593232" name="schema_redundant_indexes" objectType="VIEW" physicalName="schema_redundant_indexes" >
+     <remarks></remarks>
+     <folder id="FOLTAB3381" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX339" populated="true" UUID="f0424414-8ff0-4739-874b-a3b9eac8fc43" clustered="false" name="schema_redundant_indexes_pk" physicalName="schema_redundant_indexes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB340" populated="false" UUID="76908591-5f1f-4244-9aa1-a0345cf8c245" name="schema_table_lock_waits" objectType="VIEW" physicalName="schema_table_lock_waits" >
+     <remarks></remarks>
+     <folder id="FOLTAB3401" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX341" populated="true" UUID="d853ad1b-a75c-48d5-8451-6cd5792829c8" clustered="false" name="schema_table_lock_waits_pk" physicalName="schema_table_lock_waits_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB342" populated="false" UUID="886764e7-0f8f-42e0-b1b2-ddcb2028b143" name="schema_table_statistics" objectType="VIEW" physicalName="schema_table_statistics" >
+     <remarks></remarks>
+     <folder id="FOLTAB3421" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX343" populated="true" UUID="77c33cd1-1722-4e06-ab6d-80cceb0b2fcd" clustered="false" name="schema_table_statistics_pk" physicalName="schema_table_statistics_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB344" populated="false" UUID="b75e9b6b-32dd-449c-b86c-6ad91161bb5e" name="schema_table_statistics_with_buffer" objectType="VIEW" physicalName="schema_table_statistics_with_buffer" >
+     <remarks></remarks>
+     <folder id="FOLTAB3441" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX345" populated="true" UUID="5fe3c27e-5449-4933-a61d-f09647e24b24" clustered="false" name="schema_table_statistics_with_buffer_pk" physicalName="schema_table_statistics_with_buffer_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB346" populated="false" UUID="0c99b4e4-b1b0-449a-8bf3-da0b9e81bcc2" name="schema_tables_with_full_table_scans" objectType="VIEW" physicalName="schema_tables_with_full_table_scans" >
+     <remarks></remarks>
+     <folder id="FOLTAB3461" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX347" populated="true" UUID="18d7c728-1240-42ec-8203-ff5afa4b0f5e" clustered="false" name="schema_tables_with_full_table_scans_pk" physicalName="schema_tables_with_full_table_scans_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB348" populated="false" UUID="2056a969-a649-4f76-90f9-80ffd3aaa693" name="schema_unused_indexes" objectType="VIEW" physicalName="schema_unused_indexes" >
+     <remarks></remarks>
+     <folder id="FOLTAB3481" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX349" populated="true" UUID="1c134855-9031-4a7d-ae4e-507c01f93b15" clustered="false" name="schema_unused_indexes_pk" physicalName="schema_unused_indexes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB350" populated="false" UUID="38ac6188-f32a-4651-864e-2584f7aa41ac" name="session" objectType="VIEW" physicalName="session" >
+     <remarks></remarks>
+     <folder id="FOLTAB3501" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX351" populated="true" UUID="bb98acaf-4101-4700-b52f-5fc5dadad21f" clustered="false" name="session_pk" physicalName="session_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB352" populated="false" UUID="70d20a05-d2ef-4a8f-89ee-ad77f677cd25" name="session_ssl_status" objectType="VIEW" physicalName="session_ssl_status" >
+     <remarks></remarks>
+     <folder id="FOLTAB3521" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX353" populated="true" UUID="2049e1ba-ee64-42a6-a840-aa4999a5b750" clustered="false" name="session_ssl_status_pk" physicalName="session_ssl_status_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB354" populated="false" UUID="4778806a-d349-49e9-948b-6d44736bfe8e" name="statement_analysis" objectType="VIEW" physicalName="statement_analysis" >
+     <remarks></remarks>
+     <folder id="FOLTAB3541" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX355" populated="true" UUID="0ca3324e-c9ba-4b8c-822e-53bfa71a21c9" clustered="false" name="statement_analysis_pk" physicalName="statement_analysis_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB356" populated="false" UUID="46611f8c-d505-4541-8ff4-3f7ed0009894" name="statements_with_errors_or_warnings" objectType="VIEW" physicalName="statements_with_errors_or_warnings" >
+     <remarks></remarks>
+     <folder id="FOLTAB3561" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX357" populated="true" UUID="be0ebe02-510c-41f0-a7f3-900024648cdd" clustered="false" name="statements_with_errors_or_warnings_pk" physicalName="statements_with_errors_or_warnings_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB358" populated="false" UUID="bcefa490-65a9-4182-97e9-5310e26a2019" name="statements_with_full_table_scans" objectType="VIEW" physicalName="statements_with_full_table_scans" >
+     <remarks></remarks>
+     <folder id="FOLTAB3581" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX359" populated="true" UUID="5000eaff-10d7-4fa5-8f3a-3103f90c7d13" clustered="false" name="statements_with_full_table_scans_pk" physicalName="statements_with_full_table_scans_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB360" populated="false" UUID="2dde9c8e-1052-4f15-af63-f2eae27e88d2" name="statements_with_runtimes_in_95th_percentile" objectType="VIEW" physicalName="statements_with_runtimes_in_95th_percentile" >
+     <remarks></remarks>
+     <folder id="FOLTAB3601" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX361" populated="true" UUID="9e3701a6-0327-4f1d-9126-5235f2d367bb" clustered="false" name="statements_with_runtimes_in_95th_percentile_pk" physicalName="statements_with_runtimes_in_95th_percentile_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB362" populated="false" UUID="33bbb2b6-c863-4c69-9c53-1e6a4950be6e" name="statements_with_sorting" objectType="VIEW" physicalName="statements_with_sorting" >
+     <remarks></remarks>
+     <folder id="FOLTAB3621" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX363" populated="true" UUID="0e00b216-2e9b-40e1-a7a4-56f8cb1a32d4" clustered="false" name="statements_with_sorting_pk" physicalName="statements_with_sorting_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB364" populated="false" UUID="36c2173a-d40d-4d01-a5a6-61c7671c950d" name="statements_with_temp_tables" objectType="VIEW" physicalName="statements_with_temp_tables" >
+     <remarks></remarks>
+     <folder id="FOLTAB3641" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX365" populated="true" UUID="0a98545b-c785-4030-a1c2-4b947b75eb8a" clustered="false" name="statements_with_temp_tables_pk" physicalName="statements_with_temp_tables_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB366" populated="false" UUID="e8d066f7-51ae-4193-8645-ec22da8bcfbf" name="user_summary" objectType="VIEW" physicalName="user_summary" >
+     <remarks></remarks>
+     <folder id="FOLTAB3661" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX367" populated="true" UUID="296e9b2b-3d5d-47ea-b9ea-3a5afc5268ea" clustered="false" name="user_summary_pk" physicalName="user_summary_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB368" populated="false" UUID="0426a9f5-d083-48b4-b7da-3096bd06451f" name="user_summary_by_file_io" objectType="VIEW" physicalName="user_summary_by_file_io" >
+     <remarks></remarks>
+     <folder id="FOLTAB3681" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX369" populated="true" UUID="bdcc63a9-3fae-4f3b-9f9f-f494086455fe" clustered="false" name="user_summary_by_file_io_pk" physicalName="user_summary_by_file_io_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB370" populated="false" UUID="99184a08-b665-41fc-ac9f-bca0f96d4108" name="user_summary_by_file_io_type" objectType="VIEW" physicalName="user_summary_by_file_io_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB3701" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX371" populated="true" UUID="64c4800d-2c4a-47ec-9bad-718c9efb0620" clustered="false" name="user_summary_by_file_io_type_pk" physicalName="user_summary_by_file_io_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB372" populated="false" UUID="fe26b895-be4b-4cff-8d5f-5e9e00f87308" name="user_summary_by_stages" objectType="VIEW" physicalName="user_summary_by_stages" >
+     <remarks></remarks>
+     <folder id="FOLTAB3721" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX373" populated="true" UUID="00917602-5dd9-4065-adeb-0bfd6a2fefab" clustered="false" name="user_summary_by_stages_pk" physicalName="user_summary_by_stages_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB374" populated="false" UUID="f2fb8493-80c4-4a35-afb4-4ad6825d72f1" name="user_summary_by_statement_latency" objectType="VIEW" physicalName="user_summary_by_statement_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3741" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX375" populated="true" UUID="e0c0e9cf-b017-4bff-bf24-aef9c521acdd" clustered="false" name="user_summary_by_statement_latency_pk" physicalName="user_summary_by_statement_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB376" populated="false" UUID="b1178495-0c49-4506-96e5-91fe39dea650" name="user_summary_by_statement_type" objectType="VIEW" physicalName="user_summary_by_statement_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB3761" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX377" populated="true" UUID="fa107b9f-bae6-43e8-aa19-5fed9eaee0d0" clustered="false" name="user_summary_by_statement_type_pk" physicalName="user_summary_by_statement_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB378" populated="false" UUID="0355897d-fea8-4977-9523-f9719cb112d0" name="version" objectType="VIEW" physicalName="version" >
+     <remarks></remarks>
+     <folder id="FOLTAB3781" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX379" populated="true" UUID="a76a9315-47d2-4d1b-b5a9-4a9cd1be6921" clustered="false" name="version_pk" physicalName="version_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB380" populated="false" UUID="536c85e8-eebe-4290-9d17-6dd054665686" name="wait_classes_global_by_avg_latency" objectType="VIEW" physicalName="wait_classes_global_by_avg_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3801" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX381" populated="true" UUID="db006ef4-c6ec-4985-a685-8ca9986f9c6b" clustered="false" name="wait_classes_global_by_avg_latency_pk" physicalName="wait_classes_global_by_avg_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB382" populated="false" UUID="79757725-98de-4034-a1a2-d8679e020672" name="wait_classes_global_by_latency" objectType="VIEW" physicalName="wait_classes_global_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3821" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX383" populated="true" UUID="2ae056cb-0112-4764-8615-2bbd1a5fedd7" clustered="false" name="wait_classes_global_by_latency_pk" physicalName="wait_classes_global_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB384" populated="false" UUID="cadf6453-777b-4741-8529-08447540a510" name="waits_by_host_by_latency" objectType="VIEW" physicalName="waits_by_host_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3841" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX385" populated="true" UUID="82831fc1-b674-495c-9af1-7c11c968cf96" clustered="false" name="waits_by_host_by_latency_pk" physicalName="waits_by_host_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB386" populated="false" UUID="b9538efb-1fcc-4abf-a1da-7c3dcf1f5aed" name="waits_by_user_by_latency" objectType="VIEW" physicalName="waits_by_user_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3861" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX387" populated="true" UUID="ea68aa34-f94c-4a7d-a72d-516d3d50d4b7" clustered="false" name="waits_by_user_by_latency_pk" physicalName="waits_by_user_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB388" populated="false" UUID="8c881fad-fe2b-4db5-aa78-bc1575c7f64d" name="waits_global_by_latency" objectType="VIEW" physicalName="waits_global_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3881" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX389" populated="true" UUID="bedbd689-3176-4fa2-849d-ca065d1f2dfd" clustered="false" name="waits_global_by_latency_pk" physicalName="waits_global_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB390" populated="false" UUID="71b147bc-96f5-4636-9a85-0f530b292772" name="x$host_summary" objectType="VIEW" physicalName="x$host_summary" >
+     <remarks></remarks>
+     <folder id="FOLTAB3901" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX391" populated="true" UUID="1aee74d4-f373-4e75-afd9-8e50ec46767e" clustered="false" name="x$host_summary_pk" physicalName="x$host_summary_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB392" populated="false" UUID="58709159-1361-403d-bc94-a673f1893cb3" name="x$host_summary_by_file_io" objectType="VIEW" physicalName="x$host_summary_by_file_io" >
+     <remarks></remarks>
+     <folder id="FOLTAB3921" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX393" populated="true" UUID="7b244d7d-0e50-4e91-a8d0-a6e0ea8ba28a" clustered="false" name="x$host_summary_by_file_io_pk" physicalName="x$host_summary_by_file_io_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB394" populated="false" UUID="db008ad4-f5cf-413b-9191-e9dde91cf8a1" name="x$host_summary_by_file_io_type" objectType="VIEW" physicalName="x$host_summary_by_file_io_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB3941" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX395" populated="true" UUID="71aa9412-5709-498b-a9d5-533163c10813" clustered="false" name="x$host_summary_by_file_io_type_pk" physicalName="x$host_summary_by_file_io_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB396" populated="false" UUID="7a336dcc-e74e-40f7-82ff-5a12816ef1e5" name="x$host_summary_by_stages" objectType="VIEW" physicalName="x$host_summary_by_stages" >
+     <remarks></remarks>
+     <folder id="FOLTAB3961" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX397" populated="true" UUID="bc62a44a-f588-4a8f-9912-d5763caf39f8" clustered="false" name="x$host_summary_by_stages_pk" physicalName="x$host_summary_by_stages_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB398" populated="false" UUID="60e9818c-3d2e-4a73-aaa0-91c4c8d415e4" name="x$host_summary_by_statement_latency" objectType="VIEW" physicalName="x$host_summary_by_statement_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB3981" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX399" populated="true" UUID="154e6d82-cc10-4ce6-80c3-a907cc7f357a" clustered="false" name="x$host_summary_by_statement_latency_pk" physicalName="x$host_summary_by_statement_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB400" populated="false" UUID="9978601b-db2c-46bc-b854-db84702c85c3" name="x$host_summary_by_statement_type" objectType="VIEW" physicalName="x$host_summary_by_statement_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB4001" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX401" populated="true" UUID="63ec15a0-4ac2-416f-9aa6-870899ad0670" clustered="false" name="x$host_summary_by_statement_type_pk" physicalName="x$host_summary_by_statement_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB402" populated="false" UUID="39fcab19-89f1-4d90-8498-0169728a379d" name="x$innodb_buffer_stats_by_schema" objectType="VIEW" physicalName="x$innodb_buffer_stats_by_schema" >
+     <remarks></remarks>
+     <folder id="FOLTAB4021" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX403" populated="true" UUID="b18b5e11-27c5-4f3b-bf81-452c75c28360" clustered="false" name="x$innodb_buffer_stats_by_schema_pk" physicalName="x$innodb_buffer_stats_by_schema_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB404" populated="false" UUID="5ce4cd1d-d3e7-4d83-83e3-59b8d3f7620e" name="x$innodb_buffer_stats_by_table" objectType="VIEW" physicalName="x$innodb_buffer_stats_by_table" >
+     <remarks></remarks>
+     <folder id="FOLTAB4041" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX405" populated="true" UUID="f783193f-635b-4a90-bfed-4be9414bb8d2" clustered="false" name="x$innodb_buffer_stats_by_table_pk" physicalName="x$innodb_buffer_stats_by_table_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB406" populated="false" UUID="07b6bd2f-5f8b-4830-bb53-dd0338b36d7b" name="x$innodb_lock_waits" objectType="VIEW" physicalName="x$innodb_lock_waits" >
+     <remarks></remarks>
+     <folder id="FOLTAB4061" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX407" populated="true" UUID="5b1573f9-cf01-4b2d-9f77-4c32d6f95789" clustered="false" name="x$innodb_lock_waits_pk" physicalName="x$innodb_lock_waits_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB408" populated="false" UUID="6a6d445f-aaee-4c9d-ad1a-ee6cef266036" name="x$io_by_thread_by_latency" objectType="VIEW" physicalName="x$io_by_thread_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4081" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX409" populated="true" UUID="ba71686a-0916-4084-b60d-01e092b44df1" clustered="false" name="x$io_by_thread_by_latency_pk" physicalName="x$io_by_thread_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB410" populated="false" UUID="a98f4fab-70c8-4584-9cb5-8ba9c8125dd2" name="x$io_global_by_file_by_bytes" objectType="VIEW" physicalName="x$io_global_by_file_by_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB4101" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX411" populated="true" UUID="d69d02b4-0763-489d-8d59-ad809909ac94" clustered="false" name="x$io_global_by_file_by_bytes_pk" physicalName="x$io_global_by_file_by_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB412" populated="false" UUID="088c4375-52cb-4257-a868-ecc60edb78d2" name="x$io_global_by_file_by_latency" objectType="VIEW" physicalName="x$io_global_by_file_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4121" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX413" populated="true" UUID="0cbd7ea4-f6ca-488b-8b1e-fbdf1eeeb4ff" clustered="false" name="x$io_global_by_file_by_latency_pk" physicalName="x$io_global_by_file_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB414" populated="false" UUID="29f9feef-06c7-4620-bc05-35db8fe6149e" name="x$io_global_by_wait_by_bytes" objectType="VIEW" physicalName="x$io_global_by_wait_by_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB4141" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX415" populated="true" UUID="fdf1f96a-8504-4748-9f47-0c00fbf57255" clustered="false" name="x$io_global_by_wait_by_bytes_pk" physicalName="x$io_global_by_wait_by_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB416" populated="false" UUID="85920b6e-4c42-48f3-ab9b-b5b98df7a24c" name="x$io_global_by_wait_by_latency" objectType="VIEW" physicalName="x$io_global_by_wait_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4161" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX417" populated="true" UUID="7e5743a1-b548-46c0-a2c6-fdd29c45a9b3" clustered="false" name="x$io_global_by_wait_by_latency_pk" physicalName="x$io_global_by_wait_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB418" populated="false" UUID="a058bc83-f891-4e12-aaf3-a92a8e4eb3eb" name="x$latest_file_io" objectType="VIEW" physicalName="x$latest_file_io" >
+     <remarks></remarks>
+     <folder id="FOLTAB4181" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX419" populated="true" UUID="f811b22a-e955-46f9-be1f-655aa777e65a" clustered="false" name="x$latest_file_io_pk" physicalName="x$latest_file_io_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB420" populated="false" UUID="ffb11feb-5308-412d-88e4-642b57bd0dae" name="x$memory_by_host_by_current_bytes" objectType="VIEW" physicalName="x$memory_by_host_by_current_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB4201" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX421" populated="true" UUID="21dbac0e-8ff4-4df8-91fc-951af9f69d2e" clustered="false" name="x$memory_by_host_by_current_bytes_pk" physicalName="x$memory_by_host_by_current_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB422" populated="false" UUID="c621d56e-0531-4325-b14e-282b8455e7bf" name="x$memory_by_thread_by_current_bytes" objectType="VIEW" physicalName="x$memory_by_thread_by_current_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB4221" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX423" populated="true" UUID="e7441b65-3dde-4878-9ab4-259e8c1f1775" clustered="false" name="x$memory_by_thread_by_current_bytes_pk" physicalName="x$memory_by_thread_by_current_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB424" populated="false" UUID="28b3217e-47d3-49fe-8046-ffc85d3b195a" name="x$memory_by_user_by_current_bytes" objectType="VIEW" physicalName="x$memory_by_user_by_current_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB4241" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX425" populated="true" UUID="e71781b5-e175-4cb1-b582-ca421162a19d" clustered="false" name="x$memory_by_user_by_current_bytes_pk" physicalName="x$memory_by_user_by_current_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB426" populated="false" UUID="7c91e35a-bba2-4089-a0fd-150bbeeb74df" name="x$memory_global_by_current_bytes" objectType="VIEW" physicalName="x$memory_global_by_current_bytes" >
+     <remarks></remarks>
+     <folder id="FOLTAB4261" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX427" populated="true" UUID="2405edbf-4718-4602-a37d-3b3184f3011d" clustered="false" name="x$memory_global_by_current_bytes_pk" physicalName="x$memory_global_by_current_bytes_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB428" populated="false" UUID="4b651e2e-adae-4580-906b-ef65a5944cd3" name="x$memory_global_total" objectType="VIEW" physicalName="x$memory_global_total" >
+     <remarks></remarks>
+     <folder id="FOLTAB4281" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX429" populated="true" UUID="4c4c136d-e30e-4ee3-ab3a-03bbcc240721" clustered="false" name="x$memory_global_total_pk" physicalName="x$memory_global_total_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB430" populated="false" UUID="a1be7dc3-2370-48ae-95cd-cbfc5c185f6f" name="x$processlist" objectType="VIEW" physicalName="x$processlist" >
+     <remarks></remarks>
+     <folder id="FOLTAB4301" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX431" populated="true" UUID="241323ac-3a9f-4a0b-8349-779e7af7224c" clustered="false" name="x$processlist_pk" physicalName="x$processlist_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB432" populated="false" UUID="48716bfd-d688-4f5b-a094-198702b801ff" name="x$ps_digest_95th_percentile_by_avg_us" objectType="VIEW" physicalName="x$ps_digest_95th_percentile_by_avg_us" >
+     <remarks></remarks>
+     <folder id="FOLTAB4321" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX433" populated="true" UUID="5cd16e80-ab59-4ef3-8d93-6248328ddf30" clustered="false" name="x$ps_digest_95th_percentile_by_avg_us_pk" physicalName="x$ps_digest_95th_percentile_by_avg_us_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB434" populated="false" UUID="8f35a391-cd4c-4875-b581-c341eb423132" name="x$ps_digest_avg_latency_distribution" objectType="VIEW" physicalName="x$ps_digest_avg_latency_distribution" >
+     <remarks></remarks>
+     <folder id="FOLTAB4341" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX435" populated="true" UUID="5fb0c9c2-226b-4ea0-88bc-762699a4593a" clustered="false" name="x$ps_digest_avg_latency_distribution_pk" physicalName="x$ps_digest_avg_latency_distribution_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB436" populated="false" UUID="64afb8d9-7bfa-4709-b0ae-cc3582f8ffde" name="x$ps_schema_table_statistics_io" objectType="VIEW" physicalName="x$ps_schema_table_statistics_io" >
+     <remarks></remarks>
+     <folder id="FOLTAB4361" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX437" populated="true" UUID="3cacb41e-4c20-4379-b0c9-0053f3a77716" clustered="false" name="x$ps_schema_table_statistics_io_pk" physicalName="x$ps_schema_table_statistics_io_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB438" populated="false" UUID="2ffdcfbe-40ad-4aab-9294-cd0b90460845" name="x$schema_flattened_keys" objectType="VIEW" physicalName="x$schema_flattened_keys" >
+     <remarks></remarks>
+     <folder id="FOLTAB4381" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX439" populated="true" UUID="661a1178-fe6a-40fd-9850-e391c60731bf" clustered="false" name="x$schema_flattened_keys_pk" physicalName="x$schema_flattened_keys_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB440" populated="false" UUID="dec7ea44-9a0e-430c-8fa2-15d3541a620a" name="x$schema_index_statistics" objectType="VIEW" physicalName="x$schema_index_statistics" >
+     <remarks></remarks>
+     <folder id="FOLTAB4401" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX441" populated="true" UUID="b8b99a2e-0594-4691-82a2-d207e948306d" clustered="false" name="x$schema_index_statistics_pk" physicalName="x$schema_index_statistics_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB442" populated="false" UUID="9cc84118-f69c-4d58-8dff-46f93421022a" name="x$schema_table_lock_waits" objectType="VIEW" physicalName="x$schema_table_lock_waits" >
+     <remarks></remarks>
+     <folder id="FOLTAB4421" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX443" populated="true" UUID="86ff1234-2302-4670-b45d-87321fc7e36d" clustered="false" name="x$schema_table_lock_waits_pk" physicalName="x$schema_table_lock_waits_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB444" populated="false" UUID="35a0e8a8-1be6-4185-9f1b-877c4aa838e3" name="x$schema_table_statistics" objectType="VIEW" physicalName="x$schema_table_statistics" >
+     <remarks></remarks>
+     <folder id="FOLTAB4441" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX445" populated="true" UUID="e4bc55bf-3f34-4c6d-8701-76d289feacd6" clustered="false" name="x$schema_table_statistics_pk" physicalName="x$schema_table_statistics_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB446" populated="false" UUID="9b428c68-93e6-4bb2-bee0-4f4b8075961f" name="x$schema_table_statistics_with_buffer" objectType="VIEW" physicalName="x$schema_table_statistics_with_buffer" >
+     <remarks></remarks>
+     <folder id="FOLTAB4461" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX447" populated="true" UUID="4397699d-c870-490e-9ad8-e6ca9dffde63" clustered="false" name="x$schema_table_statistics_with_buffer_pk" physicalName="x$schema_table_statistics_with_buffer_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB448" populated="false" UUID="6129d7c9-51f8-4b2c-8f48-fd410fb3006c" name="x$schema_tables_with_full_table_scans" objectType="VIEW" physicalName="x$schema_tables_with_full_table_scans" >
+     <remarks></remarks>
+     <folder id="FOLTAB4481" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX449" populated="true" UUID="d9836ee7-f257-491e-a19a-863759cdc48b" clustered="false" name="x$schema_tables_with_full_table_scans_pk" physicalName="x$schema_tables_with_full_table_scans_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB450" populated="false" UUID="f7ca28c1-8e83-473f-94b3-acc0844dd966" name="x$session" objectType="VIEW" physicalName="x$session" >
+     <remarks></remarks>
+     <folder id="FOLTAB4501" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX451" populated="true" UUID="7d028a8d-0240-4583-8a7f-d91bd680aacf" clustered="false" name="x$session_pk" physicalName="x$session_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB452" populated="false" UUID="d1954fc3-700b-448c-b561-42ce81722b91" name="x$statement_analysis" objectType="VIEW" physicalName="x$statement_analysis" >
+     <remarks></remarks>
+     <folder id="FOLTAB4521" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX453" populated="true" UUID="54082597-00ef-481d-a408-8d9587e288a7" clustered="false" name="x$statement_analysis_pk" physicalName="x$statement_analysis_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB454" populated="false" UUID="2d4dc206-f511-4f3b-bfd6-2213dad8c47d" name="x$statements_with_errors_or_warnings" objectType="VIEW" physicalName="x$statements_with_errors_or_warnings" >
+     <remarks></remarks>
+     <folder id="FOLTAB4541" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX455" populated="true" UUID="30ff474c-6be1-402b-8abd-a8e8a807d021" clustered="false" name="x$statements_with_errors_or_warnings_pk" physicalName="x$statements_with_errors_or_warnings_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB456" populated="false" UUID="f02d6e49-beed-4c9e-abea-0d61229aa15e" name="x$statements_with_full_table_scans" objectType="VIEW" physicalName="x$statements_with_full_table_scans" >
+     <remarks></remarks>
+     <folder id="FOLTAB4561" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX457" populated="true" UUID="a4c64a46-466f-42ab-b1f5-1e54af37662a" clustered="false" name="x$statements_with_full_table_scans_pk" physicalName="x$statements_with_full_table_scans_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB458" populated="false" UUID="ee4aba36-cfcb-45e2-985d-65061a8a4a12" name="x$statements_with_runtimes_in_95th_percentile" objectType="VIEW" physicalName="x$statements_with_runtimes_in_95th_percentile" >
+     <remarks></remarks>
+     <folder id="FOLTAB4581" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX459" populated="true" UUID="3e2aa71b-43c4-46f7-8e98-0ca311cda831" clustered="false" name="x$statements_with_runtimes_in_95th_percentile_pk" physicalName="x$statements_with_runtimes_in_95th_percentile_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB460" populated="false" UUID="f6edbb4f-543e-4833-9290-d96ebe7a1710" name="x$statements_with_sorting" objectType="VIEW" physicalName="x$statements_with_sorting" >
+     <remarks></remarks>
+     <folder id="FOLTAB4601" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX461" populated="true" UUID="325c9ade-2446-416d-b60e-7cb9dc68a816" clustered="false" name="x$statements_with_sorting_pk" physicalName="x$statements_with_sorting_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB462" populated="false" UUID="4145a317-7873-4795-81ac-8a67dde0d8f7" name="x$statements_with_temp_tables" objectType="VIEW" physicalName="x$statements_with_temp_tables" >
+     <remarks></remarks>
+     <folder id="FOLTAB4621" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX463" populated="true" UUID="6fa49259-aae5-4622-b9a6-ed868bd46291" clustered="false" name="x$statements_with_temp_tables_pk" physicalName="x$statements_with_temp_tables_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB464" populated="false" UUID="cc757f76-f3e8-4c89-a899-ea51e0522235" name="x$user_summary" objectType="VIEW" physicalName="x$user_summary" >
+     <remarks></remarks>
+     <folder id="FOLTAB4641" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX465" populated="true" UUID="ace3f0e9-7da7-4c2f-9311-da3f85530d53" clustered="false" name="x$user_summary_pk" physicalName="x$user_summary_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB466" populated="false" UUID="d1a042d1-d817-4465-8ef0-acdd8741cc64" name="x$user_summary_by_file_io" objectType="VIEW" physicalName="x$user_summary_by_file_io" >
+     <remarks></remarks>
+     <folder id="FOLTAB4661" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX467" populated="true" UUID="bec3c820-f0a8-434a-b348-6f50a5c5fa6b" clustered="false" name="x$user_summary_by_file_io_pk" physicalName="x$user_summary_by_file_io_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB468" populated="false" UUID="7113a350-0689-47fc-a574-23a69f8d26fc" name="x$user_summary_by_file_io_type" objectType="VIEW" physicalName="x$user_summary_by_file_io_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB4681" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX469" populated="true" UUID="a8a4592c-365b-46b2-95bf-620a50fccea6" clustered="false" name="x$user_summary_by_file_io_type_pk" physicalName="x$user_summary_by_file_io_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB470" populated="false" UUID="8bf7bb25-f88e-4009-80fb-9dcb427d7558" name="x$user_summary_by_stages" objectType="VIEW" physicalName="x$user_summary_by_stages" >
+     <remarks></remarks>
+     <folder id="FOLTAB4701" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX471" populated="true" UUID="c5d2222d-d815-417c-b74f-0ef4157f8871" clustered="false" name="x$user_summary_by_stages_pk" physicalName="x$user_summary_by_stages_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB472" populated="false" UUID="7a5feb36-f8a5-4e07-804a-cfd33fcdba2e" name="x$user_summary_by_statement_latency" objectType="VIEW" physicalName="x$user_summary_by_statement_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4721" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX473" populated="true" UUID="1c2f527d-8e3f-44a0-b3dd-42b07ed5fcce" clustered="false" name="x$user_summary_by_statement_latency_pk" physicalName="x$user_summary_by_statement_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB474" populated="false" UUID="8a422739-aa31-4619-81cb-62420bceb412" name="x$user_summary_by_statement_type" objectType="VIEW" physicalName="x$user_summary_by_statement_type" >
+     <remarks></remarks>
+     <folder id="FOLTAB4741" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX475" populated="true" UUID="49088b8d-bd88-4ff3-a7b6-390c946130af" clustered="false" name="x$user_summary_by_statement_type_pk" physicalName="x$user_summary_by_statement_type_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB476" populated="false" UUID="469469a9-03ed-4633-b8f8-5ef9bfc8918b" name="x$wait_classes_global_by_avg_latency" objectType="VIEW" physicalName="x$wait_classes_global_by_avg_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4761" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX477" populated="true" UUID="b53d291e-ad50-4b03-992d-cca401186b3e" clustered="false" name="x$wait_classes_global_by_avg_latency_pk" physicalName="x$wait_classes_global_by_avg_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB478" populated="false" UUID="4c2346c0-23f5-44bc-bac9-7e55e6251f9b" name="x$wait_classes_global_by_latency" objectType="VIEW" physicalName="x$wait_classes_global_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4781" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX479" populated="true" UUID="c6f5840a-535d-4ea0-96b9-eddcdcb30a8f" clustered="false" name="x$wait_classes_global_by_latency_pk" physicalName="x$wait_classes_global_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB480" populated="false" UUID="f9c174cf-7861-473a-a5de-7fe6480afe0d" name="x$waits_by_host_by_latency" objectType="VIEW" physicalName="x$waits_by_host_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4801" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX481" populated="true" UUID="2928fe1f-dc8c-4596-aae8-7c5f210db0d3" clustered="false" name="x$waits_by_host_by_latency_pk" physicalName="x$waits_by_host_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB482" populated="false" UUID="d7a54a9b-7f36-4a0d-9680-fab42bc021f5" name="x$waits_by_user_by_latency" objectType="VIEW" physicalName="x$waits_by_user_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4821" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX483" populated="true" UUID="2cfd319c-2308-4645-8b47-21ca2bef6ec3" clustered="false" name="x$waits_by_user_by_latency_pk" physicalName="x$waits_by_user_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+    <table id="TAB484" populated="false" UUID="f0d62c58-346b-4e6d-b30a-10464c57cb88" name="x$waits_global_by_latency" objectType="VIEW" physicalName="x$waits_global_by_latency" >
+     <remarks></remarks>
+     <folder id="FOLTAB4841" populated="false" name="Columns" physicalName="Columns" type="1">
+      <index id="IDX485" populated="true" UUID="6834b811-f2a8-4d35-83e7-76a392bbdf0c" clustered="false" name="x$waits_global_by_latency_pk" physicalName="x$waits_global_by_latency_pk" primaryKeyIndex="true" unique="false" >
+      </index>
+     </folder>
+    </table>
+   </catalog>
+   <relationships>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB487" populated="true" UUID="f1ba07f4-3312-4c1e-abc6-74db5bdcb214" name="user" objectType="TABLE" physicalName="user" >
+   <remarks></remarks>
+   <folder id="FOLTAB4871" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL488" populated="true" UUID="d9e22400-2791-4757-a2ec-d15f78ae1154" autoIncrement="true" autoIncrementSequenceName="user_id_user_seq" defaultValue="" name="id_user" nullable="0" physicalName="id_user" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL489" populated="true" UUID="a910fd4d-5248-4350-b8e1-25c0eace5d57" autoIncrement="false" autoIncrementSequenceName="user_first_name_seq" defaultValue="" name="first_name" nullable="0" physicalName="first_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL490" populated="true" UUID="091a93e0-7c68-4724-97c3-518b63a46560" autoIncrement="false" autoIncrementSequenceName="user_last_name_seq" defaultValue="" name="last_name" nullable="0" physicalName="last_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL491" populated="true" UUID="8507e5a8-0ee4-44bb-a412-e035a0767822" autoIncrement="false" autoIncrementSequenceName="user_adress_seq" defaultValue="" name="adress" nullable="0" physicalName="adress" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL492" populated="true" UUID="29991229-88d1-4eae-8ce4-d5f17ec55044" autoIncrement="false" autoIncrementSequenceName="user_city_seq" defaultValue="" name="city" nullable="0" physicalName="city" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL493" populated="true" UUID="93e6ca24-e9ba-40b2-a653-4134f0876430" autoIncrement="false" autoIncrementSequenceName="user_post_code_seq" defaultValue="" name="post_code" nullable="0" physicalName="post_code" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL494" populated="true" UUID="a4a52de6-e029-44a6-87cf-9936f07cf8c9" autoIncrement="false" autoIncrementSequenceName="user_phone_number_seq" defaultValue="" name="phone_number" nullable="1" physicalName="phone_number" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL495" populated="true" UUID="23ad1f53-b39f-4935-9e7a-b3b090293618" autoIncrement="false" autoIncrementSequenceName="role_id_role_seq" defaultValue="" name="id_role" nullable="0" physicalName="id_role" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB4873" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB4872" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB4874" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX496" populated="true" UUID="e2bcd604-61b4-44f1-a15f-d9355a5ff0cf" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC497" populated="true" UUID="166bff1d-9ff8-47f8-8d98-db2fd7133ca8" ascendingOrDescending="UNSPECIFIED" column-ref="COL488" name="id_user" physicalName="id_user" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB498" populated="true" UUID="3a7eb42e-5ef1-4707-89ee-87c4e2459971" name="role" objectType="TABLE" physicalName="role" >
+   <remarks></remarks>
+   <folder id="FOLTAB4981" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL499" populated="true" UUID="07bc6d74-3e78-4014-af94-c166a49291b1" autoIncrement="true" autoIncrementSequenceName="role_id_role_seq" defaultValue="" name="id_role" nullable="0" physicalName="id_role" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL500" populated="true" UUID="14d879f7-a3c2-4abb-8ec5-eb2ff867cc54" autoIncrement="false" autoIncrementSequenceName="role_role_name_seq" defaultValue="" name="role_name" nullable="0" physicalName="role_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB4983" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB4982" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB4984" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX501" populated="true" UUID="01e4a686-dce5-4040-b5a7-72ae08af4e0f" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC502" populated="true" UUID="9e18493a-95f4-4069-bc5c-22a310b9d0c6" ascendingOrDescending="UNSPECIFIED" column-ref="COL499" name="id_role" physicalName="id_role" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB503" populated="true" UUID="89beb551-e36a-4ea6-bb69-b38e1f7e500e" name="book" objectType="TABLE" physicalName="book" >
+   <remarks></remarks>
+   <folder id="FOLTAB5031" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL504" populated="true" UUID="b4402adf-5d91-41d3-8d35-72e2797394bf" autoIncrement="true" autoIncrementSequenceName="book_book_id_seq" defaultValue="" name="book_id" nullable="0" physicalName="book_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL505" populated="true" UUID="4e67639d-dbeb-4fe5-ad5f-83c677529cee" autoIncrement="false" autoIncrementSequenceName="book_title_seq" defaultValue="" name="title" nullable="0" physicalName="title" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL506" populated="true" UUID="117cf857-48ad-4784-81c3-834d99cdb2dc" autoIncrement="false" autoIncrementSequenceName="book_description_seq" defaultValue="" name="description" nullable="1" physicalName="description" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-16" userDefinedTypeUUID="895cdc41-03a5-44f8-b41c-43668f815af2" >
+     <remarks></remarks>
+    </column>
+    <column id="COL507" populated="true" UUID="7a2977fb-eca3-46ca-a8c5-1791519a4563" autoIncrement="false" autoIncrementSequenceName="book_quantity_seq" defaultValue="" name="quantity" nullable="0" physicalName="quantity" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL508" populated="true" UUID="aea10da8-4369-4bb9-97bc-8dd7eec4f88e" autoIncrement="false" autoIncrementSequenceName="book_max_quantity_seq" defaultValue="" name="max_quantity" nullable="0" physicalName="max_quantity" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL509" populated="true" UUID="0ee7ebcd-e931-410f-a052-bf82b2664161" autoIncrement="false" autoIncrementSequenceName="author_author_id_seq" defaultValue="" name="author_id" nullable="0" physicalName="author_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL510" populated="true" UUID="23618f53-8124-4472-9527-a133041b488f" autoIncrement="false" autoIncrementSequenceName="publisher_publisher_id_seq" defaultValue="" name="publisher_id" nullable="0" physicalName="publisher_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB5033" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB5032" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB5034" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX511" populated="true" UUID="01e18c60-f4fe-4d7b-aa3a-119917f8a073" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC512" populated="true" UUID="a6066fed-f7bb-4e9b-8abf-7a1affe977d1" ascendingOrDescending="UNSPECIFIED" column-ref="COL504" name="book_id" physicalName="book_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB513" populated="true" UUID="3f89ddc9-07e0-49fc-800c-1d1c5fdd079f" name="author" objectType="TABLE" physicalName="author" >
+   <remarks></remarks>
+   <folder id="FOLTAB5131" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL514" populated="true" UUID="96aa9555-7e86-4f2a-abc6-5af4c9ee3e79" autoIncrement="true" autoIncrementSequenceName="author_author_id_seq" defaultValue="" name="author_id" nullable="0" physicalName="author_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL515" populated="true" UUID="43fbddb4-eee1-4614-950f-9319eae56226" autoIncrement="false" autoIncrementSequenceName="author_first_name_seq" defaultValue="" name="first_name" nullable="1" physicalName="first_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL516" populated="true" UUID="9a7a2b3f-9e38-43c9-afe0-e05715b827c5" autoIncrement="false" autoIncrementSequenceName="author_last_name_seq" defaultValue="" name="last_name" nullable="1" physicalName="last_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL517" populated="true" UUID="7eaa0681-3d25-4c7a-944f-b0d88f51c282" autoIncrement="false" autoIncrementSequenceName="author_birth_date_seq" defaultValue="" name="birth_date" nullable="1" physicalName="birth_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL518" populated="true" UUID="1247e1b1-f24e-4603-a15f-03e56fe804bf" autoIncrement="false" autoIncrementSequenceName="author_death_date_seq" defaultValue="" name="death_date" nullable="1" physicalName="death_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL519" populated="true" UUID="df5892d1-4c84-4b9d-9510-264f8c09c28d" autoIncrement="false" autoIncrementSequenceName="author_description_seq" defaultValue="" name="description" nullable="1" physicalName="description" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-16" userDefinedTypeUUID="895cdc41-03a5-44f8-b41c-43668f815af2" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB5133" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB5132" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB5134" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX520" populated="true" UUID="84798818-6dbe-4cda-affa-26d2f3f4a329" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC521" populated="true" UUID="75c89ed5-7775-4bda-a0ad-541b7aad1153" ascendingOrDescending="UNSPECIFIED" column-ref="COL514" name="author_id" physicalName="author_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB522" populated="true" UUID="2ab41707-8a17-4894-9709-cb4f277ff4c3" name="publisher" objectType="TABLE" physicalName="publisher" >
+   <remarks></remarks>
+   <folder id="FOLTAB5221" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL523" populated="true" UUID="0d747611-989d-4e8a-b596-701c21efdb9b" autoIncrement="true" autoIncrementSequenceName="publisher_publisher_id_seq" defaultValue="" name="publisher_id" nullable="0" physicalName="publisher_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL524" populated="true" UUID="e2cf1a25-8467-45bf-8160-2bd783fe6a91" autoIncrement="false" autoIncrementSequenceName="publisher_name_seq" defaultValue="" name="name" nullable="0" physicalName="name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB5223" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB5222" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB5224" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX525" populated="true" UUID="f92cec3c-87e6-47e9-ac54-8064330ca37a" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC526" populated="true" UUID="887d9c74-a419-4e18-b013-01968540d1e5" ascendingOrDescending="UNSPECIFIED" column-ref="COL523" name="publisher_id" physicalName="publisher_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB527" populated="true" UUID="09226d11-964c-4ec4-8db5-8074d39fb878" name="borrowing" objectType="TABLE" physicalName="borrowing" >
+   <remarks></remarks>
+   <folder id="FOLTAB5271" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL528" populated="true" UUID="1a0a7ca0-e040-4f99-b275-f54dc02852f7" autoIncrement="true" autoIncrementSequenceName="borrowing_borrowing_id_seq" defaultValue="" name="borrowing_id" nullable="0" physicalName="borrowing_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL529" populated="true" UUID="3a48fdbe-9af8-4581-9f8c-93f9ac02c266" autoIncrement="false" autoIncrementSequenceName="borrowing_beginning_date_seq" defaultValue="" name="beginning_date" nullable="0" physicalName="beginning_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL530" populated="true" UUID="ac4ee470-654b-4370-99c7-da7dbe278ae9" autoIncrement="false" autoIncrementSequenceName="borrowing_ending_date_seq" defaultValue="" name="ending_date" nullable="0" physicalName="ending_date" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL531" populated="true" UUID="e3259b64-daea-49e8-b7a1-dc820aff03cb" autoIncrement="false" autoIncrementSequenceName="book_book_id_seq" defaultValue="" name="book_id" nullable="0" physicalName="book_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL532" populated="true" UUID="320c7ff5-0d3d-438f-a805-ea9963446b25" autoIncrement="false" autoIncrementSequenceName="user_id_user_seq" defaultValue="" name="id_user" nullable="0" physicalName="id_user" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB5273" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB5272" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB5274" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX533" populated="true" UUID="2ee40a41-0d49-49d6-ad85-36b83bd98732" clustered="false" name="id" physicalName="id" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC534" populated="true" UUID="76aede68-aba5-407f-a6cc-25288739fd55" ascendingOrDescending="UNSPECIFIED" column-ref="COL528" name="borrowing_id" physicalName="borrowing_id" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL535" populated="true" UUID="38c14a3a-aaa0-49cf-ad8e-3ebc4e6fb6f8" deferrability="7" deleteRule="3" fk-table-ref="TAB527" fkCardinality="7" identifying="false" name="user_borrowing_fk" physicalName="user_borrowing_fk" pk-table-ref="TAB487" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP536" populated="true" UUID="dd032f8b-3284-47ec-b000-8984f541fde5" fk-column-ref="COL532" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL488" />
+   </relationship>
+   <relationship id="REL537" populated="true" UUID="fe6c3bbc-0a20-4b25-b942-534b55c74603" deferrability="7" deleteRule="3" fk-table-ref="TAB487" fkCardinality="7" identifying="false" name="role_user_fk" physicalName="role_user_fk" pk-table-ref="TAB498" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP538" populated="true" UUID="feced278-bd78-4c5d-91a4-57ee7afef31b" fk-column-ref="COL495" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL499" />
+   </relationship>
+   <relationship id="REL539" populated="true" UUID="4e8a3efc-4063-4aea-9907-3bab9df5cccf" deferrability="7" deleteRule="3" fk-table-ref="TAB527" fkCardinality="7" identifying="false" name="book_borrowing_fk" physicalName="book_borrowing_fk" pk-table-ref="TAB503" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP540" populated="true" UUID="700e0128-cc0d-46d1-895a-89fe18ac0cd4" fk-column-ref="COL531" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL504" />
+   </relationship>
+   <relationship id="REL541" populated="true" UUID="a147f4bb-2625-4cb6-8b43-426069e48e62" deferrability="7" deleteRule="3" fk-table-ref="TAB503" fkCardinality="7" identifying="false" name="author_book_fk" physicalName="author_book_fk" pk-table-ref="TAB513" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP542" populated="true" UUID="9edc9c20-9bcc-4596-9f90-1e0c7ba984e2" fk-column-ref="COL509" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL514" />
+   </relationship>
+   <relationship id="REL543" populated="true" UUID="30737581-9f67-4c63-a6a6-9dbc6eb1b33c" deferrability="7" deleteRule="3" fk-table-ref="TAB503" fkCardinality="7" identifying="false" name="publisher_book_fk" physicalName="publisher_book_fk" pk-table-ref="TAB522" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP544" populated="true" UUID="92bbea7d-eed3-4aa5-a408-ab76ff7596bb" fk-column-ref="COL510" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL523" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.189207115002721" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB487" x="281" y="232" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB498" x="285" y="435" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB503" x="540" y="232" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB513" x="813" y="235" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB522" x="545" y="444" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB527" x="393" y="61" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL537" pkConnection="0.4887640449438202" fkConnection="0.5112359550561798" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL543" pkConnection="0.4827586206896552" fkConnection="0.5221674876847291" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL541" pkConnection="0.5132743362831859" fkConnection="0.48031496062992124" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL539" pkConnection="0.18226600985221675" fkConnection="0.7019230769230769" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL535" pkConnection="0.7555555555555555" fkConnection="0.27403846153846156" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
