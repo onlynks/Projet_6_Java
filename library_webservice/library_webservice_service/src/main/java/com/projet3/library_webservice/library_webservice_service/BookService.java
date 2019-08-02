@@ -17,16 +17,15 @@ import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
 @WebService(serviceName="BookService")
 public class BookService extends AbstractBookService {
 	/*
-	public static void main(String[] args) throws SQLException {
+	 public static void main(String[] args) throws SQLException {
 	  
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
-	  BookService bookService = new BookService();
-	  
+	  BookService bookService = new BookService();	  
 	  Book book = bookManager.getBook(1);
-	  
+	  System.out.println(book.getTitle());
 	 }	
-*/
+	*/
 
 	@WebMethod
 	public Book getBook(int id) {
