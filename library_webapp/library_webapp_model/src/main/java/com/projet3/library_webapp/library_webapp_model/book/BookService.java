@@ -27,33 +27,6 @@ public interface BookService {
 
     /**
      * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "extendBorrowing", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.ExtendBorrowing")
-    @ResponseWrapper(localName = "extendBorrowingResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.ExtendBorrowingResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/extendBorrowingRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/extendBorrowingResponse")
-    public void extendBorrowing(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns java.util.List<com.projet3.library_webapp.library_webapp_model.book.Borrowing>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getUserBorrowing", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetUserBorrowing")
-    @ResponseWrapper(localName = "getUserBorrowingResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetUserBorrowingResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/getUserBorrowingRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/getUserBorrowingResponse")
-    public List<Borrowing> getUserBorrowing(
-        @WebParam(name = "arg0", targetNamespace = "")
-        int arg0);
-
-    /**
-     * 
      * @return
      *     returns java.util.List<com.projet3.library_webapp.library_webapp_model.book.Book>
      */
@@ -63,33 +36,6 @@ public interface BookService {
     @ResponseWrapper(localName = "getBookListResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetBookListResponse")
     @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookListRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/getBookListResponse")
     public List<Book> getBookList();
-
-    /**
-     * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "createBook", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.CreateBook")
-    @ResponseWrapper(localName = "createBookResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.CreateBookResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/createBookRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/createBookResponse")
-    public void createBook(
-        @WebParam(name = "arg0", targetNamespace = "")
-        Book arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns java.util.List<com.projet3.library_webapp.library_webapp_model.book.Book>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "bookResearch", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.BookResearch")
-    @ResponseWrapper(localName = "bookResearchResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.BookResearchResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/bookResearchRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/bookResearchResponse")
-    public List<Book> bookResearch(
-        @WebParam(name = "arg0", targetNamespace = "")
-        String arg0);
 
     /**
      * 
@@ -117,5 +63,59 @@ public interface BookService {
     public void deleteBorrowing(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<com.projet3.library_webapp.library_webapp_model.book.Book>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "bookResearch", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.BookResearch")
+    @ResponseWrapper(localName = "bookResearchResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.BookResearchResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/bookResearchRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/bookResearchResponse")
+    public List<Book> bookResearch(
+        @WebParam(name = "arg0", targetNamespace = "")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "extendBorrowing", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.ExtendBorrowing")
+    @ResponseWrapper(localName = "extendBorrowingResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.ExtendBorrowingResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/extendBorrowingRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/extendBorrowingResponse")
+    public void extendBorrowing(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns java.util.List<com.projet3.library_webapp.library_webapp_model.book.Borrowing>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUserBorrowing", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetUserBorrowing")
+    @ResponseWrapper(localName = "getUserBorrowingResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.GetUserBorrowingResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/getUserBorrowingRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/getUserBorrowingResponse")
+    public List<Borrowing> getUserBorrowing(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "createBook", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.CreateBook")
+    @ResponseWrapper(localName = "createBookResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.book.CreateBookResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/BookService/createBookRequest", output = "http://library_webservice_service.library_webservice.projet3.com/BookService/createBookResponse")
+    public void createBook(
+        @WebParam(name = "arg0", targetNamespace = "")
+        Book arg0);
 
 }

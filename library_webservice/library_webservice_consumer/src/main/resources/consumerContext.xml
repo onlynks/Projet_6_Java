@@ -43,6 +43,5 @@
     
     <bean id="roleDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.RoleDAOImpl"/>
     
-
-    
+    <bean id="bookingDAO" class="com.projet3.library_webservice.library_webservice_consumer.DAO.BookingDAOImpl"/> 
 </beans>

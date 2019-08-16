@@ -10,8 +10,13 @@
         
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="com.projet3.library_webservice.library_webservice_service.AbstractBookService"/>
-        <property name="targetMethod" value="setBookManager"/>
-        <property name="arguments" ref="bookManager"/>
+        <property name="targetMethod" value="setManagers"/>
+        <property name="arguments">
+            <list>
+                <ref bean="bookingManager"/>
+                <ref bean="bookManager"/>
+            </list>
+        </property>
     </bean>
     
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">

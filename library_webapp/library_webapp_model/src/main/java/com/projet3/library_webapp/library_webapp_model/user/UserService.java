@@ -58,4 +58,16 @@ public interface UserService {
     @Action(input = "http://library_webservice_service.library_webservice.projet3.com/UserService/getUserListRequest", output = "http://library_webservice_service.library_webservice.projet3.com/UserService/getUserListResponse")
     public List<User> getUserList();
 
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "createUser", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.CreateUser")
+    @ResponseWrapper(localName = "createUserResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.CreateUserResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/UserService/createUserRequest", output = "http://library_webservice_service.library_webservice.projet3.com/UserService/createUserResponse")
+    public void createUser(
+        @WebParam(name = "arg0", targetNamespace = "")
+        User arg0);
+
 }

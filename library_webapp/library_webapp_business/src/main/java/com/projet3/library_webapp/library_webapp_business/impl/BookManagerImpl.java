@@ -16,7 +16,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.projet3.library_webapp.library_webapp_business.interfaces.BookManager;
-import com.projet3.library_webapp.library_webapp_business.interfaces.UserManager;
 import com.projet3.library_webapp.library_webapp_consumer.DAO.BookDAO;
 import com.projet3.library_webapp.library_webapp_consumer.DAO.UserDAO;
 import com.projet3.library_webapp.library_webapp_model.book.Book;
@@ -80,7 +79,7 @@ public class BookManagerImpl implements BookManager
 		
 		Map<Book, Integer> booksAndQuantities = new HashMap<Book, Integer>();
 		
-		Map<String, Integer> titleList = new HashMap<String,Integer>();;
+		Map<String, Integer> titleList = new HashMap<String,Integer>();
 		
 		for(int i=0; i<bookList.size(); i++)  {
 			Boolean available = bookList.get(i).isAvailable();			

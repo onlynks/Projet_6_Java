@@ -12,20 +12,21 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
+import com.projet3.library_webservice.library_webservice_model.beans.Booking;
 import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
 
 @WebService(serviceName="BookService")
 public class BookService extends AbstractBookService {
-	/*
+	
 	 public static void main(String[] args) throws SQLException {
 	  
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
 	  BookService bookService = new BookService();	  
-	  Book book = bookManager.getBook(1);
-	  System.out.println(book.getTitle());
+	  List<Booking> bookingList = bookingManager.getBooking(2);
+	  System.out.println(bookingList);
 	 }	
-	*/
+	
 
 	@WebMethod
 	public Book getBook(int id) {
@@ -99,8 +100,19 @@ public class BookService extends AbstractBookService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}		
+	
+	
+	public void createBooking(int userId, String bookTitle) {
+		try {
+			bookingManager.createBooking(userId, bookTitle);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-		
+	
+	/*
 	public void createBook(Book book) {
 		try {
 			bookManager.createBook(book);
@@ -109,5 +121,5 @@ public class BookService extends AbstractBookService {
 			e.printStackTrace();
 		}
 	}
-
+	*/
 }

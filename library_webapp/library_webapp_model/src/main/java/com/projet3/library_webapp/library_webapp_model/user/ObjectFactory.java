@@ -25,8 +25,10 @@ import javax.xml.namespace.QName;
 public class ObjectFactory {
 
     private final static QName _LogIn_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "logIn");
+    private final static QName _CreateUser_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "createUser");
     private final static QName _GetUserList_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserList");
     private final static QName _GetUserListResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserListResponse");
+    private final static QName _CreateUserResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "createUserResponse");
     private final static QName _LogInResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "logInResponse");
 
     /**
@@ -45,11 +47,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CreateUserResponse }
+     * 
+     */
+    public CreateUserResponse createCreateUserResponse() {
+        return new CreateUserResponse();
+    }
+
+    /**
      * Create an instance of {@link GetUserListResponse }
      * 
      */
     public GetUserListResponse createGetUserListResponse() {
         return new GetUserListResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateUser }
+     * 
+     */
+    public CreateUser createCreateUser() {
+        return new CreateUser();
     }
 
     /**
@@ -94,6 +112,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateUser }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "createUser")
+    public JAXBElement<CreateUser> createCreateUser(CreateUser value) {
+        return new JAXBElement<CreateUser>(_CreateUser_QNAME, CreateUser.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetUserList }{@code >}}
      * 
      */
@@ -109,6 +136,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getUserListResponse")
     public JAXBElement<GetUserListResponse> createGetUserListResponse(GetUserListResponse value) {
         return new JAXBElement<GetUserListResponse>(_GetUserListResponse_QNAME, GetUserListResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateUserResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "createUserResponse")
+    public JAXBElement<CreateUserResponse> createCreateUserResponse(CreateUserResponse value) {
+        return new JAXBElement<CreateUserResponse>(_CreateUserResponse_QNAME, CreateUserResponse.class, null, value);
     }
 
     /**

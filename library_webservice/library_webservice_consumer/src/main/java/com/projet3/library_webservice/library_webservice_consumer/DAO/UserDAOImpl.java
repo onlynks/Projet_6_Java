@@ -5,12 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.projet3.library_webservice.library_webservice_consumer.RowMapper.UserRowMapper;
+import com.projet3.library_webservice.library_webservice_model.beans.Role;
 import com.projet3.library_webservice.library_webservice_model.beans.User;
 
 public class UserDAOImpl extends AbstractDAO implements UserDAO {
@@ -20,7 +24,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
-
+	
 	@Override
 	public User getUserById(int id) throws SQLException {
 		String sql = "SELECT * FROM user WHERE id_user = :id_user";
@@ -68,7 +72,7 @@ public class UserDAOImpl extends AbstractDAO implements UserDAO {
 		params.addValue("post_code", user.getPostCode());
 		params.addValue("phone_number", user.getPhoneNumber());
 		params.addValue("id_role", user.getRole().getId());
-		params.addValue("password", passwordEncoder.encode(user.getPassword()));
+		params.addValue("password", passwordEncoder.encode(user.getPassword()));		
 		params.addValue("email", user.getEmail());
 		
 		namedParameterTemplate.update(sql, params);		

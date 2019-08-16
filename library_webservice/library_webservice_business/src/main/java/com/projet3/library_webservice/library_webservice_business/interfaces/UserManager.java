@@ -10,4 +10,6 @@ public interface UserManager {
 	public User logIn(String firstName, String lastName, String password) throws SQLException;
 	
 	public List<User> getUserList() throws SQLException;
+	
+	public void createUser(User user) throws SQLException;
 }

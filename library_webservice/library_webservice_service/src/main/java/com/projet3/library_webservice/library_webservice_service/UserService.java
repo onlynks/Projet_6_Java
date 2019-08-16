@@ -8,22 +8,43 @@ import javax.jws.WebService;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.projet3.library_webservice.library_webservice_consumer.DAO.UserDAO;
+import com.projet3.library_webservice.library_webservice_consumer.DAO.UserDAOImpl;
+import com.projet3.library_webservice.library_webservice_model.beans.Role;
 import com.projet3.library_webservice.library_webservice_model.beans.User;
 
 @WebService(serviceName="UserService")
 public class UserService extends AbstractUserService{
-	/*
+	 /*
 	public static void main(String[] args) throws SQLException {
-		  
-		  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 		  
 		  UserService userService = new UserService();
+		  //PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		  
-		  System.out.print(userService.logIn("Nicolas", "Garnier", "passwordTest").getFirstName());
+		  Role role = new Role();
+		  role.setId(1);
 		  
+		  User user = new User();
+		  user.setFirstName("Lola");
+		  user.setLastName("Ricot");
+		  user.setPassword("mdp");
+		  user.setAdress("3 des roses");
+		  user.setCity("Saint-Vrain");
+		  user.setPostCode(91770);
+		  user.setPhoneNumber("06458565");
+		  user.setEmail("lolaricot@gmail.com");
+		  user.setRole(role);		  
+		  
+		  userService.createUser(user);
+		  //System.out.println(userService.getUserById(2));		  
 	}
 	*/
+	
 	@WebMethod
 	public User logIn(String firstName, String lastName, String password) {		
 		User user = null;	
@@ -48,6 +69,16 @@ public class UserService extends AbstractUserService{
 			e.printStackTrace();
 		}
 		return userList;
+	}
+	
+	@WebMethod
+	public void createUser(User user) {
+		try {
+			userManager.createUser(user);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

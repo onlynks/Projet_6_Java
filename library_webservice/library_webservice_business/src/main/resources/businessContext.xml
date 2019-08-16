@@ -13,6 +13,8 @@
 	<bean name="bookManager" class="com.projet3.library_webservice.library_webservice_business.impl.BookManagerImpl"></bean>
 	
 	<bean name="userManager" class="com.projet3.library_webservice.library_webservice_business.impl.UserManagerImpl"></bean>
+	
+	<bean name="bookingManager" class="com.projet3.library_webservice.library_webservice_business.impl.BookingManagerImpl"></bean>
 
     
 </beans>
