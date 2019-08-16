@@ -132,7 +132,7 @@ public class Borrowing {
      *     {@link Boolean }
      *     
      */
-    public Boolean isExtended() {
+    public Boolean getExtended() {
         return extended;
     }
 

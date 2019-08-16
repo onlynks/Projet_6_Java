@@ -69,15 +69,17 @@ public class BookManagerImpl implements BookManager
 		Borrowing borrowing = borrowingDAO.getBorrowingByBook(bookDAO.getBookById(bookId));
 		
 		Date dateToUpdate = borrowing.getEndingDate();
+		Date now = new Date();
 		
-		Calendar myCal = Calendar.getInstance();
-		myCal.setTime(dateToUpdate);    
-		myCal.add(Calendar.MONTH, +1);
-		Date updatedDate = myCal.getTime();
-		borrowing.setEndingDate(updatedDate);
-		
-		borrowingDAO.updateBorrowing(borrowing);
-		
+		if ( now.before(dateToUpdate) ) {
+			Calendar myCal = Calendar.getInstance();
+			myCal.setTime(dateToUpdate);    
+			myCal.add(Calendar.MONTH, +1);
+			Date updatedDate = myCal.getTime();
+			borrowing.setEndingDate(updatedDate);
+			
+			borrowingDAO.updateBorrowing(borrowing);
+		}		
 	}
 
 	@Override
