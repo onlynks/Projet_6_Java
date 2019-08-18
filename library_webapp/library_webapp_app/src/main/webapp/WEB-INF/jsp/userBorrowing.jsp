@@ -11,7 +11,9 @@
 		 				<i class="arrow right"></i>
 		 				<span class="badge badge-primary">  ${entry.value.Ending}</span>
 	 				</div>
-	 				<c:if test = "${!entry.key.extended}">
+	 				
+    				<jsp:useBean id="today" class="java.util.Date" />					
+	 				<c:if test = "${!entry.key.extended && today gt entry.key.getEndingDate().toGregorianCalendar().getTime() }">
          				<div class="col-md-2">	 					
 	 					<a href="extendBorrowing/${entry.key.book.id}"><button type="button" class="btn btn-primary">Prolonger d'un mois</button></a>
 	 					</div> 

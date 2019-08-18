@@ -30,9 +30,6 @@ public class BookController extends AbstractBookController {
 	public static void main(String arg[]) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 		Role role = new Role();
-		
-		
-				
 	}
 	
 	
