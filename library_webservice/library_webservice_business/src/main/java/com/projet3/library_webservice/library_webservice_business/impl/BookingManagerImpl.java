@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.projet3.library_webservice.library_webservice_business.ResponseMessage;
 import com.projet3.library_webservice.library_webservice_business.interfaces.BookingManager;
 import com.projet3.library_webservice.library_webservice_consumer.DAO.BookDAO;
 import com.projet3.library_webservice.library_webservice_consumer.DAO.BookingDAO;
@@ -34,30 +35,45 @@ public class BookingManagerImpl implements BookingManager {
 	}
 
 	@Override
-	public String createBooking(int userId, String bookTitle) throws SQLException {
+	public void createBooking(int userId, String bookTitle) throws Exception {
 		List<Book> matchingBooks = bookDAO.bookResearch(bookTitle);
 		
-		if ( matchingBooks == null ) {
-			return "Ce livre n'existe pas";
+		if ( matchingBooks.isEmpty() ) {
+			throw new Exception(ResponseMessage.NO_BOOK.value);
 		}		
 		Boolean hasAvailableBook = matchingBooks.stream().anyMatch( book -> book.getAvailable());		
 		
 		if ( hasAvailableBook ) {
-			return "Ce livre est déjà disponible";
+			throw new Exception(ResponseMessage.STILL_AVAILABLE.value);
 		}
+		
 		List<Booking> bookingList = bookingDAO.getBookingListByTitle(bookTitle);
-			
-		if ( bookingList.size() >= matchingBooks.size() * 2 ) {
-			return "Le nombre de réservation maximum a été atteint pour ce livre";
+		Boolean alreadyBooked = bookingList.stream().anyMatch( booking -> booking.getUserId() == userId);
+		
+		if ( alreadyBooked ) {
+			throw new Exception(ResponseMessage.ALREADY_BOOKED.value);
 		}
-		int lastPosition = bookingList.stream().reduce((booking1, booking2) ->
+		
+		if ( bookingList.size() >= matchingBooks.size() * 2 ) {
+			throw new Exception(ResponseMessage.BOOKING_FULL.value);
+		}		
+		int lastPosition;
+		
+		if ( bookingList.size() == 0 ) {
+			lastPosition = 0;
+		} else {
+			lastPosition = bookingList.stream().reduce((booking1, booking2) ->
 			booking1.getPosition() > booking2.getPosition()? booking1: booking2
 			).get().getPosition();
+		}		
 		
-		Booking booking = new Booking(null, bookTitle, userId, lastPosition + 1, null);
-		
+		Booking booking = new Booking(null, bookTitle, userId, lastPosition + 1, null);		
 		bookingDAO.createBooking(booking);
-		return null;
+	}
+
+	@Override
+	public Integer getBookingQuantity(String bookTitle) throws Exception {
+		return bookingDAO.getBookingNumber(bookTitle);
 	}
 	
 	

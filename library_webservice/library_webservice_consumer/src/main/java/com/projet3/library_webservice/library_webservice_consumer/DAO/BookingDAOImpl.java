@@ -71,4 +71,14 @@ public class BookingDAOImpl extends AbstractDAO implements BookingDAO {
 		namedParameterTemplate.update(sql, params);
 	}
 
+	@Override
+	public Integer getBookingQuantity(String bookTitle) throws SQLException {
+		String sql = "SELECT COUNT(*) FROM booking WHERE title = :title";
+		
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("title", bookTitle);
+		
+		return namedParameterTemplate.queryForObject(sql, params, Integer.class);	
+	}
+
 }

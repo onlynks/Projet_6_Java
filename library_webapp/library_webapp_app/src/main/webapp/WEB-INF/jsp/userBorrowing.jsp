@@ -13,7 +13,7 @@
 	 				</div>
 	 				
     				<jsp:useBean id="today" class="java.util.Date" />					
-	 				<c:if test = "${!entry.key.extended && today gt entry.key.getEndingDate().toGregorianCalendar().getTime() }">
+	 				<c:if test = "${!entry.key.extended && today lt entry.key.getEndingDate().toGregorianCalendar().getTime() }">
          				<div class="col-md-2">	 					
 	 					<a href="extendBorrowing/${entry.key.book.id}"><button type="button" class="btn btn-primary">Prolonger d'un mois</button></a>
 	 					</div> 

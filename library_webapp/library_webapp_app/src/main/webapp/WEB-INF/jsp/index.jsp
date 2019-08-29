@@ -21,10 +21,5 @@
 
 <p>Vous êtes sur la page d'accueil</p>
 
-<script type="text/javascript">
-    $(window).on('load',function(){
-        $('#myModal').modal('show');
-    });
-</script>
 
 <%@ include file="footer.jsp" %>

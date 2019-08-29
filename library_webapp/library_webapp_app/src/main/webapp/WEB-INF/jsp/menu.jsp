@@ -31,6 +31,9 @@
 	      <li class="nav-item">
 	      	<a class="nav-link" href="userBorrowing">Mes emprunts</a>
 	      </li>
+	      <li class="nav-item">
+	      	<a class="nav-link" href="userBooking">Mes réservations</a>
+	      </li>
       </c:if>
       
     </ul>

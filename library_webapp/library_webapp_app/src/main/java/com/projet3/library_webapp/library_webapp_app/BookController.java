@@ -1,10 +1,12 @@
 package com.projet3.library_webapp.library_webapp_app;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -29,7 +31,8 @@ public class BookController extends AbstractBookController {
 	
 	public static void main(String arg[]) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
-		Role role = new Role();
+		BookController bookController = new BookController();
+		
 	}
 	
 	
@@ -59,6 +62,20 @@ public class BookController extends AbstractBookController {
 	@RequestMapping("/bookResearch")
 	public String bookResearch(@RequestParam("title") String title, Model model){
 		Map<Book,Integer> bookFound = bookManager.bookResearch(title);
+		
+		if (bookFound.values().contains(0)) {
+			Map<String, NotAvailableInfos> notAvailableInfos = new HashMap<String, NotAvailableInfos>();
+			List<Book> notAvailableBooks = bookFound.entrySet().stream().filter( e -> e.getValue() == 0).map(Map.Entry::getKey).collect(Collectors.toList());
+			notAvailableBooks.forEach(book -> {
+				NotAvailableInfos infos = new NotAvailableInfos();
+				SimpleDateFormat format = new SimpleDateFormat("dd/MM/YYYY");
+				infos.setBookingQuantity(bookingManager.getBookingQuantity(book.getTitle()));
+				infos.setNextReturnDate(format.format(bookingManager.getNextBookingReturn(book.getTitle())));
+				notAvailableInfos.put(book.getTitle(), infos);						
+			});
+			model.addAttribute("notAvailableInfos", notAvailableInfos);
+		}
+		
 		model.addAttribute("bookFound", bookFound);
 		
 		return "bookFound";
@@ -71,6 +88,11 @@ public class BookController extends AbstractBookController {
 		bookManager.extendBorrowing(borrowingId);
 		
 		return this.getUserBorrowing(request, model);
+	}
+	
+	@GetMapping("/userBooking")
+	public String getBookingList() {
+		return "userBooking";
 	}
 	
 	

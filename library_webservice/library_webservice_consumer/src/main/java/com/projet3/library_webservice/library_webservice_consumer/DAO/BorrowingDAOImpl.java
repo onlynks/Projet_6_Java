@@ -79,4 +79,13 @@ public class BorrowingDAOImpl extends AbstractDAO implements BorrowingDAO {
 		
 	}
 
+	@Override
+	public List<Borrowing> getBorrowingsById(List<Integer> ids) throws SQLException {
+		String sql = "SELECT * FROM borrowing WHERE book_id IN (:ids)";
+		SqlParameterSource namedParameters = new MapSqlParameterSource("ids", ids);
+		
+		List<Borrowing> borrowingList = namedParameterTemplate.query(sql, namedParameters, new BorrowingRowMapper(userDAO, bookDAO));
+		return borrowingList;
+	}
+
 }

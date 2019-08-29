@@ -14,4 +14,5 @@ public interface BookingDAO {
 	public Integer getBookingNumber(String title) throws SQLException;
 	public void createBooking(Booking booking) throws SQLException;
 	public void deleteBooking(String bookTitle, User user) throws SQLException;
+	public Integer getBookingQuantity(String bookTitle) throws SQLException;
 }

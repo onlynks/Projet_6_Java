@@ -36,7 +36,7 @@
 	          	<packageName>com.projet3.library_webapp.library_webapp_model.book</packageName>
 	          	<sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
 	          	<wsdlUrls>
-	          		<wsdlUrl>http://localhost:8081/Services/BookService?wsdl</wsdlUrl>
+	          		<wsdlUrl>http://localhost:8081/Services2.0.0/BookService?wsdl</wsdlUrl>
 	          	</wsdlUrls>
         	</configuration>
           </execution>

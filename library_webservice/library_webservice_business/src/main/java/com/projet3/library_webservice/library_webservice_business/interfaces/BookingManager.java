@@ -10,5 +10,6 @@ public interface BookingManager {
 	
 	public List<Booking> getBooking(Integer user) throws SQLException;
 	public List<Booking> getBookingList(String bookTitle);
-	public String createBooking(int userId, String bookTitle) throws SQLException;
+	public void createBooking(int userId, String bookTitle) throws Exception;
+	public Integer getBookingQuantity(String bookTitle) throws Exception;
 }

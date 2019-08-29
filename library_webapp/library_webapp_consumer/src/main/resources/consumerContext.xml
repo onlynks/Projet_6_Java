@@ -40,4 +40,6 @@
     
     <bean id="userDAO" class="com.projet3.library_webapp.library_webapp_consumer.DAO.UserDAOImpl"/>
     
+    <bean id="bookingDAO" class="com.projet3.library_webapp.library_webapp_consumer.DAO.BookingDAOImpl"/>
+    
 </beans>

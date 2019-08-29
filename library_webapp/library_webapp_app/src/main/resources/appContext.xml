@@ -12,8 +12,13 @@
             
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="com.projet3.library_webapp.library_webapp_app.AbstractBookController"/>
-        <property name="targetMethod" value="setBookManager"/>
-        <property name="arguments" ref="bookManager"/>
+        <property name="targetMethod" value="setManagers"/>
+        <property name="arguments">
+            <list>
+                <ref bean="bookManager"/>
+                <ref bean="bookingManager"/>
+            </list>
+        </property>
     </bean>
             
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">

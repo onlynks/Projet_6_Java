@@ -30,20 +30,20 @@ public class UserService extends AbstractUserService{
 		  role.setId(1);
 		  
 		  User user = new User();
-		  user.setFirstName("Lola");
-		  user.setLastName("Ricot");
+		  user.setFirstName("Francois");
+		  user.setLastName("Pignon");
 		  user.setPassword("mdp");
-		  user.setAdress("3 des roses");
-		  user.setCity("Saint-Vrain");
-		  user.setPostCode(91770);
-		  user.setPhoneNumber("06458565");
-		  user.setEmail("lolaricot@gmail.com");
+		  user.setAdress("18 rue de la caravane");
+		  user.setCity("Saint-Germain");
+		  user.setPostCode(91750);
+		  user.setPhoneNumber("0685786363");
+		  user.setEmail("fpignon@gmail.com");
 		  user.setRole(role);		  
 		  
 		  userService.createUser(user);
 		  //System.out.println(userService.getUserById(2));		  
 	}
-	*/
+	*/	
 	
 	@WebMethod
 	public User logIn(String firstName, String lastName, String password) {		

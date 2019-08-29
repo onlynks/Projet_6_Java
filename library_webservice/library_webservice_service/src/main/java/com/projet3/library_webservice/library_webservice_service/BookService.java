@@ -1,9 +1,8 @@
 package com.projet3.library_webservice.library_webservice_service;
 
 import java.sql.SQLException;
-import java.util.HashMap;
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -12,7 +11,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
-import com.projet3.library_webservice.library_webservice_model.beans.Booking;
 import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
 
 @WebService(serviceName="BookService")
@@ -24,10 +22,12 @@ public class BookService extends AbstractBookService {
 	  
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
-	  BookService bookService = new BookService();	  
+	  BookService bookService = new BookService();
+	  Date response = bookService.getNextBookReturn("Le tour du monde en quatre-vingts jours");
+	  System.out.print("/");
 
 	 }	
-*/	
+*/
 
 	@WebMethod
 	public Book getBook(int id) {
@@ -103,14 +103,40 @@ public class BookService extends AbstractBookService {
 		}
 	}		
 	
-	
-	public void createBooking(int userId, String bookTitle) {
+	@WebMethod
+	public String createBooking(int userId, String bookTitle) {
+		String responseMessage = null;
+		
 		try {
 			bookingManager.createBooking(userId, bookTitle);
+			responseMessage = "CREATED";
+		} catch (Exception e) {
+			responseMessage = e.getMessage();
+		}
+		return responseMessage;
+	}
+	
+	@WebMethod
+	public Date getNextBookReturn(String bookTitle) {
+		Date nextBookReturn = null;
+		try {
+			nextBookReturn =  bookManager.getNextBookReturn(bookTitle);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return nextBookReturn;
+	}
+	
+	@WebMethod
+	public Integer getBookingQuantity(String bookTitle) {
+		Integer bookingQuantity = null;
+		
+		try {
+			bookingQuantity =  bookingManager.getBookingQuantity(bookTitle);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return bookingQuantity;
 	}
 	
 	

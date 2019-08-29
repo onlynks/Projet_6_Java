@@ -7,7 +7,7 @@ import com.projet3.library_webservice.library_webservice_model.beans.Book;
 
 
 public interface BookDAO {
-	public Book getBookByTitle(String title) throws SQLException;
+	public List<Book> getBookByTitle(String title) throws SQLException;
 	
 	public Book getBookById(int id) throws SQLException;
 	

@@ -1,6 +1,7 @@
 package com.projet3.library_webservice.library_webservice_business.interfaces;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
@@ -15,4 +16,5 @@ public interface BookManager {
 	public List<Borrowing> getBorrowings(int  userId) throws SQLException;	
 	public void extendBorrowing(int bookId) throws SQLException;	
 	public void deleteBorrowing (int bookId) throws SQLException;
+	public Date getNextBookReturn(String bookTitle) throws SQLException;
 }

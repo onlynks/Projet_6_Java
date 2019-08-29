@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -87,6 +88,14 @@ public class BookManagerImpl implements BookManager
 		Borrowing borrowing = borrowingDAO.getBorrowingByBook(bookDAO.getBookById(bookId));
 		borrowingDAO.deleteBorrowing(borrowing);
 		
+	}
+
+	@Override
+	public Date getNextBookReturn(String bookTitle) throws SQLException {
+		List<Book> bookList = bookDAO.getBookByTitle(bookTitle);
+		List<Integer> idsList = bookList.stream().map( Book::getId).collect(Collectors.toList());
+		List<Borrowing> borrowingList = borrowingDAO.getBorrowingsById(idsList);
+		return borrowingList.stream().map(u -> u.getEndingDate()).min(Date::compareTo).get();
 	}
   
 }

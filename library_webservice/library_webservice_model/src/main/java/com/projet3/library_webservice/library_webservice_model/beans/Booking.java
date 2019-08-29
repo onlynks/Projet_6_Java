@@ -18,6 +18,8 @@ public class Booking {
 		this.alertDate = alertDate;
 	}
 	
+	public Booking() {}
+	
 	public Integer getBookingId() {
 		return bookingId;
 	}
