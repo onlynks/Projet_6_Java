@@ -27,18 +27,6 @@ public interface UserService {
 
     /**
      * 
-     * @param arg0
-     */
-    @WebMethod
-    @RequestWrapper(localName = "createUser", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.CreateUser")
-    @ResponseWrapper(localName = "createUserResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.CreateUserResponse")
-    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/UserService/createUserRequest", output = "http://library_webservice_service.library_webservice.projet3.com/UserService/createUserResponse")
-    public void createUser(
-        @WebParam(name = "arg0", targetNamespace = "")
-        User arg0);
-
-    /**
-     * 
      * @param arg2
      * @param arg1
      * @param arg0
@@ -60,6 +48,18 @@ public interface UserService {
 
     /**
      * 
+     * @param arg0
+     */
+    @WebMethod
+    @RequestWrapper(localName = "createUser", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.CreateUser")
+    @ResponseWrapper(localName = "createUserResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.CreateUserResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/UserService/createUserRequest", output = "http://library_webservice_service.library_webservice.projet3.com/UserService/createUserResponse")
+    public void createUser(
+        @WebParam(name = "arg0", targetNamespace = "")
+        User arg0);
+
+    /**
+     * 
      * @return
      *     returns java.util.List<com.projet3.library_webapp.library_webapp_model.user.User>
      */
@@ -69,5 +69,20 @@ public interface UserService {
     @ResponseWrapper(localName = "getUserListResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.GetUserListResponse")
     @Action(input = "http://library_webservice_service.library_webservice.projet3.com/UserService/getUserListRequest", output = "http://library_webservice_service.library_webservice.projet3.com/UserService/getUserListResponse")
     public List<User> getUserList();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns com.projet3.library_webapp.library_webapp_model.user.User
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getUserById", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.GetUserById")
+    @ResponseWrapper(localName = "getUserByIdResponse", targetNamespace = "http://library_webservice_service.library_webservice.projet3.com/", className = "com.projet3.library_webapp.library_webapp_model.user.GetUserByIdResponse")
+    @Action(input = "http://library_webservice_service.library_webservice.projet3.com/UserService/getUserByIdRequest", output = "http://library_webservice_service.library_webservice.projet3.com/UserService/getUserByIdResponse")
+    public User getUserById(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0);
 
 }

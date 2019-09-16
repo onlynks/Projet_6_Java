@@ -12,6 +12,14 @@ import com.projet3.library_webservice.library_webservice_model.beans.User;
 public class BookingDAOImpl extends AbstractDAO implements BookingDAO {
 	
 	@Override
+	public List<Booking> getAllBooking() throws SQLException {
+		String sql = "SELECT * FROM booking";
+		
+		List<Booking> bookingList = template.query(sql, new BookingRowMapper());
+		return bookingList;
+	}
+	
+	@Override
 	public Booking getBookingByTitleAndUser(String title, Integer userId) throws SQLException {
 		String sql = "SELECT * FROM booking WHERE book_title = :title AND id_user = :userId";
 		SqlParameterSource namedParameters = new MapSqlParameterSource().addValue("title", title).addValue("userId", userId);
@@ -61,12 +69,12 @@ public class BookingDAOImpl extends AbstractDAO implements BookingDAO {
 	}
 
 	@Override
-	public void deleteBooking(String bookTitle, User user) throws SQLException {
+	public void deleteBooking(String bookTitle, Integer userId) throws SQLException {
 		String sql = "DELETE FROM booking WHERE book_title = :bookTitle AND id_user = :userId";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("bookTitle", bookTitle);
-		params.addValue("userId", user.getId());
+		params.addValue("userId", userId);
 		
 		namedParameterTemplate.update(sql, params);
 	}
@@ -79,6 +87,17 @@ public class BookingDAOImpl extends AbstractDAO implements BookingDAO {
 		params.addValue("title", bookTitle);
 		
 		return namedParameterTemplate.queryForObject(sql, params, Integer.class);	
+	}
+
+	@Override
+	public void updateBooking(Booking booking) throws SQLException {
+		String sql = "UPDATE booking SET position = :position WHERE id_user = :userId";
+		
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("position", booking.getPosition());
+		params.addValue("userId", booking.getUserId());
+		
+		namedParameterTemplate.update(sql, params);		
 	}
 
 }

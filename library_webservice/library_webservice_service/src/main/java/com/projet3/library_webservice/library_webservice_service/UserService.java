@@ -80,5 +80,18 @@ public class UserService extends AbstractUserService{
 			e.printStackTrace();
 		}
 	}
+	
+	@WebMethod
+	public User getUserById(int userId) {
+		User user = null;
+		
+		try {
+			user = userManager.getUserById(userId);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
+	}
 
 }

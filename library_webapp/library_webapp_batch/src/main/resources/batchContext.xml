@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:context="http://www.springframework.org/schema/context"
- xmlns:batch="http://www.springframework.org/schema/batch"
- xmlns:task="http://www.springframework.org/schema/task"
- xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
  http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd
  http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
- 
-  <context:component-scan base-package="com.projet3.library_webapp.library_webapp_batch" />
-  
-  <bean name="bookManager" class="com.projet3.library_webapp.library_webapp_business.impl.BookManagerImpl"></bean>
- 
-  <batch:job id="scheduledJob">
-    <batch:step id="jobStep">
-      <batch:tasklet ref="batchTasklet" />
-    </batch:step>
-  </batch:job>
-  
-  <task:scheduled-tasks>
-     <task:scheduled ref="batchLauncher" method="run" cron="*/5 * * * * *"/>
-  </task:scheduled-tasks>
-    
-  
- 
+
+	<context:component-scan
+		base-package="com.projet3.library_webapp.library_webapp_batch" />
+
+	<bean name="bookManager"
+		class="com.projet3.library_webapp.library_webapp_business.impl.BookManagerImpl"></bean>
+
+	<bean name="bookingManager"
+		class="com.projet3.library_webapp.library_webapp_business.impl.BookingManagerImpl"></bean>
+
+	<bean name="userManager"
+		class="com.projet3.library_webapp.library_webapp_business.impl.UserManagerImpl"></bean>
+
+	<batch:job id="scheduledJob">
+		<batch:step id="jobStep" next="jobStepBookingWarning">
+			<batch:tasklet ref="batchTasklet" />
+		</batch:step>
+		<batch:step id="jobStepBookingWarning">
+			<batch:tasklet ref="deadlineWarningTasklet" />
+		</batch:step>
+	</batch:job>
+
+
+
+	<task:scheduled-tasks>
+		<task:scheduled ref="batchLauncher" method="run"
+			cron="*/5 * * * * *" />
+	</task:scheduled-tasks>
+
+
+
 </beans>

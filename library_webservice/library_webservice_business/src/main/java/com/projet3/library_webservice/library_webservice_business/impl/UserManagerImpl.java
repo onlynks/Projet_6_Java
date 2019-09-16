@@ -33,4 +33,10 @@ public class UserManagerImpl implements UserManager{
 		userDAO.createUser(user);		
 	}
 
+	@Override
+	public User getUserById(Integer id) throws SQLException {
+		
+		return userDAO.getUserById(id);
+	}
+
 }

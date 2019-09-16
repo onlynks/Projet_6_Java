@@ -24,13 +24,9 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetBookList_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookList");
-    private final static QName _CreateBookResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "createBookResponse");
-    private final static QName _GetBookingQuantity_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookingQuantity");
-    private final static QName _ExtendBorrowingResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "extendBorrowingResponse");
     private final static QName _GetNextBookReturn_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getNextBookReturn");
+    private final static QName _GetAllBooking_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getAllBooking");
     private final static QName _GetUserBorrowing_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserBorrowing");
-    private final static QName _ExtendBorrowing_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "extendBorrowing");
     private final static QName _BookResearch_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "bookResearch");
     private final static QName _GetBook_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBook");
     private final static QName _GetBookListResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookListResponse");
@@ -39,10 +35,20 @@ public class ObjectFactory {
     private final static QName _GetBookResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookResponse");
     private final static QName _GetUserBorrowingResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserBorrowingResponse");
     private final static QName _CreateBooking_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "createBooking");
-    private final static QName _BookResearchResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "bookResearchResponse");
     private final static QName _GetNextBookReturnResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getNextBookReturnResponse");
     private final static QName _DeleteBorrowing_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "deleteBorrowing");
     private final static QName _GetBookingQuantityResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookingQuantityResponse");
+    private final static QName _GetBookList_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookList");
+    private final static QName _CreateBookResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "createBookResponse");
+    private final static QName _GetBookingQuantity_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookingQuantity");
+    private final static QName _ExtendBorrowingResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "extendBorrowingResponse");
+    private final static QName _DeleteBooking_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "deleteBooking");
+    private final static QName _ExtendBorrowing_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "extendBorrowing");
+    private final static QName _GetBookingForUser_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookingForUser");
+    private final static QName _GetBookingForUserResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookingForUserResponse");
+    private final static QName _DeleteBookingResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "deleteBookingResponse");
+    private final static QName _BookResearchResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "bookResearchResponse");
+    private final static QName _GetAllBookingResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getAllBookingResponse");
     private final static QName _CreateBook_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "createBook");
 
     /**
@@ -53,43 +59,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CreateBookingResponse }
+     * Create an instance of {@link DeleteBookingResponse }
      * 
      */
-    public CreateBookingResponse createCreateBookingResponse() {
-        return new CreateBookingResponse();
+    public DeleteBookingResponse createDeleteBookingResponse() {
+        return new DeleteBookingResponse();
     }
 
     /**
-     * Create an instance of {@link DeleteBorrowingResponse }
+     * Create an instance of {@link GetBookingForUserResponse }
      * 
      */
-    public DeleteBorrowingResponse createDeleteBorrowingResponse() {
-        return new DeleteBorrowingResponse();
+    public GetBookingForUserResponse createGetBookingForUserResponse() {
+        return new GetBookingForUserResponse();
     }
 
     /**
-     * Create an instance of {@link GetBookResponse }
+     * Create an instance of {@link DeleteBooking }
      * 
      */
-    public GetBookResponse createGetBookResponse() {
-        return new GetBookResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetBook }
-     * 
-     */
-    public GetBook createGetBook() {
-        return new GetBook();
-    }
-
-    /**
-     * Create an instance of {@link GetBookListResponse }
-     * 
-     */
-    public GetBookListResponse createGetBookListResponse() {
-        return new GetBookListResponse();
+    public DeleteBooking createDeleteBooking() {
+        return new DeleteBooking();
     }
 
     /**
@@ -101,27 +91,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BookResearch }
+     * Create an instance of {@link GetBookingForUser }
      * 
      */
-    public BookResearch createBookResearch() {
-        return new BookResearch();
-    }
-
-    /**
-     * Create an instance of {@link GetNextBookReturn }
-     * 
-     */
-    public GetNextBookReturn createGetNextBookReturn() {
-        return new GetNextBookReturn();
-    }
-
-    /**
-     * Create an instance of {@link GetUserBorrowing }
-     * 
-     */
-    public GetUserBorrowing createGetUserBorrowing() {
-        return new GetUserBorrowing();
+    public GetBookingForUser createGetBookingForUser() {
+        return new GetBookingForUser();
     }
 
     /**
@@ -165,6 +139,94 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetAllBookingResponse }
+     * 
+     */
+    public GetAllBookingResponse createGetAllBookingResponse() {
+        return new GetAllBookingResponse();
+    }
+
+    /**
+     * Create an instance of {@link BookResearchResponse }
+     * 
+     */
+    public BookResearchResponse createBookResearchResponse() {
+        return new BookResearchResponse();
+    }
+
+    /**
+     * Create an instance of {@link CreateBookingResponse }
+     * 
+     */
+    public CreateBookingResponse createCreateBookingResponse() {
+        return new CreateBookingResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteBorrowingResponse }
+     * 
+     */
+    public DeleteBorrowingResponse createDeleteBorrowingResponse() {
+        return new DeleteBorrowingResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetBookResponse }
+     * 
+     */
+    public GetBookResponse createGetBookResponse() {
+        return new GetBookResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetBook }
+     * 
+     */
+    public GetBook createGetBook() {
+        return new GetBook();
+    }
+
+    /**
+     * Create an instance of {@link GetBookListResponse }
+     * 
+     */
+    public GetBookListResponse createGetBookListResponse() {
+        return new GetBookListResponse();
+    }
+
+    /**
+     * Create an instance of {@link BookResearch }
+     * 
+     */
+    public BookResearch createBookResearch() {
+        return new BookResearch();
+    }
+
+    /**
+     * Create an instance of {@link GetNextBookReturn }
+     * 
+     */
+    public GetNextBookReturn createGetNextBookReturn() {
+        return new GetNextBookReturn();
+    }
+
+    /**
+     * Create an instance of {@link GetAllBooking }
+     * 
+     */
+    public GetAllBooking createGetAllBooking() {
+        return new GetAllBooking();
+    }
+
+    /**
+     * Create an instance of {@link GetUserBorrowing }
+     * 
+     */
+    public GetUserBorrowing createGetUserBorrowing() {
+        return new GetUserBorrowing();
+    }
+
+    /**
      * Create an instance of {@link GetBookingQuantityResponse }
      * 
      */
@@ -189,14 +251,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BookResearchResponse }
-     * 
-     */
-    public BookResearchResponse createBookResearchResponse() {
-        return new BookResearchResponse();
-    }
-
-    /**
      * Create an instance of {@link GetUserBorrowingResponse }
      * 
      */
@@ -210,6 +264,14 @@ public class ObjectFactory {
      */
     public CreateBooking createCreateBooking() {
         return new CreateBooking();
+    }
+
+    /**
+     * Create an instance of {@link Booking }
+     * 
+     */
+    public Booking createBooking() {
+        return new Booking();
     }
 
     /**
@@ -261,42 +323,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetBookList }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getBookList")
-    public JAXBElement<GetBookList> createGetBookList(GetBookList value) {
-        return new JAXBElement<GetBookList>(_GetBookList_QNAME, GetBookList.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateBookResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "createBookResponse")
-    public JAXBElement<CreateBookResponse> createCreateBookResponse(CreateBookResponse value) {
-        return new JAXBElement<CreateBookResponse>(_CreateBookResponse_QNAME, CreateBookResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetBookingQuantity }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getBookingQuantity")
-    public JAXBElement<GetBookingQuantity> createGetBookingQuantity(GetBookingQuantity value) {
-        return new JAXBElement<GetBookingQuantity>(_GetBookingQuantity_QNAME, GetBookingQuantity.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ExtendBorrowingResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "extendBorrowingResponse")
-    public JAXBElement<ExtendBorrowingResponse> createExtendBorrowingResponse(ExtendBorrowingResponse value) {
-        return new JAXBElement<ExtendBorrowingResponse>(_ExtendBorrowingResponse_QNAME, ExtendBorrowingResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetNextBookReturn }{@code >}}
      * 
      */
@@ -306,21 +332,21 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllBooking }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getAllBooking")
+    public JAXBElement<GetAllBooking> createGetAllBooking(GetAllBooking value) {
+        return new JAXBElement<GetAllBooking>(_GetAllBooking_QNAME, GetAllBooking.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetUserBorrowing }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getUserBorrowing")
     public JAXBElement<GetUserBorrowing> createGetUserBorrowing(GetUserBorrowing value) {
         return new JAXBElement<GetUserBorrowing>(_GetUserBorrowing_QNAME, GetUserBorrowing.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ExtendBorrowing }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "extendBorrowing")
-    public JAXBElement<ExtendBorrowing> createExtendBorrowing(ExtendBorrowing value) {
-        return new JAXBElement<ExtendBorrowing>(_ExtendBorrowing_QNAME, ExtendBorrowing.class, null, value);
     }
 
     /**
@@ -396,15 +422,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BookResearchResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "bookResearchResponse")
-    public JAXBElement<BookResearchResponse> createBookResearchResponse(BookResearchResponse value) {
-        return new JAXBElement<BookResearchResponse>(_BookResearchResponse_QNAME, BookResearchResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetNextBookReturnResponse }{@code >}}
      * 
      */
@@ -429,6 +446,105 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getBookingQuantityResponse")
     public JAXBElement<GetBookingQuantityResponse> createGetBookingQuantityResponse(GetBookingQuantityResponse value) {
         return new JAXBElement<GetBookingQuantityResponse>(_GetBookingQuantityResponse_QNAME, GetBookingQuantityResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBookList }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getBookList")
+    public JAXBElement<GetBookList> createGetBookList(GetBookList value) {
+        return new JAXBElement<GetBookList>(_GetBookList_QNAME, GetBookList.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateBookResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "createBookResponse")
+    public JAXBElement<CreateBookResponse> createCreateBookResponse(CreateBookResponse value) {
+        return new JAXBElement<CreateBookResponse>(_CreateBookResponse_QNAME, CreateBookResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBookingQuantity }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getBookingQuantity")
+    public JAXBElement<GetBookingQuantity> createGetBookingQuantity(GetBookingQuantity value) {
+        return new JAXBElement<GetBookingQuantity>(_GetBookingQuantity_QNAME, GetBookingQuantity.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ExtendBorrowingResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "extendBorrowingResponse")
+    public JAXBElement<ExtendBorrowingResponse> createExtendBorrowingResponse(ExtendBorrowingResponse value) {
+        return new JAXBElement<ExtendBorrowingResponse>(_ExtendBorrowingResponse_QNAME, ExtendBorrowingResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteBooking }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "deleteBooking")
+    public JAXBElement<DeleteBooking> createDeleteBooking(DeleteBooking value) {
+        return new JAXBElement<DeleteBooking>(_DeleteBooking_QNAME, DeleteBooking.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ExtendBorrowing }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "extendBorrowing")
+    public JAXBElement<ExtendBorrowing> createExtendBorrowing(ExtendBorrowing value) {
+        return new JAXBElement<ExtendBorrowing>(_ExtendBorrowing_QNAME, ExtendBorrowing.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBookingForUser }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getBookingForUser")
+    public JAXBElement<GetBookingForUser> createGetBookingForUser(GetBookingForUser value) {
+        return new JAXBElement<GetBookingForUser>(_GetBookingForUser_QNAME, GetBookingForUser.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetBookingForUserResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getBookingForUserResponse")
+    public JAXBElement<GetBookingForUserResponse> createGetBookingForUserResponse(GetBookingForUserResponse value) {
+        return new JAXBElement<GetBookingForUserResponse>(_GetBookingForUserResponse_QNAME, GetBookingForUserResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteBookingResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "deleteBookingResponse")
+    public JAXBElement<DeleteBookingResponse> createDeleteBookingResponse(DeleteBookingResponse value) {
+        return new JAXBElement<DeleteBookingResponse>(_DeleteBookingResponse_QNAME, DeleteBookingResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link BookResearchResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "bookResearchResponse")
+    public JAXBElement<BookResearchResponse> createBookResearchResponse(BookResearchResponse value) {
+        return new JAXBElement<BookResearchResponse>(_BookResearchResponse_QNAME, BookResearchResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllBookingResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getAllBookingResponse")
+    public JAXBElement<GetAllBookingResponse> createGetAllBookingResponse(GetAllBookingResponse value) {
+        return new JAXBElement<GetAllBookingResponse>(_GetAllBookingResponse_QNAME, GetAllBookingResponse.class, null, value);
     }
 
     /**

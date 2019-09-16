@@ -50,7 +50,7 @@
 	          	<packageName>com.projet3.library_webapp.library_webapp_model.user</packageName>
 	          	<sourceDestDir>${project.build.sourceDirectory}</sourceDestDir>
 	          	<wsdlUrls>
-	          		<wsdlUrl>http://localhost:8081/Services/UserService?wsdl</wsdlUrl>
+	          		<wsdlUrl>http://localhost:8081/Services2.0.0/UserService?wsdl</wsdlUrl>
 	          	</wsdlUrls>
         	</configuration>
           </execution>          

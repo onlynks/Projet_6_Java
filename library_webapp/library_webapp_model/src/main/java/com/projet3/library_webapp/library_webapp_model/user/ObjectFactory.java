@@ -29,6 +29,8 @@ public class ObjectFactory {
     private final static QName _GetUserList_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserList");
     private final static QName _GetUserListResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserListResponse");
     private final static QName _CreateUserResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "createUserResponse");
+    private final static QName _GetUserByIdResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserByIdResponse");
+    private final static QName _GetUserById_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getUserById");
     private final static QName _LogInResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "logInResponse");
 
     /**
@@ -47,11 +49,27 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetUserById }
+     * 
+     */
+    public GetUserById createGetUserById() {
+        return new GetUserById();
+    }
+
+    /**
      * Create an instance of {@link CreateUserResponse }
      * 
      */
     public CreateUserResponse createCreateUserResponse() {
         return new CreateUserResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetUserByIdResponse }
+     * 
+     */
+    public GetUserByIdResponse createGetUserByIdResponse() {
+        return new GetUserByIdResponse();
     }
 
     /**
@@ -145,6 +163,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "createUserResponse")
     public JAXBElement<CreateUserResponse> createCreateUserResponse(CreateUserResponse value) {
         return new JAXBElement<CreateUserResponse>(_CreateUserResponse_QNAME, CreateUserResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUserByIdResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getUserByIdResponse")
+    public JAXBElement<GetUserByIdResponse> createGetUserByIdResponse(GetUserByIdResponse value) {
+        return new JAXBElement<GetUserByIdResponse>(_GetUserByIdResponse_QNAME, GetUserByIdResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetUserById }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "getUserById")
+    public JAXBElement<GetUserById> createGetUserById(GetUserById value) {
+        return new JAXBElement<GetUserById>(_GetUserById_QNAME, GetUserById.class, null, value);
     }
 
     /**

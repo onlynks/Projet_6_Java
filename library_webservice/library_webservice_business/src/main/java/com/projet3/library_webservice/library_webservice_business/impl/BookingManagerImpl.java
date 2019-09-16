@@ -1,8 +1,10 @@
 package com.projet3.library_webservice.library_webservice_business.impl;
 
 import java.sql.SQLException;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,6 +23,11 @@ public class BookingManagerImpl implements BookingManager {
 	@Autowired
 	private BookDAO bookDAO;
 
+	@Override
+	public List<Booking> getBookingList() throws SQLException {
+		return bookingDAO.getAllBooking();
+	}
+	
 	@Override
 	public List<Booking> getBooking(Integer userId) throws SQLException {
 		List<Booking> booking = bookingDAO.getBookingListByUser(userId);
@@ -75,7 +82,24 @@ public class BookingManagerImpl implements BookingManager {
 	public Integer getBookingQuantity(String bookTitle) throws Exception {
 		return bookingDAO.getBookingNumber(bookTitle);
 	}
-	
+
+	@Override
+	public void deleteBooking(String bookTitle, Integer userId) throws Exception {
+		bookingDAO.deleteBooking(bookTitle, userId);
+		updateBooking(bookTitle);		
+	}
+
+	@Override
+	public void updateBooking(String bookTitle) throws Exception {
+		List<Booking> bookingList = bookingDAO.getBookingListByTitle(bookTitle);		
+		bookingList.sort(Comparator.comparing(Booking::getPosition));
+		
+		for (int index = 0; index < bookingList.size(); index ++ ) {			
+			bookingList.get(index).setPosition(index + 1);
+			bookingDAO.updateBooking(bookingList.get(index));
+		}
+	}
+
 	
 
 }

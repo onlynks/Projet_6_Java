@@ -16,4 +16,9 @@ public class UserDAOImpl extends AbstractUserDAO implements UserDAO{
 		return userServiceConnection.getUserList();
 	}
 
+	@Override
+	public User getUserById(Integer userId) {
+		return userServiceConnection.getUserById(userId);
+	}
+
 }

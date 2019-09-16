@@ -12,4 +12,6 @@ public interface UserManager {
 	public List<User> getUserList() throws SQLException;
 	
 	public void createUser(User user) throws SQLException;
+	
+	public User getUserById(Integer id) throws SQLException;
 }

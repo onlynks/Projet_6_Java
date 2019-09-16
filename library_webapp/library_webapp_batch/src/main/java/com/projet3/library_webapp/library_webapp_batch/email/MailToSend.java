@@ -34,5 +34,25 @@ public class MailToSend {
 				
 		emailSender.readyToSendEmail(toAddr, fromAddr, subject, body);
 	}
+	
+	public void sendDeadLineWarningMail(String email, String firstName, String lastName, String bookTitle) {
+		
+		String toAddr = email;
+		String fromAddr = "dev.adress.12@gmail.com";
+ 
+		String subject = "Biboliothèque de Paris: date limite de réservation dépassée";
+
+		String bookRows = "";
+		
+				
+		String body = "Bonjour " + firstName + " " + lastName + "\n \n" 
+				+ "Votre réservation pour l'ouvrage: "
+				+ bookTitle
+				+ "\n"
+				+ " est arrivé à son terme.";	
+				
+				
+		emailSender.readyToSendEmail(toAddr, fromAddr, subject, body);
+	}
 
 }

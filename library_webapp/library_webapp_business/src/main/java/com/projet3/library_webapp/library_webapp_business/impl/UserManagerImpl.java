@@ -15,4 +15,9 @@ public class UserManagerImpl implements UserManager{
 		return userDAO.logIn(firstName, lastName, password);
 	}
 
+	@Override
+	public User getUserById(Integer userId) {
+		return userDAO.getUserById(userId);
+	}
+
 }

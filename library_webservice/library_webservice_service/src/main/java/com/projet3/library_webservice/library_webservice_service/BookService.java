@@ -11,6 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
+import com.projet3.library_webservice.library_webservice_model.beans.Booking;
 import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
 
 @WebService(serviceName="BookService")
@@ -23,8 +24,7 @@ public class BookService extends AbstractBookService {
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
 	  BookService bookService = new BookService();
-	  Date response = bookService.getNextBookReturn("Le tour du monde en quatre-vingts jours");
-	  System.out.print("/");
+	  bookService.getAllBooking();
 
 	 }	
 */
@@ -101,7 +101,20 @@ public class BookService extends AbstractBookService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}		
+	}
+	
+	@WebMethod
+	public List<Booking> getAllBooking() {
+		List<Booking> bookingList = null;
+		
+		try {
+			bookingList = bookingManager.getBookingList();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return bookingList;		
+	}
 	
 	@WebMethod
 	public String createBooking(int userId, String bookTitle) {
@@ -137,6 +150,29 @@ public class BookService extends AbstractBookService {
 			e.printStackTrace();
 		}
 		return bookingQuantity;
+	}
+	
+	@WebMethod
+	public List<Booking> getBookingForUser(int userId) {
+		List<Booking> bookingList = null;
+		
+		try {
+			bookingList = bookingManager.getBooking(userId);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return bookingList;
+	}
+	
+	@WebMethod
+	public void deleteBooking(String bookTitle, int userId) {
+		try {
+			bookingManager.deleteBooking(bookTitle, userId);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
