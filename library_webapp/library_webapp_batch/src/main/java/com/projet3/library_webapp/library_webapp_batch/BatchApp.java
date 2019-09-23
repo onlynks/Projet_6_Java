@@ -18,10 +18,6 @@ public class BatchApp {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	    /*
-	    MailToSend mailToSend = (MailToSend) context.getBean("mailToSend");
-	    mailToSend.sendMail();
-	    */
 	 }
 
 }

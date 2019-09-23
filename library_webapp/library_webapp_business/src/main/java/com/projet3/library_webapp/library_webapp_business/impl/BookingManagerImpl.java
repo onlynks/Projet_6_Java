@@ -45,4 +45,9 @@ public class BookingManagerImpl implements BookingManager {
 		return bookingDAO.getAllBooking();
 	}
 
+	@Override
+	public void addAlertDate(String bookTitle) {
+		bookingDAO.addAlertDate(bookTitle);		
+	}
+
 }

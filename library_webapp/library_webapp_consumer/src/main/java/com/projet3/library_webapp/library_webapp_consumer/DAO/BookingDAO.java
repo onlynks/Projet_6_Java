@@ -13,4 +13,5 @@ public interface BookingDAO {
 	public XMLGregorianCalendar getNextBookingReturn(String bookTitle);	
 	public List<Booking> getBookingForUser(Integer userId);
 	public void deleteBooking(String bookTitle, Integer userId);
+	public void addAlertDate(String bookTitle);
 }

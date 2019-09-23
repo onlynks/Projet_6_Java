@@ -15,4 +15,5 @@ public interface BookingManager {
 	public Integer getBookingQuantity(String bookTitle) throws Exception;
 	public void deleteBooking(String bookTitle, Integer userId) throws Exception;
 	public void updateBooking(String bookTitle) throws Exception;
+	public void addAlertDate(String bookTitle) throws Exception;
 }

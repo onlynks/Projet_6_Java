@@ -40,4 +40,10 @@ public class BookingDAOImpl extends AbstractBookDAO implements BookingDAO {
 		bookServiceConnection.deleteBooking(bookTitle, userId);		
 	}
 
+	@Override
+	public void addAlertDate(String bookTitle) {
+		bookServiceConnection.addAlertDate(bookTitle);
+		
+	}
+
 }

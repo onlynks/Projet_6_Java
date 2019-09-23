@@ -18,16 +18,16 @@ import com.projet3.library_webservice.library_webservice_model.beans.Borrowing;
 public class BookService extends AbstractBookService {
 	
 
-/*
+
 	 public static void main(String[] args) throws SQLException {
 	  
 	  ApplicationContext context = new ClassPathXmlApplicationContext("classpath:/applicationContext.xml");
 	  
 	  BookService bookService = new BookService();
-	  bookService.getAllBooking();
+	  bookService.addAlertDate("Les Misérables");
 
 	 }	
-*/
+
 
 	@WebMethod
 	public Book getBook(int id) {
@@ -169,6 +169,16 @@ public class BookService extends AbstractBookService {
 	public void deleteBooking(String bookTitle, int userId) {
 		try {
 			bookingManager.deleteBooking(bookTitle, userId);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@WebMethod
+	public void addAlertDate(String BookTitle) {
+		try {
+			bookingManager.addAlertDate(BookTitle);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -91,13 +91,25 @@ public class BookingDAOImpl extends AbstractDAO implements BookingDAO {
 
 	@Override
 	public void updateBooking(Booking booking) throws SQLException {
-		String sql = "UPDATE booking SET position = :position WHERE id_user = :userId";
+		String sql = "UPDATE booking SET position = :position, alert_date = :alertDate WHERE id_user = :userId AND book_title = :bookTitle";
 		
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("position", booking.getPosition());
+		params.addValue("alertDate", booking.getAlertDate());
 		params.addValue("userId", booking.getUserId());
+		params.addValue("bookTitle", booking.getBookTitle());
 		
 		namedParameterTemplate.update(sql, params);		
+	}
+
+	@Override
+	public Booking getBookingById(int id) throws SQLException {
+		String sql = "SELECT * FROM booking WHERE booking_id = :booking_id";
+		
+		MapSqlParameterSource params = new MapSqlParameterSource();
+		params.addValue("booking_id", id);
+		
+		return namedParameterTemplate.queryForObject(sql, params, new BookingRowMapper());
 	}
 
 }

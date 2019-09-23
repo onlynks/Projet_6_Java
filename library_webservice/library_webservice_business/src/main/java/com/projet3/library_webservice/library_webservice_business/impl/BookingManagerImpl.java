@@ -1,7 +1,9 @@
 package com.projet3.library_webservice.library_webservice_business.impl;
 
 import java.sql.SQLException;
+import java.util.Calendar;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.IntStream;
@@ -14,7 +16,6 @@ import com.projet3.library_webservice.library_webservice_consumer.DAO.BookDAO;
 import com.projet3.library_webservice.library_webservice_consumer.DAO.BookingDAO;
 import com.projet3.library_webservice.library_webservice_model.beans.Book;
 import com.projet3.library_webservice.library_webservice_model.beans.Booking;
-import com.projet3.library_webservice.library_webservice_model.beans.User;
 
 public class BookingManagerImpl implements BookingManager {
 	
@@ -94,11 +95,33 @@ public class BookingManagerImpl implements BookingManager {
 		List<Booking> bookingList = bookingDAO.getBookingListByTitle(bookTitle);		
 		bookingList.sort(Comparator.comparing(Booking::getPosition));
 		
-		for (int index = 0; index < bookingList.size(); index ++ ) {			
-			bookingList.get(index).setPosition(index + 1);
+		for (int index = 0; index < bookingList.size(); index ++ ) {
+			Booking booking  = bookingList.get(index);
+			
+			booking.setPosition(index + 1);
 			bookingDAO.updateBooking(bookingList.get(index));
 		}
 	}
+
+	@Override
+	public void addAlertDate(String bookTitle) throws Exception {
+		List<Booking> bookingList = bookingDAO.getBookingListByTitle(bookTitle);
+		
+		Booking firstBooking = bookingList.stream().filter( booking -> 
+			booking.getPosition() == 1
+		).findFirst().get();
+		
+		Date currentDate = new Date();
+		Calendar c = Calendar.getInstance();
+        c.setTime(currentDate);
+        c.add(Calendar.DATE, 2);
+        firstBooking.setAlertDate(c.getTime());
+        
+        bookingDAO.updateBooking(firstBooking);
+	}
+
+
+	
 
 	
 

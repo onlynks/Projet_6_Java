@@ -8,6 +8,7 @@ import com.projet3.library_webservice.library_webservice_model.beans.User;
 
 public interface BookingDAO {
 
+	public Booking getBookingById(int id) throws SQLException;
 	public List<Booking> getAllBooking() throws SQLException;
 	public Booking getBookingByTitleAndUser(String title, Integer userId) throws SQLException;
 	public List<Booking> getBookingListByTitle(String title) throws SQLException;

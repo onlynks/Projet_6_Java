@@ -34,7 +34,7 @@
 
 	<task:scheduled-tasks>
 		<task:scheduled ref="batchLauncher" method="run"
-			cron="*/5 * * * * *" />
+			cron="0 */1 * * * *" />
 	</task:scheduled-tasks>
 
 

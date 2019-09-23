@@ -47,6 +47,8 @@ public class ObjectFactory {
     private final static QName _GetBookingForUser_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookingForUser");
     private final static QName _GetBookingForUserResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getBookingForUserResponse");
     private final static QName _DeleteBookingResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "deleteBookingResponse");
+    private final static QName _AddAlertDateResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "addAlertDateResponse");
+    private final static QName _AddAlertDate_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "addAlertDate");
     private final static QName _BookResearchResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "bookResearchResponse");
     private final static QName _GetAllBookingResponse_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "getAllBookingResponse");
     private final static QName _CreateBook_QNAME = new QName("http://library_webservice_service.library_webservice.projet3.com/", "createBook");
@@ -64,6 +66,14 @@ public class ObjectFactory {
      */
     public DeleteBookingResponse createDeleteBookingResponse() {
         return new DeleteBookingResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddAlertDateResponse }
+     * 
+     */
+    public AddAlertDateResponse createAddAlertDateResponse() {
+        return new AddAlertDateResponse();
     }
 
     /**
@@ -152,6 +162,14 @@ public class ObjectFactory {
      */
     public BookResearchResponse createBookResearchResponse() {
         return new BookResearchResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddAlertDate }
+     * 
+     */
+    public AddAlertDate createAddAlertDate() {
+        return new AddAlertDate();
     }
 
     /**
@@ -527,6 +545,24 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "deleteBookingResponse")
     public JAXBElement<DeleteBookingResponse> createDeleteBookingResponse(DeleteBookingResponse value) {
         return new JAXBElement<DeleteBookingResponse>(_DeleteBookingResponse_QNAME, DeleteBookingResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddAlertDateResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "addAlertDateResponse")
+    public JAXBElement<AddAlertDateResponse> createAddAlertDateResponse(AddAlertDateResponse value) {
+        return new JAXBElement<AddAlertDateResponse>(_AddAlertDateResponse_QNAME, AddAlertDateResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddAlertDate }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://library_webservice_service.library_webservice.projet3.com/", name = "addAlertDate")
+    public JAXBElement<AddAlertDate> createAddAlertDate(AddAlertDate value) {
+        return new JAXBElement<AddAlertDate>(_AddAlertDate_QNAME, AddAlertDate.class, null, value);
     }
 
     /**

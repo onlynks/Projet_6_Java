@@ -8,6 +8,4 @@
     <import resource="classpath:/businessContext.xml"/>
     <import resource="classpath:/consumerContext.xml"/>
     <import resource="classpath:/mailConfig.xml"/>
-
-
 </beans>

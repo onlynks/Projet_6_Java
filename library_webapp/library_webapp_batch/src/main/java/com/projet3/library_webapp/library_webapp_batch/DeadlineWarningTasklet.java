@@ -1,12 +1,8 @@
 package com.projet3.library_webapp.library_webapp_batch;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+
 import java.util.GregorianCalendar;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import javax.xml.datatype.DatatypeFactory;
@@ -25,7 +21,6 @@ import com.projet3.library_webapp.library_webapp_business.interfaces.BookingMana
 import com.projet3.library_webapp.library_webapp_business.interfaces.UserManager;
 import com.projet3.library_webapp.library_webapp_model.book.Book;
 import com.projet3.library_webapp.library_webapp_model.book.Booking;
-import com.projet3.library_webapp.library_webapp_model.book.Borrowing;
 import com.projet3.library_webapp.library_webapp_model.user.User;
 
 @Component
@@ -42,8 +37,8 @@ public class DeadlineWarningTasklet implements Tasklet{
 	
 	public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 		List<Booking> bookingList = bookingManager.getAllBooking();
-		
 		List<Booking> bookingListWithEndingDate = bookingList.stream().filter(booking -> booking.getAlertDate() != null).collect(Collectors.toList());
+		
 		GregorianCalendar gregorianCalendar = new GregorianCalendar();
         DatatypeFactory datatypeFactory = DatatypeFactory.newInstance();
         XMLGregorianCalendar now = 
@@ -51,14 +46,31 @@ public class DeadlineWarningTasklet implements Tasklet{
 		
 		bookingListWithEndingDate.forEach(booking -> {
 			if (booking.getAlertDate().compare(now) < 0) {
-				Book book  = (Book) bookManager.bookResearch(booking.getBookTitle()).keySet().toArray()[0];
-				User user = userManager.getUserById(booking.getUserId());
+				System.out.println("On y passe roroya");
 				
+				Book book  = (Book) bookManager.bookResearch(booking.getBookTitle()).keySet().toArray()[0];
+				User user = userManager.getUserById(booking.getUserId());				
 				mailToSend.sendDeadLineWarningMail(user.getEmail(), user.getFirstName(), user.getLastName(), book.getTitle());
+				bookingManager.deleteBooking(book.getTitle(), user.getId());
+				
+				bookingManager.addAlertDate(book.getTitle());				
+				User user2 = getfirstPositionUserForBooking(book.getTitle());
+				mailToSend.sendAvailableBookingMessage(user2.getEmail(), user2.getFirstName(), user2.getLastName(), book.getTitle());
 			}
 		});
 		
 		return RepeatStatus.FINISHED;
+	}
+	
+	public User getfirstPositionUserForBooking(String bookTitle) {
+		
+		List<Booking> bookingList = bookingManager.getAllBooking();
+		
+		Integer userId = bookingList.stream().filter( booking -> booking.getBookTitle().equals(bookTitle) && booking.getPosition() == 1)
+				.findAny().get().getUserId();
+		
+		User user = userManager.getUserById(userId);
+		return user;
 	}
 
 }

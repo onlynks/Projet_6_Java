@@ -54,5 +54,25 @@ public class MailToSend {
 				
 		emailSender.readyToSendEmail(toAddr, fromAddr, subject, body);
 	}
+	
+	public void sendAvailableBookingMessage(String email, String firstName, String lastName, String bookTitle) {
+		
+		String toAddr = email;
+		String fromAddr = "dev.adress.12@gmail.com";
+ 
+		String subject = "Biboliothèque de Paris: Votre réservation est disponible";
+
+		String bookRows = "";
+		
+				
+		String body = "Bonjour " + firstName + " " + lastName + "\n \n" 
+				+ "Votre réservation pour l'ouvrage: "
+				+ bookTitle
+				+ "\n"
+				+ " est désormais disponible, vous pouvez venir le chercher dans un délai de 48h dans votre bibliothèque.";	
+				
+				
+		emailSender.readyToSendEmail(toAddr, fromAddr, subject, body);
+	}
 
 }
