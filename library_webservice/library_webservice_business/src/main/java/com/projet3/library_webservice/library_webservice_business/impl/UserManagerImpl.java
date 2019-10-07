@@ -24,7 +24,6 @@ public class UserManagerImpl implements UserManager{
 
 	@Override
 	public List<User> getUserList() throws SQLException {
-		
 		return userDAO.getUserList();
 	}
 

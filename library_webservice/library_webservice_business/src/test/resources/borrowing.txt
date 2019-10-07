@@ -1,0 +1,113 @@
+[
+  {
+    "id": 1,
+    "beginningDate": 1569695980,
+    "endingDate": 1572291580,
+    "book": {
+      "id": 2,
+      "title": "Les Misérables",
+      "description": "Le destin de Jean Valjean, forçat échappé du bagne, est bouleversé par sa rencontre avec Fantine. Mourante et sans le sou, celle-ci lui demande de prendre soin de Cosette, sa fille confiée aux Thénardier. Ce couple d’aubergistes, malhonnête et sans scrupules, exploitent la fillette jusqu’à ce que Jean Valjean tienne sa promesse et l’adopte. Cosette devient alors sa raison de vivre. Mais son passé le rattrape et l’inspecteur Javert le traque…",
+      "available": true,
+      "author": {
+        "id": 2,
+        "firstName": "Victor",
+        "lastName": "Hugo",
+        "birthDate": 1569588006451,
+        "deathDate": "null",
+        "description": "Victor Hugo est un poète, dramaturge, écrivain, romancier et dessinateur romantique français, né le 26 février 1802 à Besançon et mort le 22 mai 1885 à Paris. Il est considéré comme l'un des plus importants écrivains de langue française."
+      },
+      "publisher": {
+        "id": 2,
+        "name": "Magnard"
+      }
+    },
+    "user": {
+      "id": 1,
+      "firstName": "Nicolas",
+      "lastName": "Garnier",
+      "password": "mdp",
+      "adress": "3 allée des pots de fleurs",
+      "postCode": 91510,
+      "email": "nicogar12@gmail.com",
+      "role": {
+        "id": 1,
+        "roleName": "user"
+      }
+    },
+    "extended": false
+  },
+  {
+    "id": 2,
+    "beginningDate": 1568572780,
+    "endingDate": 1571164780,
+    "book": {
+      "id": 2,
+      "title": "Les Misérables",
+      "description": "Le destin de Jean Valjean, forçat échappé du bagne, est bouleversé par sa rencontre avec Fantine. Mourante et sans le sou, celle-ci lui demande de prendre soin de Cosette, sa fille confiée aux Thénardier. Ce couple d’aubergistes, malhonnête et sans scrupules, exploitent la fillette jusqu’à ce que Jean Valjean tienne sa promesse et l’adopte. Cosette devient alors sa raison de vivre. Mais son passé le rattrape et l’inspecteur Javert le traque…",
+      "available": true,
+      "author": {
+        "id": 2,
+        "firstName": "Victor",
+        "lastName": "Hugo",
+        "birthDate": 1569588006451,
+        "deathDate": "null",
+        "description": "Victor Hugo est un poète, dramaturge, écrivain, romancier et dessinateur romantique français, né le 26 février 1802 à Besançon et mort le 22 mai 1885 à Paris. Il est considéré comme l'un des plus importants écrivains de langue française."
+      },
+      "publisher": {
+        "id": 2,
+        "name": "Magnard"
+      }
+    },
+    "user": {
+      "id": 2,
+      "firstName": "José",
+      "lastName": "Bové",
+      "password": "mdp",
+      "adress": "3 allée des pots de fleurs",
+      "postCode": 91510,
+      "email": "nicogar12@gmail.com",
+      "role": {
+        "id": 1,
+        "roleName": "user"
+      }
+    },
+    "extended": false
+  },
+  {
+    "id": 3,
+    "beginningDate": 1567449580,
+    "endingDate": 1570041580,
+    "book": {
+      "id": 2,
+      "title": "Les Misérables",
+      "description": "Le destin de Jean Valjean, forçat échappé du bagne, est bouleversé par sa rencontre avec Fantine. Mourante et sans le sou, celle-ci lui demande de prendre soin de Cosette, sa fille confiée aux Thénardier. Ce couple d’aubergistes, malhonnête et sans scrupules, exploitent la fillette jusqu’à ce que Jean Valjean tienne sa promesse et l’adopte. Cosette devient alors sa raison de vivre. Mais son passé le rattrape et l’inspecteur Javert le traque…",
+      "available": true,
+      "author": {
+        "id": 2,
+        "firstName": "Victor",
+        "lastName": "Hugo",
+        "birthDate": 1569588006451,
+        "deathDate": "null",
+        "description": "Victor Hugo est un poète, dramaturge, écrivain, romancier et dessinateur romantique français, né le 26 février 1802 à Besançon et mort le 22 mai 1885 à Paris. Il est considéré comme l'un des plus importants écrivains de langue française."
+      },
+      "publisher": {
+        "id": 2,
+        "name": "Magnard"
+      }
+    },
+    "user": {
+      "id": 3,
+      "firstName": "Léa",
+      "lastName": "Duvet",
+      "password": "mdp",
+      "adress": "3 allée des pots de fleurs",
+      "postCode": 91510,
+      "email": "nicogar12@gmail.com",
+      "role": {
+        "id": 1,
+        "roleName": "user"
+      }
+    },
+    "extended": false
+  }
+]

@@ -2,6 +2,7 @@ package com.projet3.library_webservice.library_webservice_model.beans;
 
 public class Book {
 	
+	
 	private int id;
 	private String title;
 	private String description;
@@ -44,6 +45,12 @@ public class Book {
 	}
 	public void setPublisher(Publisher publisher) {
 		this.publisher = publisher;
+	}
+	
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", title=" + title + ", description=" + description + ", available=" + available
+				+ ", author=" + author + ", publisher=" + publisher + "]";
 	}
 
 }

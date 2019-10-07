@@ -1,0 +1,30 @@
+[
+  {
+    "bookingId": 1,
+    "bookTitle": "Les Misérables",
+    "userId": 1,
+    "position": 1,
+    "alertDate": null
+  },
+  {
+    "bookingId": 2,
+    "bookTitle": "Les Misérables",
+    "userId": 2,
+    "position": 2,
+    "alertDate": null
+  },
+  {
+    "bookingId": 3,
+    "bookTitle": "La chatte",
+    "userId": 1,
+    "position": 1,
+    "alertDate": null
+  },
+  {
+    "bookingId": 4,
+    "bookTitle": "Les Misérables",
+    "userId": 3,
+    "position": 4,
+    "alertDate": null
+  }
+]

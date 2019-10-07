@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Le petit cheval de manège",
+    "description": "Lorsque débute leur vie commune, Alain et Camille sont deux amis d’enfance que tout en apparence rapproche. Mais leurs secrètes rêveries les divisent. « Mon mariage, reconnaît Alain, contente tout le monde et Camille, et il y a des moments où il me contente aussi, mais… » Ce qu’Alain aime en Camille, c’est une beauté idéalisée, faite d’immobilité et de silence. Aussi est-il déconcerté par son exubérance. Comme l’arrivée d’une saison nouvelle, la découverte de leur intime division le met à la merci d’autres rêves. Et c’est alors que le drame se noue. La chatte Saha sera désormais pour Alain la chimère sublime qui domine sa vie et pour Camille la rivale détestée contre laquelle aucun procédé n’est...",
+    "available": true,
+    "author": {
+      "id": 1,
+      "firstName": "Juste",
+      "lastName": "Leblanc",
+      "birthDate": 1569588006451,
+      "deathDate": null,
+      "description": "Un ami fidèle"
+    },
+    "publisher": {
+      "id": 1,
+      "name": "Les éditeurs du plat pays"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Les Misérables",
+    "description": "Le destin de Jean Valjean, forçat échappé du bagne, est bouleversé par sa rencontre avec Fantine. Mourante et sans le sou, celle-ci lui demande de prendre soin de Cosette, sa fille confiée aux Thénardier. Ce couple d’aubergistes, malhonnête et sans scrupules, exploitent la fillette jusqu’à ce que Jean Valjean tienne sa promesse et l’adopte. Cosette devient alors sa raison de vivre. Mais son passé le rattrape et l’inspecteur Javert le traque…",
+    "available": true,
+    "author": {
+      "id": 2,
+      "firstName": "Victor",
+      "lastName": "Hugo",
+      "birthDate": 1569588006451,
+      "deathDate": "null",
+      "description": "Victor Hugo est un poète, dramaturge, écrivain, romancier et dessinateur romantique français, né le 26 février 1802 à Besançon et mort le 22 mai 1885 à Paris. Il est considéré comme l'un des plus importants écrivains de langue française."
+    },
+    "publisher": {
+      "id": 2,
+      "name": "Magnard"
+    }
+  },
+  {
+    "id": 3,
+    "title": "La chatte",
+    "description": "Lorsque débute leur vie commune, Alain et Camille sont deux amis d’enfance que tout en apparence rapproche. Mais leurs secrètes rêveries les divisent. « Mon mariage, reconnaît Alain, contente tout le monde et Camille, et il y a des moments où il me contente aussi, mais… » Ce qu’Alain aime en Camille, c’est une beauté idéalisée, faite d’immobilité et de silence. Aussi est-il déconcerté par son exubérance. Comme l’arrivée d’une saison nouvelle, la découverte de leur intime division le met à la merci d’autres rêves. Et c’est alors que le drame se noue. La chatte Saha sera désormais pour Alain la chimère sublime qui domine sa vie et pour Camille la rivale détestée contre laquelle aucun procédé n’est trop brutal.",
+    "available": false,
+    "author": {
+      "id": 3,
+      "firstName": "Jules",
+      "lastName": "Verne",
+      "birthDate": 1569588006451,
+      "deathDate": "null",
+      "description": "Jules Verne, né le 8 février 1828 à Nantes et mort le 24 mars 1905 à Amiens, est un écrivain français dont l'œuvre est, pour la plus grande partie, constituée de romans d'aventures évoquant les progrès scientifiques du xixe siècle."
+    },
+    "publisher": {
+      "id": 2,
+      "name": "Magnard"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Les Misérables",
+    "description": "Le destin de Jean Valjean, forçat échappé du bagne, est bouleversé par sa rencontre avec Fantine. Mourante et sans le sou, celle-ci lui demande de prendre soin de Cosette, sa fille confiée aux Thénardier. Ce couple d’aubergistes, malhonnête et sans scrupules, exploitent la fillette jusqu’à ce que Jean Valjean tienne sa promesse et l’adopte. Cosette devient alors sa raison de vivre. Mais son passé le rattrape et l’inspecteur Javert le traque…",
+    "available": true,
+    "author": {
+      "id": 2,
+      "firstName": "Victor",
+      "lastName": "Hugo",
+      "birthDate": 1569588006451,
+      "deathDate": "null",
+      "description": "Victor Hugo est un poète, dramaturge, écrivain, romancier et dessinateur romantique français, né le 26 février 1802 à Besançon et mort le 22 mai 1885 à Paris. Il est considéré comme l'un des plus importants écrivains de langue française."
+    },
+    "publisher": {
+      "id": 2,
+      "name": "Magnard"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Les Misérables",
+    "description": "Le destin de Jean Valjean, forçat échappé du bagne, est bouleversé par sa rencontre avec Fantine. Mourante et sans le sou, celle-ci lui demande de prendre soin de Cosette, sa fille confiée aux Thénardier. Ce couple d’aubergistes, malhonnête et sans scrupules, exploitent la fillette jusqu’à ce que Jean Valjean tienne sa promesse et l’adopte. Cosette devient alors sa raison de vivre. Mais son passé le rattrape et l’inspecteur Javert le traque…",
+    "available": true,
+    "author": {
+      "id": 2,
+      "firstName": "Victor",
+      "lastName": "Hugo",
+      "birthDate": 1569588006451,
+      "deathDate": "null",
+      "description": "Victor Hugo est un poète, dramaturge, écrivain, romancier et dessinateur romantique français, né le 26 février 1802 à Besançon et mort le 22 mai 1885 à Paris. Il est considéré comme l'un des plus importants écrivains de langue française."
+    },
+    "publisher": {
+      "id": 2,
+      "name": "Magnard"
+    }
+  }
+]
